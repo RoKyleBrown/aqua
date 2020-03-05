@@ -1,8 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
+import ReactDOM from "react-dom";
+import configureStore from "./store/store";
+import Root from "./components/root";
+import { login, signup } from './actions/session_actions'
 
 document.addEventListener("DOMContentLoaded", () => {
-    const root = document.getElementById('root');
-    ReactDOM.render(<h1>This is not Hulu</h1>, root)
-})
+    const store = configureStore();
+    window.login = login;
+    window.signup = signup
+    
+
+    // TESTING START
+    window.getState = store.getState;
+    window.dispatch = store.dispatch;
+    // TESTING END
+
+    const root = document.getElementById("root");
+    ReactDOM.render(<Root store={store} />, root);
+});

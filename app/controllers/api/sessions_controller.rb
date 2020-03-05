@@ -9,7 +9,7 @@ class Api::SessionsController < ApplicationController
             render json: "signed in"
             #movie index
          else
-            render json: "invalid password or username", status: 401
+            render json: ["invalid password or username"], status: 401
             #error message, invalid password or username
             #render modal
          end
