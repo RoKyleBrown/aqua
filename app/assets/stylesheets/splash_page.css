@@ -6,10 +6,17 @@
 
 
 
-.splash-container {
+html {
+    margin: 0; 
+}
+ .splash-container {  /* hero */
     background-image: url(man-tv.png);
     background-position: center;
     background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    transform: scale(1.03);
+
 }
 .splash-nav {
     display: flex;
