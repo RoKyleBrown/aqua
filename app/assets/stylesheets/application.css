@@ -20,51 +20,7 @@
  /* magenta #cc038f    */
  /* white #ffff    */
 
+ @import url(//db.onlinewebfonts.com/c/105007d99d9df64c50cc24d696d79555?family=Graphik+Web+Regular)
+;
+
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
-
-.splash-container {
-
-}
-.splash-nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-.splash-nav li {
-  display: block;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
- #logo-splash {
-    font-family: 'futura';
-    text-transform: lowercase;
-    float: left;
- }
-
-  #login-btn {
-     color: #cc038f;
-     text-transform: uppercase;
-     font-family: 'Helvetica';
-     text-decoration: none;
-     right: 15%;
-     float: right;
- }
-
-
-
- .splash-background-top {
-    background-color: #16b9be;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
-
-  .signup-btn {
-     display: flex;
-     text-decoration: none;
-     color: #010116;
- }

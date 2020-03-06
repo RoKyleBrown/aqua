@@ -1,0 +1,83 @@
+ /* black #00000    */
+ /* NAVY #010116    */
+ /* teel #16b9be    */
+ /* magenta #cc038f    */
+ /* white #ffff    */
+
+
+
+.splash-container {
+    background-image: url(man-tv.png);
+    background-position: center;
+    background-size: cover;
+}
+.splash-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+ #logo-splash {
+    font-family: 'futura';
+    font-size: 26px;
+    text-transform: lowercase;
+    font-weight: 900;
+    color: white;
+ }
+
+  #login-btn {
+     color: #cc038f;
+     text-transform: uppercase;
+     font-family: "Graphik Web Regular";
+     font-weight: 900;
+     text-decoration: none;
+ }
+
+
+
+ .splash-background-top {
+    /* background-color: #16b9be; */
+    height: 445px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+ }
+
+ .tagline {
+     font-family: "Graphik Web Regular";
+     font-size: 48px;
+     font-weight: lighter;
+     color: white;
+     margin-bottom: 0.10%;
+     text-align: center;
+ }
+
+ .tag-sub {
+     font-family: "Graphik Web Regular";
+     font-size: 23px;
+     width: 55%;
+     text-align: center;
+     color: white;
+     margin-bottom: 9%;
+ }
+
+   .signup-btn {
+     text-decoration: none;
+     color: #010116;
+     background-color: white;
+     padding: 15px;
+     padding-left: 25px;
+     padding-right: 25px;
+     border-radius: 4px;
+     text-align: center;
+     display: inline-block;
+     font-size: 16px;
+     font-family: "Graphik Web Regular";
+
+ }

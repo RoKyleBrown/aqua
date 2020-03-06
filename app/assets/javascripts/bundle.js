@@ -636,16 +636,20 @@ __webpack_require__.r(__webpack_exports__);
 var SplashPage = function SplashPage() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash-nav"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     id: "logo-splash"
-  }, "Not Hulu"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, "Not Hulu"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     id: "login-btn",
     to: "/session/login"
   }, "Log In"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash-background-top"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "tagline"
+  }, "All Your Movies In One Place"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "tag-sub"
+  }, "Watch thousands of shows and movies, with plans starting at $5.99/month."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     className: "signup-btn",
     to: "/users/new"
   }, "Start Your Free Trial")));
