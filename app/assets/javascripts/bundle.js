@@ -634,14 +634,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var SplashPage = function SplashPage() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "logo-splash"
-  }, "Not Hulu"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    className: "login-btn",
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "splash-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "splash-nav"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    id: "logo-splash"
+  }, "Not Hulu"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    id: "login-btn",
     to: "/session/login"
-  }, "Log In"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, "Log In"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "splash-background-top"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    className: "signup-btn",
     to: "/users/new"
-  }, "Sign Up"));
+  }, "Start Your Free Trial")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SplashPage);
