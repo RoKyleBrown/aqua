@@ -6,23 +6,23 @@ class Api::SessionsController < ApplicationController
         params[:user][:password])
          if @user
             log_in!(@user)
-            render json: "signed in"
+            render "api/users/show"
             #movie index
          else
-            render json: ["invalid password or username"], status: 401
+            render json: ["Invalid username/password combination"], status: 401 
             #error message, invalid password or username
             #render modal
          end
     end
 
     def destroy
-
-        if current_user
+        @user = current_user
+        if @user
             log_out!
-            render json: {}
+            render "api/users/show"
             #redirect to signin page or render modal
         else
-        render json: "not signed in", status: 404
+        render json: ["not signed in"], status: 404
         end
     end
 end

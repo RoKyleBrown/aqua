@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+ /* black #00000    */
+ /* NAVY #010116    */
+ /* teel #16b9be    */
+ /* magenta #cc038f    */
+ /* white #ffff    */
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+
+
+
+ .logo-splash {
+
+ }
+
+  .login-btn {
+     color: #cc038f;
+     text-transform: uppercase;
+     font-family: 'Helvetica';
+     text-decoration: none;
+     right: 15%;
+ }
