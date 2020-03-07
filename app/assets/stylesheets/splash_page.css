@@ -13,9 +13,7 @@ html {
     background-image: url(man-tv.png);
     background-position: center;
     background-size: cover;
-    position: relative;
     background-repeat: no-repeat;
-    transform: scale(1.03);
 
 }
 .splash-nav {
@@ -24,7 +22,7 @@ html {
     justify-content: space-between;
     align-items: center;
     margin-left: 3%;
-    margin-right: 3%;
+    margin-right: 4%;
 }
 
  #logo-splash {
@@ -58,7 +56,7 @@ html {
 
  .tagline {
      font-family: "Graphik Web Regular";
-     font-size: 48px;
+     font-size: 4.8vw;
      font-weight: lighter;
      color: white;
      margin-bottom: 0.10%;
@@ -67,7 +65,7 @@ html {
 
  .tag-sub {
      font-family: "Graphik Web Regular";
-     font-size: 23px;
+     font-size: 2.3vw;
      width: 55%;
      text-align: center;
      color: white;
@@ -86,5 +84,8 @@ html {
      display: inline-block;
      font-size: 16px;
      font-family: "Graphik Web Regular";
+ }
 
+ #test {
+    transform: translateZ(30%);
  }

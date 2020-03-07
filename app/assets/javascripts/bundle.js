@@ -404,17 +404,30 @@ var SignupForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Sign Up"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "signup-background"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "signup-nav"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        id: "logo-signup"
+      }, "Not Hulu"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Log In")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "signup-form-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Create Your Account"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        className: "signup-form",
         onSubmit: this.doTheRightThing
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "email:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "First Name", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Last Name", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "email", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.email,
         onChange: this.update('email')
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "password:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "password", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "password",
         value: this.state.password,
         onChange: this.update('password')
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Sign Up")));
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Sign Up"))));
     }
   }]);
 

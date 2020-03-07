@@ -20,23 +20,38 @@ class SignupForm extends React.Component {
     }
     render() {
         return (
-            <div>
-                <h1>Sign Up</h1>
-                <form onSubmit={this.doTheRightThing}>
-                    <label>email:
-                        <input type="text"
-                            value={this.state.email}
-                            onChange={this.update('email')}
-                        />
-                    </label>
-                    <label>password:
-                        <input type="password"
-                            value={this.state.password}
-                            onChange={this.update('password')}
-                        />
-                    </label>
-                    <button>Sign Up</button>
-                </form>
+            
+            <div className="signup-background">
+                <ul className="signup-nav">
+                    <li id="logo-signup">Not Hulu</li>
+                    <li>Log In</li>
+                </ul>
+                <div className="signup-form-container">
+                    <p>Create Your Account</p>
+                    <form className="signup-form" onSubmit={this.doTheRightThing}>
+                        <label>First Name
+                            <input type="text"
+                            />
+                        </label>
+                        <label>Last Name
+                            <input type="text"
+                            />
+                        </label>
+                        <label>email
+                            <input type="text"
+                                value={this.state.email}
+                                onChange={this.update('email')}
+                            />
+                        </label>
+                        <label>password
+                            <input type="password"
+                                value={this.state.password}
+                                onChange={this.update('password')}
+                            />
+                        </label>
+                        <button>Sign Up</button>
+                    </form>
+                </div>
             </div>
         )
     }
