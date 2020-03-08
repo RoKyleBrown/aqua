@@ -21,7 +21,7 @@ class MoviesIndex extends React.Component {
         if (this.props.currentUser) {
             return (
                 <div>
-                    <h3>Hello {this.props.currentUser.email}</h3>
+                    <h3>Hello {this.props.currentUser.first_name}</h3>
                     <button onClick={this.rightThing}>Log Out
                     </button>
                 </div>
@@ -30,7 +30,9 @@ class MoviesIndex extends React.Component {
             else if (this.props.errors.length) {
                 return (
                     <div>
-                        <h3>{this.props.errors}</h3>
+                        {this.props.errors.map( err => 
+                                <ul>{err}</ul>
+                            )}
                     </div>
                 )
             }

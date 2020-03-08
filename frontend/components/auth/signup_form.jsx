@@ -6,7 +6,9 @@ class SignupForm extends React.Component {
         super(props);
         this.state = {
             email: '',
-            password: ''
+            password: '',
+            first_name: '',
+            last_name: ''
         }
         this.doTheRightThing = this.doTheRightThing.bind(this)
     }
@@ -24,22 +26,28 @@ class SignupForm extends React.Component {
             
             <div className="signup-background">
                 <ul className="signup-nav">
-                    <li id="logo-signup">Not Hulu</li>
+                    <li ><Link id="logo-signup" to={`/`}>Not Hulu</Link></li>
                     <li> <Link id="signup-login-btn" to={`/session/login`}> 
                     Log In</Link></li>
                 </ul>
                 <div className="signup-form-container">
                     <p>Create Your Account</p>
-                    <p>Use your email and password to watch on your favorite devices.</p>
+                    <p>Use your email and password to watch on your 
+                        favorite devices.</p>
                     <form className="signup-form" 
                     onSubmit={this.doTheRightThing}>
                         <div className="signup-form-background">
-                            <label><span id="signup-first-name">First Name</span> 
+                            <label><span id="signup-first-name">First Name
+                            </span> 
                                 <input type="text"
+                                    value={this.state.first_name}
+                                    onChange={this.update('first_name')}
                                 />
                             </label>
                             <label><span>Last Name</span> 
                                 <input type="text"
+                                    value={this.state.last_name}
+                                    onChange={this.update('last_name')}
                                 />
                             </label>
                             <label><span id="signup-email">email</span> 
@@ -55,7 +63,8 @@ class SignupForm extends React.Component {
                                 />
                             </label>
                         </div>
-                        <p id="signup-t-c">By clicking "SIGN UP" you agree to the Terms of Use and Privacy Policy.</p>
+                        <p id="signup-t-c">By clicking "SIGN UP" you agree to 
+                        the Terms of Use and Privacy Policy.</p>
                         <button className="signup-btn">Sign Up</button>
                     </form>
                 </div>

@@ -16,9 +16,14 @@
 
  /* black #00000    */
  /* NAVY #010116    */
- /* teel #16b9be    */
+ /* teal #16b9be    */
  /* magenta #cc038f    */
  /* white #ffff    */
+ /* night #021623  */
+ /* light-gray #bfbfbf */
+ /* magenta hover #5e1638  */
+ /*  charcoal #1b1a1b    */
+
 
  @import url(//db.onlinewebfonts.com/c/105007d99d9df64c50cc24d696d79555?family=Graphik+Web+Regular)
 ;
@@ -28,4 +33,24 @@
 
 body {
     margin: 0;
+}
+
+input[type="text"] {
+    font-size:18px;
+    font-family: "Graphik Web Regular";
+    color: #021623;
+}
+
+input[type=text]:focus{
+  outline: 2px solid black;
+  box-shadow: 0 0 0 1px black;
+}
+input[type="password"] {
+    font-size:18px;
+    font-family: "Graphik Web Regular";
+}
+
+input[type=password]:focus{
+  outline: 2px solid black;
+  box-shadow: 0 0 0 1px black;
 }

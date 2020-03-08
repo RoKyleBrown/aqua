@@ -6,7 +6,7 @@
  /* night #021623  */
  /* light-gray #bfbfbf */
  /* magenta hover #5e1638  */
- /*  charcol #1b1a1b    */
+ /*  charcoal #1b1a1b    */
 
 
 .signup-background {
@@ -21,6 +21,7 @@
     text-transform: lowercase;
     font-weight: 900;
     color: white;
+    text-decoration: none;
  }
 
 .signup-nav {

@@ -185,7 +185,7 @@ var App = function App() {
     exact: true,
     path: "/",
     component: _splash_page__WEBPACK_IMPORTED_MODULE_5__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__["AuthRoute"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
     exact: true,
     path: "/session/login",
     component: _auth_login_form_container__WEBPACK_IMPORTED_MODULE_2__["default"]
@@ -334,6 +334,152 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 /***/ }),
 
+/***/ "./frontend/components/auth/modal_login_form.jsx":
+/*!*******************************************************!*\
+  !*** ./frontend/components/auth/modal_login_form.jsx ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+var ModalLoginForm = /*#__PURE__*/function (_React$Component) {
+  _inherits(ModalLoginForm, _React$Component);
+
+  function ModalLoginForm(props) {
+    var _this;
+
+    _classCallCheck(this, ModalLoginForm);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ModalLoginForm).call(this, props));
+    _this.state = {
+      email: '',
+      password: ''
+    };
+    _this.doTheRightThing = _this.doTheRightThing.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(ModalLoginForm, [{
+    key: "update",
+    value: function update(field) {
+      var _this2 = this;
+
+      return function (e) {
+        return _this2.setState(_defineProperty({}, field, e.currentTarget.value));
+      };
+    }
+  }, {
+    key: "doTheRightThing",
+    value: function doTheRightThing(e) {
+      e.preventDefault();
+      var user = Object.assign({}, this.state);
+      this.props.login(user);
+      this.props.history.push('/movies');
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "login-modal-form"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        id: "title-login"
+      }, "Log in"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "modal-line"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+        id: "left-ln"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "or"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+        id: "right-ln"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: this.doTheRightThing
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "login-modal-form-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        id: "modal-login-email"
+      }, "email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        value: this.state.email,
+        onChange: this.update('email')
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        id: "modal-login-password"
+      }, "password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "password",
+        value: this.state.password,
+        onChange: this.update('password')
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "login-modal-btn"
+      }, "Log In"))));
+    }
+  }]);
+
+  return ModalLoginForm;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (ModalLoginForm);
+
+/***/ }),
+
+/***/ "./frontend/components/auth/modal_login_form_container.js":
+/*!****************************************************************!*\
+  !*** ./frontend/components/auth/modal_login_form_container.js ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../actions/session_actions */ "./frontend/actions/session_actions.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _modal_login_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modal_login_form */ "./frontend/components/auth/modal_login_form.jsx");
+
+
+
+
+var mapStateToProps = function mapStateToProps(state, ownProps) {
+  return {
+    errors: state.errors.session,
+    history: ownProps.history
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    login: function login(user) {
+      return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["login"])(user));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(_modal_login_form__WEBPACK_IMPORTED_MODULE_2__["default"]));
+
+/***/ }),
+
 /***/ "./frontend/components/auth/signup_form.jsx":
 /*!**************************************************!*\
   !*** ./frontend/components/auth/signup_form.jsx ***!
@@ -380,7 +526,9 @@ var SignupForm = /*#__PURE__*/function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(SignupForm).call(this, props));
     _this.state = {
       email: '',
-      password: ''
+      password: '',
+      first_name: '',
+      last_name: ''
     };
     _this.doTheRightThing = _this.doTheRightThing.bind(_assertThisInitialized(_this));
     return _this;
@@ -410,9 +558,10 @@ var SignupForm = /*#__PURE__*/function (_React$Component) {
         className: "signup-background"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "signup-nav"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        id: "logo-signup"
-      }, "Not Hulu"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        id: "logo-signup",
+        to: "/"
+      }, "Not Hulu")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         id: "signup-login-btn",
         to: "/session/login"
       }, "Log In"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -425,9 +574,13 @@ var SignupForm = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         id: "signup-first-name"
       }, "First Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "text"
+        type: "text",
+        value: this.state.first_name,
+        onChange: this.update('first_name')
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Last Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "text"
+        type: "text",
+        value: this.state.last_name,
+        onChange: this.update('last_name')
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         id: "signup-email"
       }, "email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -473,7 +626,9 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
     user: {
       email: '',
-      password: ''
+      password: '',
+      first_name: '',
+      last_name: ''
     },
     errors: state.errors.session
   };
@@ -550,11 +705,13 @@ var MoviesIndex = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       if (this.props.currentUser) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Hello ", this.props.currentUser.email), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Hello ", this.props.currentUser.first_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           onClick: this.rightThing
         }, "Log Out"));
       } else if (this.props.errors.length) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, this.props.errors));
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.props.errors.map(function (err) {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, err);
+        }));
       } else {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null);
       }
@@ -660,19 +817,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _auth_modal_login_form_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./auth/modal_login_form_container */ "./frontend/components/auth/modal_login_form_container.js");
 
 
 
-var SplashPage = function SplashPage() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+
+var SplashPage = function SplashPage(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash-nav"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     id: "logo-splash"
-  }, "Not Hulu"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, "Not Hulu"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     id: "login-btn",
-    to: "/session/login"
+    onClick: function onClick(e) {
+      e.preventDefault();
+      $(".login-modal").addClass("login-modal-open");
+      $(".splash-container").addClass("splash-container-modal-open");
+    }
   }, "Log In"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash-background-top"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
@@ -682,7 +845,20 @@ var SplashPage = function SplashPage() {
   }, "Watch thousands of shows and movies, with plans starting at $5.99/month."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     className: "signup-btn",
     to: "/users/new"
-  }, "Start Your Free Trial")));
+  }, "Start Your Free Trial"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "login-modal"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    id: "login-modal-close",
+    onClick: function onClick(e) {
+      e.preventDefault();
+      $(".login-modal").removeClass("login-modal-open");
+      $(".splash-container").removeClass("splash-container-modal-open");
+    }
+  }, "\u2715"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "login-modal-background"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_auth_modal_login_form_container__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    history: props.history
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SplashPage);

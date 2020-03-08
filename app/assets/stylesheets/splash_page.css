@@ -1,8 +1,12 @@
  /* black #00000    */
  /* NAVY #010116    */
- /* teel #16b9be    */
+ /* teal #16b9be    */
  /* magenta #cc038f    */
  /* white #ffff    */
+ /* night #021623  */
+ /* light-gray #bfbfbf */
+ /* magenta hover #5e1638  */
+ /*  charcoal #1b1a1b    */
 
 
 
@@ -14,7 +18,9 @@ html {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
+    position: absolute;
+    width: 100%;
+    z-index: -1;
 }
 .splash-nav {
     display: flex;
@@ -38,9 +44,15 @@ html {
      text-transform: uppercase;
      font-family: "Graphik Web Regular";
      font-weight: 900;
-     text-decoration: none;
+     background: none;
+     border: none;
+     font-size: 16px;
+     outline: none;
  }
 
+ #login-btn:hover {
+    cursor: pointer;
+ }
 
 
  .splash-background-top {
@@ -51,6 +63,7 @@ html {
     justify-content: center;
     align-items: center;
     width: 100%;
+    z-index: -1;
     
  }
 
@@ -76,7 +89,7 @@ html {
      text-decoration: none;
      color: #010116;
      background-color: white;
-     padding: 15px;
+     padding: 18px;
      padding-left: 25px;
      padding-right: 25px;
      border-radius: 4px;
@@ -84,8 +97,13 @@ html {
      display: inline-block;
      font-size: 16px;
      font-family: "Graphik Web Regular";
+     text-transform: uppercase;
+     font-weight: bold;
  }
 
- #test {
-    transform: translateZ(30%);
+ .signup-btn:hover {
+     background-color: #bfbfbf;
  }
+
+
+
