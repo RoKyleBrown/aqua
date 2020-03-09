@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 
 class LoginForm extends React.Component {
@@ -21,23 +22,30 @@ class LoginForm extends React.Component {
     }
     render() {
         return (
-            <div>
-                <p>Log in</p>
-                <form onSubmit={this.doTheRightThing}>
-                    <label>email:
-                        <input type="text"
-                            value={this.state.email}
-                            onChange={this.update('email')}
-                        />
-                    </label>
-                    <label>password:
-                        <input type="password"
-                            value={this.state.password}
-                            onChange={this.update('password')}
-                        />
-                    </label>
-                    <button>Log In</button>
-                </form>
+            <div className="login-page-background">
+                <ul className="login-page-nav">
+                    <li><Link id="logo-login-page" to={'/'}>aqua</Link></li>
+                </ul>
+                <div className="login-page-form-container">
+                    <p>Log in</p>
+                    <form className="login-page-form" onSubmit={this.doTheRightThing}>
+                        <div className="login-page-form-background">
+                            <label> <span id="login-page-email">email</span> 
+                                <input type="text"
+                                    value={this.state.email}
+                                    onChange={this.update('email')}
+                                />
+                            </label>
+                            <label><span id="login-page-password">password</span> 
+                                <input type="password"
+                                    value={this.state.password}
+                                    onChange={this.update('password')}
+                                />
+                            </label>
+                        </div>
+                        <button className="login-page-btn">Log In</button>
+                    </form>
+                </div>
             </div>
         )
     }

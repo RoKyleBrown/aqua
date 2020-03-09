@@ -135,6 +135,7 @@
     margin: none;
     font-family: "Graphik Web Bold";
     transform: translateY(170%) translateX(2%);
+    text-transform: capitalize;
 
 }
 
