@@ -26,7 +26,7 @@ class SignupForm extends React.Component {
             
             <div className="signup-background">
                 <ul className="signup-nav">
-                    <li ><Link id="logo-signup" to={`/`}>Not Hulu</Link></li>
+                    <li ><Link id="logo-signup" to={`/`}>aqua</Link></li>
                     <li> <Link id="signup-login-btn" to={`/session/login`}> 
                     Log In</Link></li>
                 </ul>

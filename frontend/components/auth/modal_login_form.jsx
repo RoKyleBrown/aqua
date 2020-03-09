@@ -24,14 +24,17 @@ class ModalLoginForm extends React.Component {
 
         return (
             <div className="login-modal-form">
-                <h3 id="title-login">Log in</h3>
+               <h3 id="title-login">Log in</h3>
+                <button className="guest-modal-btn">Log In as a guest
+                    </button>
                 <div id="modal-line">
-                    <hr id="left-ln"></hr>
-                    <p>or</p>
-                    <hr id="right-ln"></hr>
+                    <p>or</p>  
                 </div>
+                <hr id="left-ln"></hr>
+                <hr id="right-ln"></hr>
                 <form onSubmit={this.doTheRightThing}>
-                <div className="login-modal-form-container">
+                <div 
+                className="login-modal-form-container">
                     <label><span id="modal-login-email">email</span> 
                         <input type="text"
                             value={this.state.email}

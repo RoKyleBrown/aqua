@@ -410,13 +410,15 @@ var ModalLoginForm = /*#__PURE__*/function (_React$Component) {
         className: "login-modal-form"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         id: "title-login"
-      }, "Log in"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Log in"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "guest-modal-btn"
+      }, "Log In as a guest"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "modal-line"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "or")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
         id: "left-ln"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "or"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
         id: "right-ln"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.doTheRightThing
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "login-modal-form-container"
@@ -561,7 +563,7 @@ var SignupForm = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         id: "logo-signup",
         to: "/"
-      }, "Not Hulu")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      }, "aqua")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         id: "signup-login-btn",
         to: "/session/login"
       }, "Log In"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -829,7 +831,7 @@ var SplashPage = function SplashPage(props) {
     className: "splash-nav"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     id: "logo-splash"
-  }, "Not Hulu"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, "AQUA"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     id: "login-btn",
     onClick: function onClick(e) {
       e.preventDefault();
@@ -842,10 +844,16 @@ var SplashPage = function SplashPage(props) {
     className: "tagline"
   }, "All Your Movies In One Place"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "tag-sub"
-  }, "Watch thousands of shows and movies, with plans starting at $5.99/month."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, "Watch thousands of your favorite movies, with plans starting at $5.99/month.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    id: "hbo"
+  }, " HBO\xAE, SHOWTIME\xAE, CINEMAX\xAE and STARZ\xAE available as add-ons.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     className: "signup-btn",
     to: "/users/new"
   }, "Start Your Free Trial"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "splash-buffer"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "temp-hero"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "login-modal"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     id: "login-modal-close",

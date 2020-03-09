@@ -18,6 +18,8 @@
      justify-content: center;
      height: 535px;
      width: 100%;
+     /* transform: translateY(-150px); */
+     transform: translateY(50px);
  }
 
  .login-modal-background {
@@ -83,26 +85,27 @@
 
 #modal-line p {
     margin: 0%;
-    transform: translateX(50%) translateY(-115%);
+    transform: translateX(50%) translateY(-57%);
     color: gray;
     margin-right: 0%;
 }
 
 #left-ln {
     width: 33%;
-    transform: translateX(-56%);
-    border: .33px solid #bfbfbf;
+    border: .5px solid #bfbfbf;
+    transform: translateX(-60%) translateY(-2450%);
+    margin: none;
 }
 #right-ln {
     width: 33%;
-    transform: translateX(70%) translateY(-3300%);
+    transform: translateX(72%) translateY(-3300%);
     border: .5px solid #bfbfbf;
     /* width: 33%;
     transform: translateX(56%);
     border: .33px solid red; */
 }
 
-.login-modal-btn {
+.login-modal-btn, .guest-modal-btn {
     color: white;
     width: 78%;
     margin-top: 20%;
@@ -112,6 +115,10 @@
     border-radius: 4px;
     background-color: #1b1a1b;
     outline: none;
+}
+
+.guest-modal-btn {
+    background-color: #39579d;
 }
 
 .login-modal-btn:hover {
@@ -124,10 +131,17 @@
 
 #title-login {
     width: 100%;
+    font-size: 24px;
+    margin: none;
+    font-family: "Graphik Web Bold";
+    transform: translateY(170%) translateX(2%);
+
 }
+
 
 .login-modal-form {
     font-family: "Graphik Web Regular";
+    transform: translateY(-3%);
 }
 
 .login-modal-form h3 {

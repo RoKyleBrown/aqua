@@ -7,6 +7,7 @@
  /* light-gray #bfbfbf */
  /* magenta hover #5e1638  */
  /*  charcoal #1b1a1b    */
+ /* dark teal  */
 
 
 
@@ -20,7 +21,7 @@ html {
     background-repeat: no-repeat;
     position: absolute;
     width: 100%;
-    z-index: -1;
+    /* z-index: -1; */
 }
 .splash-nav {
     display: flex;
@@ -42,12 +43,13 @@ html {
   #login-btn {
      color: #cc038f;
      text-transform: uppercase;
-     font-family: "Graphik Web Regular";
-     font-weight: 900;
+     font-family: "GraphikLCGMedium";
      background: none;
      border: none;
      font-size: 16px;
      outline: none;
+     letter-spacing: 1.5px;
+     font-weight: bold;
  }
 
  #login-btn:hover {
@@ -60,7 +62,7 @@ html {
     height: 445px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
     z-index: -1;
@@ -68,22 +70,28 @@ html {
  }
 
  .tagline {
-     font-family: "Graphik Web Regular";
+     font-family: "Graphik LC TT Thin";
      font-size: 4.8vw;
      font-weight: lighter;
      color: white;
-     margin-bottom: 0.10%;
+     margin-bottom: 1.7%;
      text-align: center;
  }
 
  .tag-sub {
-     font-family: "Graphik Web Regular";
-     font-size: 2.3vw;
+     font-family: "Graphik Web Light";
+     font-size: 2vw;
      width: 55%;
      text-align: center;
      color: white;
-     margin-bottom: 9%;
+     margin-bottom: 3%;
  }
+
+ #hbo {
+     margin-top: 3%;
+    font-size: 1.3vw;
+    font-family: "Graphik Web Regular";
+}
 
    .signup-btn {
      text-decoration: none;
@@ -99,6 +107,7 @@ html {
      font-family: "Graphik Web Regular";
      text-transform: uppercase;
      font-weight: bold;
+     transform: translateY(-50%);
  }
 
  .signup-btn:hover {
@@ -106,4 +115,12 @@ html {
  }
 
 
+/* .splash-buffer {
+    background-image: linear-gradient(to right, #021623 , #1c4d5b);
+    height: 150px;
+    transform: translateY(532px);
+    position: relative;
+    z-index: -1;
+}
+ */
 
