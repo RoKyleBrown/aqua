@@ -121,6 +121,9 @@
     background-color: #39579d;
 }
 
+.guest-modal-btn:hover {
+    cursor: pointer;
+}
 .login-modal-btn:hover {
     cursor: pointer;
 }

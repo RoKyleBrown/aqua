@@ -9,7 +9,8 @@ class ModalLoginForm extends React.Component {
             email: '',
             password: ''
         }
-        this.doTheRightThing = this.doTheRightThing.bind(this)
+        this.doTheRightThing = this.doTheRightThing.bind(this);
+        this.demoLogIn = this.demoLogIn.bind(this);
     }
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value})
@@ -20,12 +21,22 @@ class ModalLoginForm extends React.Component {
         this.props.login(user)
         this.props.history.push('/movies');
     }
+    demoLogIn(e) {
+        e.preventDefault();
+        const guest = {
+            email: 'guest@aqua.com',
+            password: '123asd'
+        }
+        this.props.login(guest)
+        this.props.history.push('/movies');
+    }
     render() {
 
         return (
             <div className="login-modal-form">
                <h3 id="title-login">Log in</h3>
-                <button className="guest-modal-btn">Log In as a guest
+                <button className="guest-modal-btn" onClick={this.demoLogIn}>
+                    Log In as a guest
                     </button>
                 <div id="modal-line">
                     <p>or</p>  

@@ -403,6 +403,7 @@ var ModalLoginForm = /*#__PURE__*/function (_React$Component) {
       password: ''
     };
     _this.doTheRightThing = _this.doTheRightThing.bind(_assertThisInitialized(_this));
+    _this.demoLogIn = _this.demoLogIn.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -424,6 +425,17 @@ var ModalLoginForm = /*#__PURE__*/function (_React$Component) {
       this.props.history.push('/movies');
     }
   }, {
+    key: "demoLogIn",
+    value: function demoLogIn(e) {
+      e.preventDefault();
+      var guest = {
+        email: 'guest@aqua.com',
+        password: '123asd'
+      };
+      this.props.login(guest);
+      this.props.history.push('/movies');
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -431,7 +443,8 @@ var ModalLoginForm = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         id: "title-login"
       }, "Log in"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "guest-modal-btn"
+        className: "guest-modal-btn",
+        onClick: this.demoLogIn
       }, "Log In as a guest"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "modal-line"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "or")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
@@ -726,6 +739,8 @@ var MoviesIndex = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      debugger;
+
       if (this.props.currentUser) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Hello ", this.props.currentUser.first_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           onClick: this.rightThing
