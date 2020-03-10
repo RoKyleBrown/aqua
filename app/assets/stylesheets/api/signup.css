@@ -168,33 +168,39 @@
 }
 
 #signup-first-name-error {
-    position: fixed;
+    position: absolute;
     z-index: 5;
     color: red;
     text-transform: capitalize;
-    transform: translateY(311%) translateX(-50%);
+    transform: translateY(-3140%) translateX(260%);
     margin: none;
     font-size: 15px;
-    transform: translateY(-220%);
 }
 
 #signup-email-error {
-    position: fixed;
+    position: absolute;
     z-index: 5;
     color: red;
     text-transform: capitalize;
-    font-size: 15px;
+    font-size: 14px;
     margin: none;
-    /* transform: translateY(311%) translateX(-50%); */
-    transform: translateY(-220%);
+    transform: translateY(-1965%) translateX(370%);
+}
+#signup-email-error2 {
+    position: absolute;
+    z-index: 5;
+    color: red;
+    text-transform: capitalize;
+    font-size: 14px;
+    margin: none;
+    transform: translateY(-1965%) translateX(228%);
 }
 #signup-password-error {
-    position: fixed;
+    position: absolute;
     z-index: 5;
     color: red;
     text-transform: capitalize;
-    font-size: 15px;
+    font-size: 14px;
     margin: none;
-    /* transform: translateY(311%) translateX(-50%); */
-    transform: translateY(-220%);
+    transform: translateY(-1260%) translateX(123%);
 }

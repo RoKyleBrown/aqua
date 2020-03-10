@@ -631,11 +631,7 @@ var SignupForm = /*#__PURE__*/function (_React$Component) {
         type: "text",
         value: this.state.first_name,
         onChange: this.update('first_name')
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        id: "signup-first-name-error"
-      }, this.props.errors.filter(function (err) {
-        return err.includes("First name");
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Last Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Last Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.last_name,
         onChange: this.update('last_name')
@@ -645,23 +641,31 @@ var SignupForm = /*#__PURE__*/function (_React$Component) {
         type: "text",
         value: this.state.email,
         onChange: this.update('email')
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        id: "signup-email-error"
-      }, this.props.errors.filter(function (err) {
-        return err.includes("Email");
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "password",
         value: this.state.password,
         onChange: this.update('password')
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        id: "signup-password-error"
-      }, this.props.errors.filter(function (err) {
-        return err.includes("Password");
-      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         id: "signup-t-c"
       }, "By clicking \"SIGN UP\" you agree to the Terms of Use and Privacy Policy."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "signup-btn"
-      }, "Sign Up"))));
+      }, "Sign Up")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        id: "signup-first-name-error"
+      }, this.props.errors.filter(function (err) {
+        return err.includes("First name");
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        id: "signup-email-error"
+      }, this.props.errors.filter(function (err) {
+        return err.includes("Email can't");
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        id: "signup-email-error2"
+      }, this.props.errors.filter(function (err) {
+        return err.includes("Email has");
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        id: "signup-password-error"
+      }, this.props.errors.filter(function (err) {
+        return err.includes("Password");
+      }))));
     }
   }]);
 
