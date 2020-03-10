@@ -169,3 +169,14 @@
     border-radius: 4px;
     margin: 2%;
 }
+
+#login-modal-error-message {
+    color: red;
+    text-transform: capitalize;
+    transform: translateX(9%) translateY(830%);
+    margin: 0%;
+    position: absolute;
+    z-index: 4;
+
+
+}

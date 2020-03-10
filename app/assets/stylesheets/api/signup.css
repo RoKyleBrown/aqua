@@ -128,6 +128,7 @@
     border-color: #bfbfbf;
     margin-top: 1%;
     border-radius: 4px;
+  
 }
 
 
@@ -142,6 +143,7 @@
     font-family: "Graphik Web Regular";
     border-radius: 4px;
     text-transform: uppercase;
+    outline: none;
 }
 
 .signup-form .signup-btn:hover {
@@ -165,4 +167,34 @@
     padding-bottom: 0%;
 }
 
+#signup-first-name-error {
+    position: fixed;
+    z-index: 5;
+    color: red;
+    text-transform: capitalize;
+    transform: translateY(311%) translateX(-50%);
+    margin: none;
+    font-size: 15px;
+    transform: translateY(-220%);
+}
 
+#signup-email-error {
+    position: fixed;
+    z-index: 5;
+    color: red;
+    text-transform: capitalize;
+    font-size: 15px;
+    margin: none;
+    /* transform: translateY(311%) translateX(-50%); */
+    transform: translateY(-220%);
+}
+#signup-password-error {
+    position: fixed;
+    z-index: 5;
+    color: red;
+    text-transform: capitalize;
+    font-size: 15px;
+    margin: none;
+    /* transform: translateY(311%) translateX(-50%); */
+    transform: translateY(-220%);
+}

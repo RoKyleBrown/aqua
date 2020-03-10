@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect} from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 
 
 class ModalLoginForm extends React.Component {
@@ -19,7 +19,8 @@ class ModalLoginForm extends React.Component {
         e.preventDefault();
         const user = Object.assign( {}, this.state)
         this.props.login(user)
-        this.props.history.push('/movies');
+        //.then(() => this.loggedIn())
+        .then(() => this.props.history.push('/movies'));  
     }
     demoLogIn(e) {
         e.preventDefault();
@@ -28,10 +29,14 @@ class ModalLoginForm extends React.Component {
             password: '123asd'
         }
         this.props.login(guest)
-        this.props.history.push('/movies');
+         .then(() => this.props.history.push('/movies'));
+    }
+    loggedIn (e) {
+        e.preventDefault();
+
     }
     render() {
-
+        
         return (
             <div className="login-modal-form">
                <h3 id="title-login">Log in</h3>
@@ -43,7 +48,7 @@ class ModalLoginForm extends React.Component {
                 </div>
                 <hr id="left-ln"></hr>
                 <hr id="right-ln"></hr>
-                <form onSubmit={this.doTheRightThing}>
+                <form onSubmit={ this.doTheRightThing}>
                 <div 
                 className="login-modal-form-container">
                     <label><span id="modal-login-email">email</span> 
@@ -57,6 +62,10 @@ class ModalLoginForm extends React.Component {
                             value={this.state.password}
                             onChange={this.update('password')}
                         />
+                         <p id="login-modal-error-message">
+                             {this.props.errors.filter( err => 
+                                err.includes("username")
+                                )}</p>
                     </label>
                     <button className="login-modal-btn">Log In</button>
                     </div>
@@ -66,4 +75,4 @@ class ModalLoginForm extends React.Component {
     }
 }
 
-export default ModalLoginForm;
+export default withRouter(ModalLoginForm);

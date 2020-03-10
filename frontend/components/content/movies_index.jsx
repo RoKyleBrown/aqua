@@ -7,9 +7,6 @@ class MoviesIndex extends React.Component {
         super(props);
         this.rightThing = this.rightThing.bind(this)
     }
-    // componentDidMount() {
-    //     !!this.props.currentUser;
-    // }
 
     rightThing() {
        this.props.logout(this.props.currentUser);
@@ -17,7 +14,6 @@ class MoviesIndex extends React.Component {
     }
 
     render () {
-        debugger;
         if (this.props.currentUser) {
             return (
                 <div>
@@ -38,7 +34,7 @@ class MoviesIndex extends React.Component {
             }
         else {
             return (
-                <div></div>
+                <div>Waiting.....</div>
             )
         }
     }

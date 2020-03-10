@@ -419,21 +419,33 @@ var ModalLoginForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "doTheRightThing",
     value: function doTheRightThing(e) {
+      var _this3 = this;
+
       e.preventDefault();
       var user = Object.assign({}, this.state);
-      this.props.login(user);
-      this.props.history.push('/movies');
+      this.props.login(user) //.then(() => this.loggedIn())
+      .then(function () {
+        return _this3.props.history.push('/movies');
+      });
     }
   }, {
     key: "demoLogIn",
     value: function demoLogIn(e) {
+      var _this4 = this;
+
       e.preventDefault();
       var guest = {
         email: 'guest@aqua.com',
         password: '123asd'
       };
-      this.props.login(guest);
-      this.props.history.push('/movies');
+      this.props.login(guest).then(function () {
+        return _this4.props.history.push('/movies');
+      });
+    }
+  }, {
+    key: "loggedIn",
+    value: function loggedIn(e) {
+      e.preventDefault();
     }
   }, {
     key: "render",
@@ -467,7 +479,11 @@ var ModalLoginForm = /*#__PURE__*/function (_React$Component) {
         type: "password",
         value: this.state.password,
         onChange: this.update('password')
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        id: "login-modal-error-message"
+      }, this.props.errors.filter(function (err) {
+        return err.includes("username");
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "login-modal-btn"
       }, "Log In"))));
     }
@@ -476,7 +492,7 @@ var ModalLoginForm = /*#__PURE__*/function (_React$Component) {
   return ModalLoginForm;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (ModalLoginForm);
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(ModalLoginForm));
 
 /***/ }),
 
@@ -581,10 +597,13 @@ var SignupForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "doTheRightThing",
     value: function doTheRightThing(e) {
+      var _this3 = this;
+
       e.preventDefault();
       var user = Object.assign({}, this.state);
-      this.props.signup(user);
-      this.props.history.push("/movies");
+      this.props.signup(user).then(function () {
+        return _this3.props.history.push("/movies");
+      });
     }
   }, {
     key: "render",
@@ -612,7 +631,11 @@ var SignupForm = /*#__PURE__*/function (_React$Component) {
         type: "text",
         value: this.state.first_name,
         onChange: this.update('first_name')
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Last Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        id: "signup-first-name-error"
+      }, this.props.errors.filter(function (err) {
+        return err.includes("First name");
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Last Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.last_name,
         onChange: this.update('last_name')
@@ -622,11 +645,19 @@ var SignupForm = /*#__PURE__*/function (_React$Component) {
         type: "text",
         value: this.state.email,
         onChange: this.update('email')
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        id: "signup-email-error"
+      }, this.props.errors.filter(function (err) {
+        return err.includes("Email");
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "password",
         value: this.state.password,
         onChange: this.update('password')
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        id: "signup-password-error"
+      }, this.props.errors.filter(function (err) {
+        return err.includes("Password");
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         id: "signup-t-c"
       }, "By clicking \"SIGN UP\" you agree to the Terms of Use and Privacy Policy."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "signup-btn"
@@ -725,10 +756,7 @@ var MoviesIndex = /*#__PURE__*/function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(MoviesIndex).call(this, props));
     _this.rightThing = _this.rightThing.bind(_assertThisInitialized(_this));
     return _this;
-  } // componentDidMount() {
-  //     !!this.props.currentUser;
-  // }
-
+  }
 
   _createClass(MoviesIndex, [{
     key: "rightThing",
@@ -739,8 +767,6 @@ var MoviesIndex = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      debugger;
-
       if (this.props.currentUser) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Hello ", this.props.currentUser.first_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           onClick: this.rightThing
@@ -750,7 +776,7 @@ var MoviesIndex = /*#__PURE__*/function (_React$Component) {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, err);
         }));
       } else {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null);
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Waiting.....");
       }
     }
   }]);
