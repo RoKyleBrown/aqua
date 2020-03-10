@@ -3,24 +3,28 @@ import { Link } from 'react-router-dom';
 import ModalLoginFormContainer from './auth/modal_login_form_container';
 
 const SplashPage = (props) => {
-    return (<div>
+    return (<div className="splash-background">
         <div className="splash-container">
-            <div className="splash-nav">
-                <p id="logo-splash">AQUA</p>
-                <p ><button id="login-btn" onClick={(e) => {
-                    e.preventDefault();
-                    $(".login-modal").addClass("login-modal-open");
-                    $(".splash-container").addClass("splash-container-modal-open");
-                    }}>
-                    Log In
-                </button></p>
-            </div>
+            
+                <ul className="splash-nav" >
+                    <li id="logo-splash">AQUA</li>
+                    <li ><button id="login-btn" onClick={(e) => {
+                        e.preventDefault();
+                        $(".login-modal").addClass("login-modal-open");
+                        $(".splash-container")
+                            .addClass("splash-container-modal-open");
+                        }}>
+                        Log In
+                    </button></li>
+                </ul>
+            
             <div className="splash-background-top">
                     <h1 className="tagline">All Your Movies In One Place</h1>
-                    <p className="tag-sub">Watch thousands of your favorite movies, 
-                    with plans starting at $5.99/month.
+                    <p className="tag-sub">Watch thousands of your favorite 
+                    movies, with plans starting at $5.99/month.
                     
-                    <p id="hbo"> HBO®, SHOWTIME®, CINEMAX® and STARZ® available as add-ons.</p>
+                    <p id="hbo"> HBO®, SHOWTIME®, CINEMAX® and STARZ® available 
+                    as add-ons.</p>
                     </p>
                     <Link className="signup-btn"  to={`/users/new`}>Start Your 
                         Free Trial</Link>
@@ -45,9 +49,13 @@ const SplashPage = (props) => {
                     history={props.history} />
             </div>
         </div>
+        {window.addEventListener('scroll', (e) => {
+            e.preventDefault();
+        $(".splash-nav").addClass("splash-nav-scroll")
+      })}
     </div> )
 
-    
+    on
 }
 
 export default SplashPage;

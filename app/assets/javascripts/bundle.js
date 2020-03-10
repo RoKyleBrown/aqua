@@ -269,10 +269,13 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "doTheRightThing",
     value: function doTheRightThing(e) {
+      var _this3 = this;
+
       e.preventDefault();
       var user = Object.assign({}, this.state);
-      this.props.login(user);
-      this.props.history.push('/movies');
+      this.props.login(user).then(function () {
+        return _this3.props.history.push('/movies');
+      });
     }
   }, {
     key: "render",
@@ -284,7 +287,10 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         id: "logo-login-page",
         to: '/'
-      }, "aqua"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "aqua")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        id: "signup-login-btn",
+        to: "/session/login"
+      }, "Log In"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "login-page-form-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Log in"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "login-page-form",
@@ -303,7 +309,11 @@ var LoginForm = /*#__PURE__*/function (_React$Component) {
         type: "password",
         value: this.state.password,
         onChange: this.update('password')
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        id: "login-page-error-message"
+      }, this.props.errors.filter(function (err) {
+        return err.includes("username");
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "login-page-btn"
       }, "Log In"))));
     }
@@ -631,7 +641,11 @@ var SignupForm = /*#__PURE__*/function (_React$Component) {
         type: "text",
         value: this.state.first_name,
         onChange: this.update('first_name')
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Last Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        id: "signup-first-name-error"
+      }, this.props.errors.filter(function (err) {
+        return err.includes("First name");
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Last Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.last_name,
         onChange: this.update('last_name')
@@ -641,19 +655,7 @@ var SignupForm = /*#__PURE__*/function (_React$Component) {
         type: "text",
         value: this.state.email,
         onChange: this.update('email')
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "password",
-        value: this.state.password,
-        onChange: this.update('password')
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        id: "signup-t-c"
-      }, "By clicking \"SIGN UP\" you agree to the Terms of Use and Privacy Policy."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "signup-btn"
-      }, "Sign Up")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        id: "signup-first-name-error"
-      }, this.props.errors.filter(function (err) {
-        return err.includes("First name");
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         id: "signup-email-error"
       }, this.props.errors.filter(function (err) {
         return err.includes("Email can't");
@@ -661,11 +663,21 @@ var SignupForm = /*#__PURE__*/function (_React$Component) {
         id: "signup-email-error2"
       }, this.props.errors.filter(function (err) {
         return err.includes("Email has");
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "password",
+        value: this.state.password,
+        onChange: this.update('password')
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         id: "signup-password-error"
       }, this.props.errors.filter(function (err) {
         return err.includes("Password");
-      }))));
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        id: "signup-t-c"
+      }, "By clicking \"SIGN UP\" you agree to the Terms of Use and Privacy Policy."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "signup-btn"
+      }, "Sign Up"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "errors-container"
+      }));
     }
   }]);
 
@@ -890,13 +902,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var SplashPage = function SplashPage(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "splash-container"
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "splash-background"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "splash-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "splash-nav"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     id: "logo-splash"
-  }, "AQUA"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, "AQUA"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     id: "login-btn",
     onClick: function onClick(e) {
       e.preventDefault();
@@ -931,7 +945,11 @@ var SplashPage = function SplashPage(props) {
     className: "login-modal-background"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_auth_modal_login_form_container__WEBPACK_IMPORTED_MODULE_2__["default"], {
     history: props.history
-  }))));
+  }))), window.addEventListener('scroll', function (e) {
+    e.preventDefault();
+    $(".splash-nav").addClass("splash-nav-scroll");
+  }));
+  on;
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SplashPage);

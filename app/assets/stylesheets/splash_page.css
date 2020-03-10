@@ -11,9 +11,6 @@
 
 
 
-html {
-    margin: 0; 
-}
  .splash-container {  /* hero */
     background-image: url(man-tv.png);
     background-position: center;
@@ -24,13 +21,35 @@ html {
     /* z-index: -1; */
 }
 .splash-nav {
+    color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-left: 3%;
-    margin-right: 4%;
+    height: 45px;
+    margin: 0%;
+    padding: 1%;
+    list-style: none;
+    position: fixed;
+    width: 100%;
+    z-index: 6;
 }
+
+.splash-nav-scroll {
+    /* background-color: black ; */
+    /* position: fixed; */
+    /* width: 100%; */
+}
+
+.splash-nav li {
+    margin-inline-end: 2.34%;
+    margin-inline-start: 1%;
+}
+
+#login-btn {
+    margin-top: 1%;
+}
+
 
  #logo-splash {
     font-family: 'futura';
@@ -121,9 +140,9 @@ html {
 /* .splash-buffer {
     background-image: linear-gradient(to right, #021623 , #1c4d5b);
     height: 150px;
-    transform: translateY(532px);
-    position: relative;
-    z-index: -1;
-}
- */
+    transform: translateY(590px);
+    position: static;
+    z-index: 4;
+} */
+
 
