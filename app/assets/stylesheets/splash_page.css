@@ -30,19 +30,20 @@
     margin: 0%;
     padding: 1%;
     list-style: none;
-    position: fixed;
+    position: absolute;
     width: 100%;
     z-index: 6;
 }
 
 .splash-nav-scroll {
-    /* background-color: black ; */
-    /* position: fixed; */
-    /* width: 100%; */
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    opacity: 90%;
 }
 
 .splash-nav li {
-    margin-inline-end: 2.34%;
+    margin-inline-end: 4.35%;
     margin-inline-start: 1%;
 }
 
@@ -51,12 +52,16 @@
 }
 
 
- #logo-splash {
+ .logo-splash {
     font-family: 'futura';
     font-size: 26px;
     text-transform: lowercase;
     font-weight: 900;
     color: white;
+ }
+
+ .logo-splash-scroll {
+     color: black;
  }
 
   #login-btn {

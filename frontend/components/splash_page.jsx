@@ -7,12 +7,12 @@ const SplashPage = (props) => {
         <div className="splash-container">
             
                 <ul className="splash-nav" >
-                    <li id="logo-splash">AQUA</li>
+                    <li className="logo-splash">AQUA</li>
                     <li ><button id="login-btn" onClick={(e) => {
                         e.preventDefault();
                         $(".login-modal").addClass("login-modal-open");
                         $(".splash-container")
-                            .addClass("splash-container-modal-open");
+                        .addClass("splash-container-modal-open");
                         }}>
                         Log In
                     </button></li>
@@ -51,8 +51,78 @@ const SplashPage = (props) => {
         </div>
         {window.addEventListener('scroll', (e) => {
             e.preventDefault();
-        $(".splash-nav").addClass("splash-nav-scroll")
+        $(".splash-nav").addClass("splash-nav-scroll");
+        $(".logo-splash").addClass("logo-splash-scroll");
       })}
+
+        {window.addEventListener('scroll', (e) => {
+                e.preventDefault();
+                if (window.scrollY === 0) {
+                    $(".splash-nav").removeClass("splash-nav-scroll");
+                    $(".logo-splash").removeClass("logo-splash-scroll");
+                }
+        })}
+
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
     </div> )
 
     on

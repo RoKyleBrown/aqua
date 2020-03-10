@@ -11,7 +11,9 @@ class ModalLoginForm extends React.Component {
         }
         this.doTheRightThing = this.doTheRightThing.bind(this);
         this.demoLogIn = this.demoLogIn.bind(this);
+
     }
+   
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value})
     }
@@ -19,8 +21,7 @@ class ModalLoginForm extends React.Component {
         e.preventDefault();
         const user = Object.assign( {}, this.state)
         this.props.login(user)
-        //.then(() => this.loggedIn())
-        .then(() => this.props.history.push('/movies'));  
+            .then(() => this.props.history.push('/movies'));  
     }
     demoLogIn(e) {
         e.preventDefault();
@@ -29,7 +30,7 @@ class ModalLoginForm extends React.Component {
             password: '123asd'
         }
         this.props.login(guest)
-         .then(() => this.props.history.push('/movies'));
+            .then(() => this.props.history.push('/movies'));
     }
     loggedIn (e) {
         e.preventDefault();
