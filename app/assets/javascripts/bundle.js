@@ -977,7 +977,14 @@ var MoviesIndexItem = function MoviesIndexItem(props) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, props.movie.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: props.movie.imageUrl,
     alt: "GF"
-  }));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
+    width: "360",
+    height: "640",
+    controls: true
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("source", {
+    src: "test-vid.mp4",
+    type: "video/mp4"
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (MoviesIndexItem);
