@@ -21,7 +21,7 @@
      position: fixed;
      /* transform: translateY(-150px); */
      transform: translateY(50px);
-     z-index: 7;
+     z-index: 26;
      overflow-y: scroll;
  }
 
@@ -32,6 +32,7 @@
      transition-duration: 0.4s;
      background-color: white;
      position: absolute;
+     z-index: -1;
  }
  .login-modal-container {
      width: 375px;
@@ -57,9 +58,13 @@
      cursor: pointer;
  }
 
- .splash-container-modal-open {  /* hero */
+ .splash-background-modal-open { 
     transition-duration: 0.4s;
     filter: brightness(50%);
+}
+
+.login-modal-open {
+    filter: brightness(100%);
 }
 
 .login-modal-form {
@@ -143,6 +148,8 @@
     font-family: "Graphik Web Bold";
     transform: translateY(170%) translateX(2%);
     text-transform: capitalize;
+    z-index: 10;
+    color: black;
 
 }
 

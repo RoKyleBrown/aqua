@@ -38,7 +38,7 @@ h3 {
     position: fixed;
     /* transform: translateY(-12.594px); */
     width: 100%;
-    transition: 1.35s;
+    /* transition: 1.35s; */
 }
 
 .nav-left {

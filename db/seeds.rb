@@ -8,9 +8,16 @@
 
 #16:9, 9:16
 
+Movie.destroy_all
 
-    Movie.create(
+
+m1 = Movie.create(
     title: "The Godfather",
     description: "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son . . .",
     imageUrl: "lkasjl"
-    )   
+)   
+m2 = Movie.create(
+    title: "Pulp Fiction",
+    description: "Starring John Travolta, Samuel L. Jackson, Bruce Willis, Tim Roth, Ving Rhames, and Uma Thurman, it tells several stories of criminal Los Angeles.",
+    imageUrl: "lkasjl"
+)   

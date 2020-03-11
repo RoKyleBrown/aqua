@@ -52,7 +52,7 @@
 }
 
 .signup-background {
-    background-image: url(../hulu.png);
+    /* background-image: url(../hulu.png); */
     background-position: center;
     background-size: contain;
     /* background-repeat: no-repeat; */
