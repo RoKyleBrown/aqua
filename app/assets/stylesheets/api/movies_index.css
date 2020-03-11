@@ -21,7 +21,7 @@
     transition: 1.35s;
     position: absolute;
     width: 100%;
-    z-index: 67;
+    z-index: 76;
     /* transform: translateY(-12.594px); */
 }
 
@@ -106,6 +106,7 @@ h3 {
     flex-direction: column;
     justify-content: space-evenly;
     position: fixed;
+    z-index: 75;
 }
 
 .user-dropdown li {
@@ -125,4 +126,9 @@ h3 {
 
 .user-btn {
     cursor: pointer;
+}
+
+["MoviesIndexItem"]  {
+    z-index: -1;
+    position: static;
 }

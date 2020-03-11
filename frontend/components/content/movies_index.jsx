@@ -1,11 +1,15 @@
 import React from "react";
-import Route from "react-router-dom";
+import MoviesIndexItem from './movies_index_item';
 
 
 class MoviesIndex extends React.Component {
     constructor(props){
         super(props);
         this.rightThing = this.rightThing.bind(this)
+    }
+
+    componentDidMount() {
+        this.props.fetchMovies()
     }
 
     rightThing() {
@@ -58,7 +62,12 @@ class MoviesIndex extends React.Component {
                     <br />
                     <br />
                     <br />
-
+                    {this.props.movies.map( movie =>
+                            <MoviesIndexItem 
+                                className ="item-container"
+                                movie={movie}
+                            />
+                        )}
                     <h3>Hello {this.props.currentUser.first_name}</h3>
                     <button onClick={this.rightThing}>Log Out
                     </button>
@@ -118,15 +127,6 @@ class MoviesIndex extends React.Component {
                 </div>
             )
         }
-            else if (this.props.errors.length) {
-                return (
-                    <div>
-                        {this.props.errors.map( err => 
-                                <ul>{err}</ul>
-                            )}
-                    </div>
-                )
-            }
         else {
             return (
                 <div>Waiting.....</div>

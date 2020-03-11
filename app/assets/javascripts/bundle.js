@@ -86,6 +86,55 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./frontend/actions/movie_actions.js":
+/*!*******************************************!*\
+  !*** ./frontend/actions/movie_actions.js ***!
+  \*******************************************/
+/*! exports provided: RECEIVE_MOVIES, RECEIVE_MOVIE, fetchMovies, fetchMovie */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_MOVIES", function() { return RECEIVE_MOVIES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_MOVIE", function() { return RECEIVE_MOVIE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchMovies", function() { return fetchMovies; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchMovie", function() { return fetchMovie; });
+/* harmony import */ var _util_movie_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/movie_api_util */ "./frontend/util/movie_api_util.js");
+
+var RECEIVE_MOVIES = 'RECEIVE_MOVIES';
+var RECEIVE_MOVIE = 'RECEIVE_MOVIE';
+
+var receiveMovies = function receiveMovies(movies) {
+  return {
+    type: RECEIVE_MOVIES,
+    movies: movies
+  };
+};
+
+var receiveMovie = function receiveMovie(movie) {
+  return {
+    type: RECEIVE_MOVIE,
+    movie: movie
+  };
+};
+
+var fetchMovies = function fetchMovies() {
+  return function (dispatch) {
+    return _util_movie_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchMovies"]().then(function (movies) {
+      return dispatch(receiveMovies(movies));
+    });
+  };
+};
+var fetchMovie = function fetchMovie(movieId) {
+  return function (dispatch) {
+    return _util_movie_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchMovie"](movieId).then(function (movie) {
+      return dispatch(receiveMovie(movie));
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/actions/session_actions.js":
 /*!*********************************************!*\
   !*** ./frontend/actions/session_actions.js ***!
@@ -748,7 +797,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _movies_index_item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./movies_index_item */ "./frontend/components/content/movies_index_item.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -784,6 +833,11 @@ var MoviesIndex = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(MoviesIndex, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.fetchMovies();
+    }
+  }, {
     key: "rightThing",
     value: function rightThing() {
       this.props.logout(this.props.currentUser);
@@ -829,7 +883,12 @@ var MoviesIndex = /*#__PURE__*/function (_React$Component) {
             $(".nav-main").removeClass("nav-main-scroll");
             $(".nav-logo").removeClass("nav-logo-scroll");
           }
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Hello ", this.props.currentUser.first_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.props.movies.map(function (movie) {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_movies_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
+            className: "item-container",
+            movie: movie
+          });
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Hello ", this.props.currentUser.first_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           onClick: this.rightThing
         }, "Log Out"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "user-dropdown-flex",
@@ -842,10 +901,6 @@ var MoviesIndex = /*#__PURE__*/function (_React$Component) {
           id: "logout-dropdown",
           onClick: this.rightThing
         }, "Log Out"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
-      } else if (this.props.errors.length) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.props.errors.map(function (err) {
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, err);
-        }));
       } else {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Waiting.....");
       }
@@ -870,7 +925,9 @@ var MoviesIndex = /*#__PURE__*/function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/session_actions */ "./frontend/actions/session_actions.js");
-/* harmony import */ var _movies_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./movies_index */ "./frontend/components/content/movies_index.jsx");
+/* harmony import */ var _actions_movie_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/movie_actions */ "./frontend/actions/movie_actions.js");
+/* harmony import */ var _movies_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./movies_index */ "./frontend/components/content/movies_index.jsx");
+
 
 
 
@@ -878,32 +935,52 @@ __webpack_require__.r(__webpack_exports__);
 var mapStateProps = function mapStateProps(state) {
   return {
     currentUser: state.entities.users[state.session.id],
-    errors: state.errors.session
+    movies: Object.values(state.entities.movies)
   };
 };
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  // login: user => dispatch(login(user)),
   return {
-    login: function (_login) {
-      function login(_x) {
-        return _login.apply(this, arguments);
-      }
-
-      login.toString = function () {
-        return _login.toString();
-      };
-
-      return login;
-    }(function (user) {
-      return dispatch(login(user));
-    }),
+    fetchMovies: function fetchMovies(movies) {
+      return dispatch(Object(_actions_movie_actions__WEBPACK_IMPORTED_MODULE_2__["fetchMovies"])(movies));
+    },
+    fetchMovie: function fetchMovie(movieId) {
+      return dispatch(Object(_actions_movie_actions__WEBPACK_IMPORTED_MODULE_2__["fetchMovie"])(movieId));
+    },
     logout: function logout(user) {
       return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_1__["logout"])(user));
     }
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateProps, mapDispatchToProps)(_movies_index__WEBPACK_IMPORTED_MODULE_2__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateProps, mapDispatchToProps)(_movies_index__WEBPACK_IMPORTED_MODULE_3__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/content/movies_index_item.jsx":
+/*!***********************************************************!*\
+  !*** ./frontend/components/content/movies_index_item.jsx ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var MoviesIndexItem = function MoviesIndexItem(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "movie-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, props.movie.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: props.movie.imageUrl,
+    alt: "GF"
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (MoviesIndexItem);
 
 /***/ }),
 
@@ -1084,11 +1161,14 @@ document.addEventListener("DOMContentLoaded", function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-/* harmony import */ var _users_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./users_reducer */ "./frontend/reducers/users_reducer.js");
+/* harmony import */ var _movies_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./movies_reducer */ "./frontend/reducers/movies_reducer.js");
+/* harmony import */ var _users_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./users_reducer */ "./frontend/reducers/users_reducer.js");
+
 
 
 var entitiesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  users: _users_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+  users: _users_reducer__WEBPACK_IMPORTED_MODULE_2__["default"],
+  movies: _movies_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (entitiesReducer);
 
@@ -1111,6 +1191,41 @@ var errorsReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"]
   session: _session_errors_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (errorsReducer);
+
+/***/ }),
+
+/***/ "./frontend/reducers/movies_reducer.js":
+/*!*********************************************!*\
+  !*** ./frontend/reducers/movies_reducer.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_movie_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/movie_actions */ "./frontend/actions/movie_actions.js");
+
+
+var moviesReducer = function moviesReducer() {
+  var oldState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(oldState);
+  var nextState = Object.assign({}, oldState);
+
+  switch (action.type) {
+    case _actions_movie_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_MOVIES"]:
+      return action.movies;
+
+    case _actions_movie_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_MOVIE"]:
+      nextState[action.movie.id] = action.movie;
+      return nextState;
+
+    default:
+      return oldState;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (moviesReducer);
 
 /***/ }),
 
@@ -1266,6 +1381,36 @@ var configureStore = function configureStore() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (configureStore);
+
+/***/ }),
+
+/***/ "./frontend/util/movie_api_util.js":
+/*!*****************************************!*\
+  !*** ./frontend/util/movie_api_util.js ***!
+  \*****************************************/
+/*! exports provided: fetchMovies, fetchMovie */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchMovies", function() { return fetchMovies; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchMovie", function() { return fetchMovie; });
+var fetchMovies = function fetchMovies() {
+  return $.ajax({
+    url: "/api/movies",
+    error: function error(err) {
+      return console.log(err);
+    }
+  });
+};
+var fetchMovie = function fetchMovie(movieId) {
+  return $.ajax({
+    url: "/api/movies/".concat(movieId),
+    error: function error(err) {
+      return console.log(err);
+    }
+  });
+};
 
 /***/ }),
 

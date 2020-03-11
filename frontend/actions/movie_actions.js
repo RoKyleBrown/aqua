@@ -15,10 +15,10 @@ const receiveMovie = (movie) => ({
 })
 
 
-export const fetchMovies = () =>  (dispatch) => (
-    APIUtil.fetchMovies()
+export const fetchMovies = () =>  (dispatch) => {
+  return  APIUtil.fetchMovies()
         .then((movies) => dispatch(receiveMovies(movies)))
-)
+}
 
 export const fetchMovie = (movieId) => (dispatch) => (
     APIUtil.fetchMovie(movieId)

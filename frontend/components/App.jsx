@@ -16,7 +16,6 @@ const App = () => {
 
         return null;
     }
-    
     return ( <div>
         <ScrollToTopOnMount />
         <Switch>

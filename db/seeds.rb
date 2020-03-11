@@ -14,7 +14,7 @@ Movie.destroy_all
 m1 = Movie.create(
     title: "The Godfather",
     description: "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son . . .",
-    imageUrl: "lkasjl"
+    imageUrl: "godfather-1@0,25x.png"
 )   
 m2 = Movie.create(
     title: "Pulp Fiction",

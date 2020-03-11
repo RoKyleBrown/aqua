@@ -13,7 +13,6 @@ class Api::MoviesController < ApplicationController
 
     def create
         @movie = Movie.new(movie_params)
-        debugger
             if @movie.save
             render :show
             else
