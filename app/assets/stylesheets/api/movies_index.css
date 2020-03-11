@@ -1,0 +1,128 @@
+ /* black #00000    */
+ /* NAVY #010116    */
+ /* teal #16b9be    */
+ /* magenta #cc038f    */
+ /* white #ffff    */
+ /* night #021623  */
+ /* light-gray #bfbfbf */
+ /* magenta hover #5e1638  */
+ /*  charcoal #1b1a1b    */
+
+
+.nav-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: none;
+    color: white;
+    height: 45px;
+    padding: 1%;
+    transition: 1.35s;
+    position: absolute;
+    width: 100%;
+    z-index: 67;
+    /* transform: translateY(-12.594px); */
+}
+
+h3 {
+    color: white;
+}
+
+.app-background {
+    background-color: #010116;
+}
+
+.nav-main-scroll {
+    background-color: #021623;
+    position: fixed;
+    /* transform: translateY(-12.594px); */
+    width: 100%;
+    transition: 1.35s;
+}
+
+.nav-left {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    list-style: none;
+    transform: translateX(-40px);
+    align-items: center;
+}
+
+.nav-right {
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+    list-style: none;
+}
+
+.nav-main li:not(.nav-logo) {
+    margin-left: 20px;
+    margin-right: 20px;
+     text-transform: uppercase;
+     font-family: "Graphik Web Regular";
+     text-decoration: none;
+     letter-spacing: 1.2px;
+     font-size: 14px;
+}
+
+.nav-logo {
+    font-family: 'futura';
+    font-size: 26px;
+    text-transform: lowercase;
+    font-weight: 900;
+    color: #cc038f;
+    transform: translateY(-3px);
+    margin-right: 10px;
+}
+
+.nav-logo-scroll {
+    color: white;
+}
+
+
+.user-dropdown-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.user-dropdown-no-select {
+    display: none;
+}
+
+.user-dropdown {
+    color: white;
+    background: #021623;
+    list-style: none;
+    font-family: "Graphik Web Regular";
+    font-size: 13px;
+    height: 250px;
+    width: 150px;
+    transform: translateY(-85px) translateX(-12px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+}
+
+.user-dropdown li {
+    filter: brightness(80%);
+}
+
+.line-top {
+    padding-top: 13px;
+    transform: translateX(-20px) scaleX(1.2626);
+    /* width: 125.36%; */   
+}
+
+#logout-dropdown:hover {
+    cursor: pointer;
+    filter: brightness(100%);
+}
+
+.user-btn {
+    cursor: pointer;
+}

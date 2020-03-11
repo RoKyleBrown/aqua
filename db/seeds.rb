@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+#16:9, 9:16
+
+
+    Movie.create(
+    title: "The Godfather",
+    description: "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son . . .",
+    imageUrl: "lkasjl"
+    )   

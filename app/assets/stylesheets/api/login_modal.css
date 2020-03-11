@@ -18,10 +18,11 @@
      justify-content: center;
      height: 535px;
      width: 100%;
-     position: absolute;
+     position: fixed;
      /* transform: translateY(-150px); */
      transform: translateY(50px);
      z-index: 7;
+     overflow-y: scroll;
  }
 
  .login-modal-background {

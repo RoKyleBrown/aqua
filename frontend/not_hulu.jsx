@@ -7,8 +7,7 @@ import { login, signup } from './actions/session_actions'
 document.addEventListener("DOMContentLoaded", () => {
     // const store = configureStore();
     window.login = login;
-    window.signup = signup
-    
+    window.signup = signup;
 
     // TESTING START
     // window.getState = store.getState;
@@ -24,9 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
             session: { id: window.currentUser.id }
         };
         store = configureStore(preloadedState);
+        window.getState = store.getState;
         delete window.currentUser;
     } else {
         store = configureStore();
+        window.getState = store.getState;
     }
 
     const root = document.getElementById("root");

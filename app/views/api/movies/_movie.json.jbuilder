@@ -1,2 +1,1 @@
-json.extract! movie, :id, :title, :description
-json.
+json.extract! movie, :id, :description, :title, :imageUrl

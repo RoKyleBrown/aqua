@@ -5,14 +5,23 @@ import SignupFormContainer from './auth/signup_form_container';
 import {Switch, Route} from 'react-router-dom';
 import SplashPage from './splash_page'
 import { AuthRoute, ProtectedRoute } from '../util/route_util'
-
+import { withRouter } from "react-router";
+import { useEffect } from "react"
 const App = () => {
+
+    function ScrollToTopOnMount() {
+        useEffect(() => {
+            window.scrollTo(0, 0);
+        }, []);
+
+        return null;
+    }
     
     return ( <div>
-        
+        <ScrollToTopOnMount />
         <Switch>
             <Route exact path="/" component={SplashPage}/>
-            <Route exact path="/session/login" component={LoginFormContainer}/>
+            <AuthRoute exact path="/session/login" component={LoginFormContainer}/>
             <AuthRoute exact path="/users/new" component={SignupFormContainer} />
             <Route exact path="/movies" component={MoviesIndexContainer} />
          </Switch>
@@ -20,7 +29,7 @@ const App = () => {
     </div> )
 };
 
-export default App;
+export default withRouter(App);
 
 
 //login modal
