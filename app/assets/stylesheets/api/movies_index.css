@@ -127,8 +127,3 @@ h3 {
 .user-btn {
     cursor: pointer;
 }
-
-["MoviesIndexItem"]  {
-    z-index: -1;
-    position: static;
-}
