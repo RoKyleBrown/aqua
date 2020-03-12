@@ -19,7 +19,7 @@
     height: 45px;
     padding: 1%;
     transition: 1.35s;
-    position: absolute;
+    position: relative;
     width: 100%;
     z-index: 76;
     /* transform: translateY(-12.594px); */

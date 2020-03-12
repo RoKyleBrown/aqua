@@ -1,5 +1,5 @@
 import React from "react";
-import MoviesIndexItem from './movies_index_item';
+import FeaturedItem from './Featured_Item';
 
 
 class MoviesIndex extends React.Component {
@@ -62,15 +62,6 @@ class MoviesIndex extends React.Component {
                     <br />
                     <br />
                     <br />
-                    {this.props.movies.map( movie =>
-                            <MoviesIndexItem 
-                                className ="item-container"
-                                movie={movie}
-                            />
-                        )}
-                    <h3>Hello {this.props.currentUser.first_name}</h3>
-                    <button onClick={this.rightThing}>Log Out
-                    </button>
 
                     <div className="user-dropdown-flex"
                          onMouseLeave={this.dropdownUp}>
@@ -83,6 +74,13 @@ class MoviesIndex extends React.Component {
                             onClick={this.rightThing}>Log Out</li>
                         </ul>
                     </div>
+
+                    {this.props.movies.map(movie =>
+                        <FeaturedItem
+                            className="item-container"
+                            movie={movie}
+                        />
+                    )}
 
                     <br/>
                     <br/>

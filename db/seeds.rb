@@ -14,10 +14,14 @@ Movie.destroy_all
 m1 = Movie.create(
     title: "The Godfather",
     description: "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son . . .",
-    imageUrl: "godfather-1@0,25x.png"
+    imageUrl: "godfather.png",
+    feature: true,
+    top_feature: true
 )   
 m2 = Movie.create(
     title: "Pulp Fiction",
     description: "Starring John Travolta, Samuel L. Jackson, Bruce Willis, Tim Roth, Ving Rhames, and Uma Thurman, it tells several stories of criminal Los Angeles.",
-    imageUrl: "lkasjl"
+    imageUrl: "lkasjl",
+    feature: false,
+    top_feature: false
 )   

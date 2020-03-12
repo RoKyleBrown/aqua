@@ -4,6 +4,7 @@ import { fetchMovies, fetchMovie } from '../../actions/movie_actions';
 import MoviesIndex from './movies_index';
 
 const mapStateProps = (state) => {
+    debugger;
     return {
         
         currentUser: state.entities.users[state.session.id],
