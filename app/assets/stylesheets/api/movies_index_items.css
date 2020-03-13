@@ -1,21 +1,39 @@
 h1 {
     color: white;
 }
-
+.movie-container {
+    width: 100%;
+}
 .featured-items img{
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    overflow: hidden;
     overflow-x: hidden;
     overflow-y: hidden;
     background-size: contain;
-    width: 100%;
+    overflow: hidden;
     z-index: 1;
     transform: scale(1);
-    transition: 2.3s;
+    animation-name: zoom;
+    animation-duration: 2.3s;
+    animation-fill-mode: forwards;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(1,1);
+        width: 100%;
+        overflow: hidden;
+        }
+    to {
+        transform: scale(1.03,1.03);
+        width: 100%;
+        overflow: hidden;
+        }
 }
 
 /* .featured-items-load img {
@@ -43,7 +61,6 @@ h1 {
     transform: translateY(94%);
     margin-left: 3%;
     margin-right: 3%;
-    object-fit: cover;
     list-style: none;
 }
 
@@ -57,4 +74,10 @@ h1 {
     background-size: center;
     width: 100%;
     height: 100%;
+    transition: .5s;
+}
+
+.sub-items img:hover {
+    transform: scale(1.027);
+    transition: .5s;
 }

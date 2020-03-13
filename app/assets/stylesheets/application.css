@@ -66,3 +66,8 @@ input[type=password]:focus{
   outline: 2px solid black;
   box-shadow: 0 0 0 1px black;
 }
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}

@@ -7,16 +7,11 @@ class MoviesIndex extends React.Component {
     constructor(props){
         super(props);
         this.rightThing = this.rightThing.bind(this)
-        this.state = {
-            appClass: 'myClass'
-        };
+        this.zoom = this.zoom.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchMovies();
-    }
-    componentWillMount() {
-            $(".featured-items").addClass("featured-items-load");
     }
 
     rightThing() {
@@ -31,6 +26,10 @@ class MoviesIndex extends React.Component {
     dropdownUp(e) {
         e.preventDefault();
         $(".user-dropdown-no-select").removeClass("user-dropdown")
+    }
+    zoom(e) {
+        e.preventDefault();
+        $(".featured-items").addClass("featured-items-load");
     }
     render () {
         if (this.props.currentUser) {
@@ -55,10 +54,6 @@ class MoviesIndex extends React.Component {
                         $(".nav-main").addClass("nav-main-scroll");
                         $(".nav-logo").addClass("nav-logo-scroll");
                     })}
-                    {/* {window.addEventListener('load', (e) => {
-                        e.preventDefault();
-                        $(".featured-items").addClass("featured-items-load");
-                    })} */}
 
                     {window.addEventListener('scroll', (e) => {
                         e.preventDefault();

@@ -1028,9 +1028,7 @@ var MoviesIndex = /*#__PURE__*/function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(MoviesIndex).call(this, props));
     _this.rightThing = _this.rightThing.bind(_assertThisInitialized(_this));
-    _this.state = {
-      appClass: 'myClass'
-    };
+    _this.zoom = _this.zoom.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -1038,11 +1036,6 @@ var MoviesIndex = /*#__PURE__*/function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchMovies();
-    }
-  }, {
-    key: "componentWillMount",
-    value: function componentWillMount() {
-      $(".featured-items").addClass("featured-items-load");
     }
   }, {
     key: "rightThing",
@@ -1061,6 +1054,12 @@ var MoviesIndex = /*#__PURE__*/function (_React$Component) {
     value: function dropdownUp(e) {
       e.preventDefault();
       $(".user-dropdown-no-select").removeClass("user-dropdown");
+    }
+  }, {
+    key: "zoom",
+    value: function zoom(e) {
+      e.preventDefault();
+      $(".featured-items").addClass("featured-items-load");
     }
   }, {
     key: "render",

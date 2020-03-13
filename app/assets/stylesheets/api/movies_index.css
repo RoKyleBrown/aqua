@@ -102,7 +102,7 @@
     font-size: 13px;
     height: 250px;
     width: 150px;
-    transform: translateY(-85px) translateX(-12px);
+    transform: translateY(-18px) translateX(-12px);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
