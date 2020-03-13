@@ -60,9 +60,6 @@
     width: 100%;
 }
 
-.signup-form-container {
-
-}
 
 .signup-form-container :not(.signup-btn) {
     display: flex;
@@ -81,6 +78,13 @@
 .signup-form-container p:nth-child(2) {
     font-size: 14px;
     margin-bottom: 3%;
+}
+
+.signup-form {
+    position: absolute;
+    z-index: -1;
+    left: 50px;
+    right: 50px;
 }
 
 .signup-form .signup-form-background {
@@ -129,6 +133,7 @@
 }
 #signup-first-name {
     transform: translateX(-341%);
+    
 }
 
 

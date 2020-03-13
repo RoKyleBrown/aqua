@@ -1,8 +1,17 @@
 .video-container {
     justify-content: center;
+    height: 1000px;
+    background-color: black;
+}
+
+.video-container:hover {
+    background-color: #010116;
 }
 
 #show-video {
     width: 100%;
-    height: 56.25%;
+    height: auto;
+    outline: none;
+    position: absolute;
+    transform: translateY(15.3%);
 }

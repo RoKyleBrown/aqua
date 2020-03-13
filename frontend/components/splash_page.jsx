@@ -50,8 +50,6 @@ const SplashPage = (props) => {
                     }
             })}
 
-        
-
 
             <br/>
             <br/>
@@ -115,6 +113,9 @@ const SplashPage = (props) => {
                     <ModalLoginFormContainer
                         history={props.history} />
                 </div>
+            </div>
+            <div className="background-continue">
+
             </div>
     </div>)
 

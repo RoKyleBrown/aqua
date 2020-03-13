@@ -13,6 +13,11 @@
     background-color: #021623;
 }
 
+.background-continue {
+    background-color: #021623;
+    height: 1500px;
+}
+
  .splash-container {  /* hero */
     background-image: url(man-tv.png);
     background-position: center;

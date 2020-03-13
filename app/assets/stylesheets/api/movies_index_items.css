@@ -80,4 +80,5 @@ h1 {
 .sub-items img:hover {
     transform: scale(1.027);
     transition: .5s;
+    cursor: pointer;
 }

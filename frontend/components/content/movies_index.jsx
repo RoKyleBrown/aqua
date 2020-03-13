@@ -90,11 +90,9 @@ class MoviesIndex extends React.Component {
                             )}
                         </div>
                             <div className="sub-items">
-                                {this.props.movies.map(movie =>
                                     <FeaturedItems
-                                        movie={movie}
+                                        movies={this.props.movies}
                                     />
-                                )}
                         </div>
                     </div>
 
