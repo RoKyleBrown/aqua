@@ -16,12 +16,14 @@ m1 = Movie.create(
     description: "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son . . .",
     imageUrl: "godfather.png",
     feature: true,
-    top_feature: true
+    top_feature: true,
+    video: "TheGodfather.mp4"
 )   
 m2 = Movie.create(
     title: "Pulp Fiction",
     description: "Starring John Travolta, Samuel L. Jackson, Bruce Willis, Tim Roth, Ving Rhames, and Uma Thurman, it tells several stories of criminal Los Angeles.",
-    imageUrl: "lkasjl",
-    feature: false,
-    top_feature: false
+    imageUrl: "pulp-fiction.png",
+    feature: true,
+    top_feature: false,
+    video: "PulpFiction.mp4"
 )   

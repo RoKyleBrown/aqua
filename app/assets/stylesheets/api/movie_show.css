@@ -1,0 +1,8 @@
+.video-container {
+    justify-content: center;
+}
+
+#show-video {
+    width: 100%;
+    height: 56.25%;
+}

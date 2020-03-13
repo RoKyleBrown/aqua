@@ -19,18 +19,19 @@
     height: 45px;
     padding: 1%;
     transition: 1.35s;
-    position: relative;
+    position: absolute;
     width: 100%;
     z-index: 76;
     /* transform: translateY(-12.594px); */
 }
 
-h3 {
+/* h3 {
     color: white;
-}
+} */
 
 .app-background {
     background-color: #010116;
+    height: 2000px;
 }
 
 .nav-main-scroll {

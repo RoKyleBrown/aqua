@@ -1,15 +1,22 @@
 import React from "react";
 import FeaturedItem from './Featured_Item';
+import FeaturedItems from './featured_items'
 
 
 class MoviesIndex extends React.Component {
     constructor(props){
         super(props);
         this.rightThing = this.rightThing.bind(this)
+        this.state = {
+            appClass: 'myClass'
+        };
     }
 
     componentDidMount() {
-        this.props.fetchMovies()
+        this.props.fetchMovies();
+    }
+    componentWillMount() {
+            $(".featured-items").addClass("featured-items-load");
     }
 
     rightThing() {
@@ -25,7 +32,6 @@ class MoviesIndex extends React.Component {
         e.preventDefault();
         $(".user-dropdown-no-select").removeClass("user-dropdown")
     }
-
     render () {
         if (this.props.currentUser) {
             return (
@@ -49,6 +55,10 @@ class MoviesIndex extends React.Component {
                         $(".nav-main").addClass("nav-main-scroll");
                         $(".nav-logo").addClass("nav-logo-scroll");
                     })}
+                    {/* {window.addEventListener('load', (e) => {
+                        e.preventDefault();
+                        $(".featured-items").addClass("featured-items-load");
+                    })} */}
 
                     {window.addEventListener('scroll', (e) => {
                         e.preventDefault();
@@ -74,13 +84,24 @@ class MoviesIndex extends React.Component {
                             onClick={this.rightThing}>Log Out</li>
                         </ul>
                     </div>
-
-                    {this.props.movies.map(movie =>
-                        <FeaturedItem
-                            className="item-container"
-                            movie={movie}
-                        />
-                    )}
+                    <div > 
+                        <div className="featured-items"
+                        >
+                            {this.props.movies.map(movie =>
+                               <FeaturedItem
+                                    className="item-container"
+                                    movie={movie}
+                                />
+                            )}
+                        </div>
+                            <div className="sub-items">
+                                {this.props.movies.map(movie =>
+                                    <FeaturedItems
+                                        movie={movie}
+                                    />
+                                )}
+                        </div>
+                    </div>
 
                     <br/>
                     <br/>

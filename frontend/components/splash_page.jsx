@@ -36,19 +36,6 @@ const SplashPage = (props) => {
             <div className="splash-movie-hero">
 
             </div>
-            <div className="login-modal">
-                    <button id='login-modal-close' onClick={(e) => {
-                        e.preventDefault();
-                        $(".login-modal").removeClass("login-modal-open");
-                        $(".splash-background")
-                            .removeClass("splash-background-modal-open");
-                    }}>&#x2715;</button>
-                    
-                <div className="login-modal-background">
-                    <ModalLoginFormContainer
-                        history={props.history} />
-                </div>
-            </div>
             {window.addEventListener('scroll', (e) => {
                 e.preventDefault();
             $(".splash-nav").addClass("splash-nav-scroll");
@@ -116,6 +103,19 @@ const SplashPage = (props) => {
             <br/>
             <br/>
         </div> 
+            <div className="login-modal">
+                <button id='login-modal-close' onClick={(e) => {
+                    e.preventDefault();
+                    $(".login-modal").removeClass("login-modal-open");
+                    $(".splash-background")
+                        .removeClass("splash-background-modal-open");
+                }}>&#x2715;</button>
+
+                <div className="login-modal-background">
+                    <ModalLoginFormContainer
+                        history={props.history} />
+                </div>
+            </div>
     </div>)
 
 }

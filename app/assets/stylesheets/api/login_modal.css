@@ -11,7 +11,7 @@
  .login-modal {
      display: none;
  }
-
+ 
  .login-modal-open {
      display: flex;
      align-items: center;
@@ -19,8 +19,7 @@
      height: 535px;
      width: 100%;
      position: fixed;
-     /* transform: translateY(-150px); */
-     transform: translateY(50px);
+     transform: translateY(-750px);
      z-index: 26;
      overflow-y: scroll;
  }

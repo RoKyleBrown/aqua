@@ -27,7 +27,8 @@ class Api::MoviesController < ApplicationController
             :title,
             :description,
             :feature,
-            :top_feature
+            :top_feature,
+            :video
         )
 
     end
