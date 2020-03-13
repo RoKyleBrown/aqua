@@ -91,6 +91,7 @@ h1 {
     font-family: "Graphik LC TT Thin";
     transform: translateY( 268%) translateX(7%);
     text-transform: uppercase;
+    object-fit: contain;
 }
 .movie-container p {
     z-index: 56;
@@ -101,6 +102,8 @@ h1 {
     font-size: 20px;
     font-family: "Graphik LC TT Thin";
     letter-spacing: 1.2px;
+    object-fit: contain;
+    bottom: 20%;
 }
 
 .featured-items-flex p {

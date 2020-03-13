@@ -9,7 +9,6 @@ const FeaturedItem = (props) => {
                 <Link to={`/movies/${props.movie.id}`}>
                     <img src={props.movie.imageUrl} />
                     <h3>{props.movie.title}</h3>
-                    <p>{props.movie.description}</p>
                 </Link> 
             </div>
         )

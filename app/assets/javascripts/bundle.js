@@ -814,7 +814,7 @@ var FeaturedItem = function FeaturedItem(props) {
       to: "/movies/".concat(props.movie.id)
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: props.movie.imageUrl
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, props.movie.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.movie.description)));
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, props.movie.title)));
   } else {
     return null;
   }
