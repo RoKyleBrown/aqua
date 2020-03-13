@@ -814,7 +814,7 @@ var FeaturedItem = function FeaturedItem(props) {
       to: "/movies/".concat(props.movie.id)
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: props.movie.imageUrl
-    })));
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, props.movie.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.movie.description)));
   } else {
     return null;
   }
@@ -852,22 +852,22 @@ var FeaturedItems = function FeaturedItems(props) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: movies[0][0].imageUrl,
     alt: ""
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, movies[0][0].title))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/movies/".concat(movies[0][1].id)
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: movies[0][1].imageUrl,
     alt: ""
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, movies[0][1].title))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/movies/".concat(movies[0][2].id)
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: movies[0][2].imageUrl,
     alt: ""
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, movies[0][2].title))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/movies/".concat(movies[0][3].id)
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: movies[0][3].imageUrl,
     alt: ""
-  })))));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, movies[0][3].title)))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (FeaturedItems);

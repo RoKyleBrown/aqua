@@ -12,13 +12,17 @@ const FeaturedItems = (props) => {
              return  ( <div>
                     <ul className="featured-items-flex">
                         <Link to={`/movies/${movies[0][0].id}`}><li><img
-                            src={movies[0][0].imageUrl} alt="" /></li></Link>
+                         src={movies[0][0].imageUrl} alt="" /> 
+                         <p>{movies[0][0].title}</p></li></Link>
                         <Link to={`/movies/${movies[0][1].id}`}><li><img
-                            src={movies[0][1].imageUrl} alt="" /></li></Link>
+                         src={movies[0][1].imageUrl} alt="" />
+                         <p>{movies[0][1].title}</p></li></Link>
                         <Link to={`/movies/${movies[0][2].id}`}><li><img
-                            src={movies[0][2].imageUrl} alt="" /></li></Link>
+                            src={movies[0][2].imageUrl} alt="" />
+                         <p>{movies[0][2].title}</p></li></Link>
                         <Link to={`/movies/${movies[0][3].id}`}><li><img
-                            src={movies[0][3].imageUrl} alt="" /></li></Link>
+                         src={movies[0][3].imageUrl} alt="" />
+                         <p>{movies[0][3].title}</p></li></Link>
                     </ul>
                 </div>)
     }

@@ -48,7 +48,7 @@ m4 = Movie.create(
 
 
 m5 = Movie.create(
-    title: "Mad Max: Fury Road",
+    title: "Mad Max",
     description: "Mad Max: Fury Road is a 2015 post-apocalyptic action film co-written, produced, and directed by George Miller. Miller collaborated with Brendan McCarthy and Nico Lathouris on the screenplay . . .",
     imageUrl: "mad_max.png",
     feature: true,
