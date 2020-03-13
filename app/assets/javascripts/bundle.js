@@ -844,7 +844,6 @@ var FeaturedItems = function FeaturedItems(props) {
   movies.push(props.movies.filter(function (movie) {
     return movie.feature && !movie.top_feature;
   }));
-  debugger;
   if (!movies[0][0]) return null;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "featured-items-flex"

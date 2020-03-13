@@ -8,7 +8,6 @@ const FeaturedItems = (props) => {
         movies.push(props.movies.filter( movie => 
             (movie.feature && !movie.top_feature)
             ))
-            debugger;
             if (!movies[0][0]) return null;
              return  ( <div>
                     <ul className="featured-items-flex">
