@@ -19,9 +19,8 @@
      height: 540px;
      width: 100%;
      position: fixed;
-     transform: translateY(-750px);
+     transform: translateY(-200vh);
      z-index: 26;
-     overflow-y: scroll;
  }
 
  .login-modal-background {
