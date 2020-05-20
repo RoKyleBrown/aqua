@@ -1271,7 +1271,11 @@ var SplashPage = function SplashPage(props) {
     className: "login-modal-background"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_auth_modal_login_form_container__WEBPACK_IMPORTED_MODULE_2__["default"], {
     history: props.history
-  }))));
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "continue"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "devices"
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SplashPage);

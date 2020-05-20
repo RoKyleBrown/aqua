@@ -9,8 +9,10 @@
  /*  charcoal #1b1a1b    */
  /* dark teal  */
 
+
 .splash-background {
     background-color: #021623;
+     
 }
 
 /* .background-continue {
@@ -25,6 +27,7 @@
     background-repeat: no-repeat;
     position: relative;
     width: 100%;
+    overflow: hidden;
     /* display: block; */
     /* z-index: -1; */
 }
@@ -174,4 +177,18 @@
     width: 100%;
     height: 60vw;
     position: relative;
+}
+
+#devices {
+    background-color: #032236;
+    width: 100%;
+    height: 400px;
+    margin-top: 7%;
+}
+
+#continue {
+    width: 100%;
+    height: 530px;
+    background-color: #021623;
+    
 }

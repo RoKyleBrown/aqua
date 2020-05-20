@@ -64,6 +64,12 @@ const SplashPage = (props) => {
                         history={props.history} />
                 </div>
             </div>
+
+        <div id="continue">
+            <div id="devices">
+
+            </div>
+        </div>
                 
     </div>)
 
