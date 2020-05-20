@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import ModalLoginFormContainer from './auth/modal_login_form_container';
 
 const SplashPage = (props) => {
-        return ( <div>
+        return ( <div id="modal-center">
         
             <div className="splash-background">
             
@@ -50,7 +50,7 @@ const SplashPage = (props) => {
                     }
             })}
 
-        </div> 
+        </div>
             <div className="login-modal">
                 <button id='login-modal-close' onClick={(e) => {
                     e.preventDefault();
@@ -64,9 +64,7 @@ const SplashPage = (props) => {
                         history={props.history} />
                 </div>
             </div>
-            <div className="background-continue">
-
-            </div>
+                
     </div>)
 
 }

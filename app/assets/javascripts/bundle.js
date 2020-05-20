@@ -1217,7 +1217,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var SplashPage = function SplashPage(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "modal-center"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash-background"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "splash-container"
@@ -1269,9 +1271,7 @@ var SplashPage = function SplashPage(props) {
     className: "login-modal-background"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_auth_modal_login_form_container__WEBPACK_IMPORTED_MODULE_2__["default"], {
     history: props.history
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "background-continue"
-  }));
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SplashPage);

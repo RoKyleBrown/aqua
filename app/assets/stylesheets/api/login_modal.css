@@ -16,17 +16,17 @@
      display: flex;
      align-items: center;
      justify-content: center;
-     height: 540px;
+     height: 500px;
      width: 100%;
      position: fixed;
-     transform: translateY(-200vh);
+     transform: translateY(-20vw);
      z-index: 26;
  }
 
  .login-modal-background {
-     transform: translateY(12%);
+
      width: 375px;
-     height: 540px;
+     height: 500px;
      transition-duration: 0.4s;
      background-color: white;
      position: fixed;
@@ -40,7 +40,7 @@
  }
 
  #login-modal-close {
-     transform: translateX(500%) translateY(-565%);
+     transform: translateX(500%) translateY(-695%);
      background: none;
      border: none;
      font-size: 24px;
@@ -48,7 +48,7 @@
      color: gray;
      opacity: 75%;
      position: absolute;
-     z-index: 9;
+     z-index: 29;
      
  }
 
@@ -188,4 +188,12 @@
     z-index: 4;
 
 
+}
+
+#modal-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
 }
