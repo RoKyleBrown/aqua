@@ -1,10 +1,13 @@
 h1 {
     color: white;
 }
+#root {
+    overflow: hidden;
+}
 .movie-container {
     width: 100%;
 }
-.featured-items img{
+.featured-items img {
     position: absolute;
     top: 0;
     right: 0;
@@ -19,7 +22,7 @@ h1 {
     animation-name: zoom;
     animation-duration: 2.3s;
     animation-fill-mode: forwards;
-    max-width: 100%;
+    width: 100%;
     overflow-x: hidden;
 }
 
