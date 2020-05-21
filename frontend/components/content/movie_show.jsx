@@ -9,10 +9,12 @@ class MovieShow extends React.Component {
     render () {
         if (!this.props.movie) return null;
         return (
-            <div className="video-container">
-                <video id="show-video"  controls autoPlay>
-                    <source src={this.props.movie.video} type="video/mp4"/>
-                    </video> 
+            <div id="video-background">
+                <div className="video-container">
+                    <video id="show-video"  controls autoPlay>
+                        <source src={this.props.movie.video} type="video/mp4"/>
+                        </video> 
+                </div>
             </div>
         )
     }

@@ -937,6 +937,8 @@ var MovieShow = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       if (!this.props.movie) return null;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "video-background"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "video-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
         id: "show-video",
@@ -945,7 +947,7 @@ var MovieShow = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("source", {
         src: this.props.movie.video,
         type: "video/mp4"
-      })));
+      }))));
     }
   }]);
 
