@@ -14,17 +14,35 @@ h1 {
     justify-content: center;
 }
 
+#movie-details {
+    position: absolute;
+    width: 30%;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: column;
+}
+
 .movie-container h3 {
     z-index: 56;
-    position: absolute;
+    
     color: white;
-    font-size: 3vw;
+    font-size: 3.5vw;
     font-family: "Graphik LC TT Thin";
     /* transform: translateY( 268%) translateX(7%); */
-    left: 2%;
     margin: 0%;
     text-transform: uppercase;
-    object-fit: contain;
+}
+
+.movie-container p {
+    z-index: 56;
+    margin: 0%;
+    margin-top: 1%;
+    color: white;
+    /* transform: translateY(255%) translateX(8%); */
+    font-size: 1vw;
+    font-family: "Graphik LC TT Thin";
+    letter-spacing: 1.6px;
+    /* bottom: 20%; */
 }
 
 #crop-image {
@@ -114,17 +132,7 @@ h1 {
     position: relative;
 }
 
-.movie-container p {
-    z-index: 56;
-    position: absolute;
-    color: white;
-    transform: translateY(255%) translateX(8%);
-    width: 354px;
-    font-size: 20px;
-    font-family: "Graphik LC TT Thin";
-    letter-spacing: 1.2px;
-    /* bottom: 20%; */
-}
+
 
 .featured-items-flex p {
     z-index: 5;

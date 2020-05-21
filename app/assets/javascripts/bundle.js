@@ -816,7 +816,9 @@ var FeaturedItem = function FeaturedItem(props) {
       id: "crop-image"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: props.movie.imageUrl
-    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, props.movie.title)));
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: "movie-details"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, props.movie.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.movie.description))));
   } else {
     return null;
   }
