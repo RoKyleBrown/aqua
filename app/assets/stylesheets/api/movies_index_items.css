@@ -138,6 +138,7 @@ h1 {
     font-size: 2vw;
     object-fit: contain;
     margin: 0%;
+    margin-left: 3%;
     transition: .5s;
 }
 

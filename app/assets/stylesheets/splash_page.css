@@ -21,7 +21,7 @@
 } */
 
  .splash-container {  /* hero */
-    background-image: url(man-tv.png);
+    background-image: url(https://aqua-app-dev.s3-us-west-1.amazonaws.com/man-tv.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
