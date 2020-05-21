@@ -9,19 +9,19 @@ const FeaturedItems = (props) => {
             (movie.feature && !movie.top_feature)
             ))
             if (!movies[0][0]) return null;
-             return  ( <div>
+             return  ( <div id="items">
                     <ul className="featured-items-flex">
-                        <Link to={`/movies/${movies[0][0].id}`}><li><img
-                         src={movies[0][0].imageUrl} alt="" /> 
+                        <Link to={`/movies/${movies[0][0].id}`}><li id="li-flex">
+                            <img src={movies[0][0].imageUrl} alt="" /> 
                          <p>{movies[0][0].title}</p></li></Link>
-                        <Link to={`/movies/${movies[0][1].id}`}><li><img
-                         src={movies[0][1].imageUrl} alt="" />
+                        <Link to={`/movies/${movies[0][1].id}`}><li id="li-flex">
+                            <img src={movies[0][1].imageUrl} alt="" />
                          <p>{movies[0][1].title}</p></li></Link>
-                        <Link to={`/movies/${movies[0][2].id}`}><li><img
-                            src={movies[0][2].imageUrl} alt="" />
+                        <Link to={`/movies/${movies[0][2].id}`}><li id="li-flex">
+                            <img    src={movies[0][2].imageUrl} alt="" />
                          <p>{movies[0][2].title}</p></li></Link>
-                        <Link to={`/movies/${movies[0][3].id}`}><li><img
-                         src={movies[0][3].imageUrl} alt="" />
+                        <Link to={`/movies/${movies[0][3].id}`}><li id="li-flex">
+                            <img src={movies[0][3].imageUrl} alt="" />
                          <p>{movies[0][3].title}</p></li></Link>
                     </ul>
                 </div>)

@@ -7,7 +7,9 @@ const FeaturedItem = (props) => {
         return (
             <div className="movie-container" >
                 <Link to={`/movies/${props.movie.id}`}>
-                    <img src={props.movie.imageUrl} />
+                    <div id="crop-image">
+                        <img src={props.movie.imageUrl} />
+                    </div>
                     <h3>{props.movie.title}</h3>
                 </Link> 
             </div>

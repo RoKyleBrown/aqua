@@ -63,10 +63,6 @@ class MoviesIndex extends React.Component {
                         }
                     })}
 
-                    <br />
-                    <br />
-                    <br />
-                    <br />
 
                     <div className="user-dropdown-flex"
                          onMouseLeave={this.dropdownUp}>
@@ -79,7 +75,7 @@ class MoviesIndex extends React.Component {
                             onClick={this.rightThing}>Log Out</li>
                         </ul>
                     </div>
-                    <div > 
+                    <div id="featured-container" > 
                         <div className="featured-items"
                         >
                             {this.props.movies.map(movie =>
@@ -95,47 +91,6 @@ class MoviesIndex extends React.Component {
                                     />
                         </div>
                     </div>
-
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
                 </div>
             )
         }

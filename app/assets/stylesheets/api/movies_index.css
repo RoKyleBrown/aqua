@@ -12,10 +12,19 @@ html, body {
     overflow-x: hidden;
 }
 
+#root {
+    overflow: hidden;
+}
+
 .app-background {
     background-color: #010116;
     height: 2000px;
     overflow-x: hidden;
+}
+
+.movie-container a {
+    overflow: hidden;
+    width: 100%;
 }
 
 .nav-main {
@@ -136,4 +145,8 @@ html, body {
 
 .user-btn {
     cursor: pointer;
+}
+
+.sub-items {
+    position: relative;
 }

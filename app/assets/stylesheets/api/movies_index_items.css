@@ -7,12 +7,34 @@ h1 {
 .movie-container {
     width: 100%;
 }
-.featured-items img {
+
+.movie-container a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movie-container h3 {
+    z-index: 56;
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    color: white;
+    font-size: 3vw;
+    font-family: "Graphik LC TT Thin";
+    /* transform: translateY( 268%) translateX(7%); */
+    left: 2%;
+    margin: 0%;
+    text-transform: uppercase;
+    object-fit: contain;
+}
+
+#crop-image {
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-items img {
+    position: relative;
     overflow-x: hidden;
     overflow-y: hidden;
     background-size: contain;
@@ -21,21 +43,17 @@ h1 {
     transform: scale(1);
     animation-name: zoom;
     animation-duration: 2.3s;
-    animation-fill-mode: forwards;
-    width: 100%;
-    overflow-x: hidden;
+    animation-fill-mode: both;
+    width: inherit;
 }
 
 @keyframes zoom {
     from {
         transform: scale(1,1);
-        width: 100%;
-        overflow: hidden;
+      
         }
     to {
         transform: scale(1.03,1.03);
-        width: 100%;
-        overflow: hidden;
         }
 }
 
@@ -54,6 +72,9 @@ h1 {
     transform: scale(1.05);
     transition: 2.3s;
 } */
+
+
+
 .sub-items ul{
 
     position: absolute;
@@ -61,7 +82,7 @@ h1 {
     flex-direction: row;
     z-index: 2;
     padding: 0;
-    transform: translateY(94%);
+    transform: translateY(-16%);
     margin-left: 3%;
     margin-right: 3%;
     list-style: none;
@@ -80,22 +101,19 @@ h1 {
     transition: .5s;
 }
 
-.sub-items img:hover {
+#li-flex {
+    transition: .5s;
+    position: relative;
+}
+
+#li-flex:hover {
     transform: scale(1.027);
     transition: .5s;
     cursor: pointer;
+    z-index: 26;
+    position: relative;
 }
 
-.movie-container h3 {
-    z-index: 56;
-    position: absolute;
-    color: white;
-    font-size: 46px;
-    font-family: "Graphik LC TT Thin";
-    transform: translateY( 268%) translateX(7%);
-    text-transform: uppercase;
-    object-fit: contain;
-}
 .movie-container p {
     z-index: 56;
     position: absolute;
@@ -105,23 +123,42 @@ h1 {
     font-size: 20px;
     font-family: "Graphik LC TT Thin";
     letter-spacing: 1.2px;
-    object-fit: contain;
-    bottom: 20%;
+    /* bottom: 20%; */
 }
 
 .featured-items-flex p {
-    z-index: 55;
+    z-index: 5;
     list-style: none;
     text-decoration: none;
     color: white;
     position: absolute;
-    transform: translateY(-400%) translateX(10%);
+    /* transform: translateY(-400%) translateX(10%); */
     font-family: "Graphik LC TT Thin";
     text-transform: uppercase;
-    font-size: 120%;
+    font-size: 2vw;
     object-fit: contain;
+    margin: 0%;
+    transition: .5s;
 }
+
+/* #li-flex:hover p {
+    z-index: 26;
+    font-size: 2.1vw;
+    transition: .5s;
+} */
 
 .featured-items-flex {
     text-decoration: none;
+    position: absolute;
+    z-index: 56;
+}
+
+
+#items {
+    position: relative;
+} 
+
+#li-flex {
+    display: flex;
+    align-items: flex-end;
 }
