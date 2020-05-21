@@ -165,7 +165,7 @@
 
 
 .splash-movie-hero {
-    background-image: url(movie-hero.png);
+    background-image: url(https://aqua-app-dev.s3-us-west-1.amazonaws.com/movie-hero.png);
     /* height: 1000px; */
     /* background-position: center; */
     background-position: center;
