@@ -19,7 +19,7 @@
      height: 500px;
      width: 100%;
      position: fixed;
-     transform: translateY(-20vw);
+     transform: translateY(-40vw);
      z-index: 26;
  }
 

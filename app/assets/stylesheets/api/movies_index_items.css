@@ -116,8 +116,8 @@ h1 {
     cursor: pointer;
 }
 
-#feat-actions img:hover #feat-play img {
-    opacity: 70%;
+ #feat-actions img:hover #feat-play img {
+    opacity: 0%;
 }
 
 #crop-image {

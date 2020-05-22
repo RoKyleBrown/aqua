@@ -46,13 +46,17 @@ class MoviesIndex extends React.Component {
                             <li 
                                 className="user-btn"
                                 onMouseOver={this.dropdown}
-                            >{this.props.currentUser.first_name}</li>
+                            >
+                            <span className="circle-letter">{`${this.props.currentUser.first_name[0]}`}
+                            </span> 
+                            <span>{this.props.currentUser.first_name}</span></li>
                         </ul>
                     </div>
                     {window.addEventListener('scroll', (e) => {
                         e.preventDefault();
                         $(".nav-main").addClass("nav-main-scroll");
                         $(".nav-logo").addClass("nav-logo-scroll");
+                        $(".circle-letter").addClass("circle-letter-scroll");
                     })}
 
                     {window.addEventListener('scroll', (e) => {
@@ -60,6 +64,7 @@ class MoviesIndex extends React.Component {
                         if (window.scrollY === 0) {
                             $(".nav-main").removeClass("nav-main-scroll");
                             $(".nav-logo").removeClass("nav-logo-scroll");
+                            $(".circle-letter").removeClass("circle-letter-scroll");
                         }
                     })}
 

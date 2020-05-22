@@ -823,6 +823,9 @@ var FeaturedItem = function FeaturedItem(props) {
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "feat-play"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      onClick: function onClick() {
+        location.reload();
+      },
       src: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/feat-play-btn.png",
       alt: ""
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1109,16 +1112,20 @@ var MoviesIndex = /*#__PURE__*/function (_React$Component) {
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "search"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           className: "user-btn",
           onMouseOver: this.dropdown
-        }, this.props.currentUser.first_name))), window.addEventListener('scroll', function (e) {
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+          className: "circle-letter"
+        }, "".concat(this.props.currentUser.first_name[0])), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, this.props.currentUser.first_name)))), window.addEventListener('scroll', function (e) {
           e.preventDefault();
           $(".nav-main").addClass("nav-main-scroll");
           $(".nav-logo").addClass("nav-logo-scroll");
+          $(".circle-letter").addClass("circle-letter-scroll");
         }), window.addEventListener('scroll', function (e) {
           e.preventDefault();
 
           if (window.scrollY === 0) {
             $(".nav-main").removeClass("nav-main-scroll");
             $(".nav-logo").removeClass("nav-logo-scroll");
+            $(".circle-letter").removeClass("circle-letter-scroll");
           }
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "user-dropdown-flex",
