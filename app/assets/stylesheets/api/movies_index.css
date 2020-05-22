@@ -136,9 +136,16 @@ html, body {
     margin-right: 12%;
 }
 
-#my-content {
+#my-content, #search, #browse {
     display: flex;
     align-items: center;
+    transition: 0.1s;
+}
+
+#my-content:hover, #search:hover, #browse:hover {
+    opacity: 80%;
+    cursor: pointer;
+    transition: 0.1s;
 }
 
 #check-icon, #search-icon, #browse-icon {
@@ -169,7 +176,8 @@ html, body {
     font-family: "Graphik Web Regular";
     font-size: 13px;
     height: 250px;
-    width: 150px;
+    width: 250px;
+    transform: translateX(-12%);
     /* transform: translateY(-18px) translateX(-12px); */
     display: flex;
     flex-direction: column;
@@ -184,8 +192,16 @@ html, body {
 
 .line-top {
     padding-top: 13px;
-    transform: translateX(-20px) scaleX(1.2626);
-    /* width: 125.36%; */   
+    transform: translateX(-20px) scaleX(1.159);
+    /* width: 125.36%;*/
+}
+
+.line-top hr {
+    border-top: 0.567px solid white;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    opacity: 45%;
 }
 
 #logout-dropdown:hover {
@@ -193,15 +209,17 @@ html, body {
     filter: brightness(100%);
 }
 
+.user-btn {
+    transition: 0.1s;
+    padding: 45px 10px 45px 10px;
+}
+
 .user-btn:hover {
     cursor: pointer;
+    opacity: 80%;
+    transition: 0.1s;
 }
 
 .sub-items {
     position: relative;
-}
-
-#search {
-    display: flex;
-    align-items: center;
 }

@@ -38,7 +38,7 @@ class MoviesIndex extends React.Component {
                     <div className="nav-main">
                         <ul className="nav-left">
                             <li className="nav-logo">aqua</li>
-                            <li id="my-content">
+                            <li id="browse">
                                 <span id="browse-space"><img id="browse-icon"
                                     src="https://aqua-app-dev.s3-us-west-1.amazonaws.com/browse_icon.png" 
                                 alt=""/></span>
@@ -61,6 +61,7 @@ class MoviesIndex extends React.Component {
                             <li 
                                 className="user-btn"
                                 onMouseOver={this.dropdown}
+                                onMouseLeave={this.dropdownUp}
                             >
                             <span className="circle-letter">{`${this.props.currentUser.first_name[0]}`}
                             </span> 
@@ -85,6 +86,7 @@ class MoviesIndex extends React.Component {
 
 
                     <div className="user-dropdown-flex"
+                         onMouseOver={this.dropdown}
                          onMouseLeave={this.dropdownUp}>
                         <ul className="user-dropdown-no-select">
                             <li className="line-top"><hr /></li>

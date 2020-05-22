@@ -1108,7 +1108,7 @@ var MoviesIndex = /*#__PURE__*/function (_React$Component) {
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           className: "nav-logo"
         }, "aqua"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          id: "my-content"
+          id: "browse"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
           id: "browse-space"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -1135,7 +1135,8 @@ var MoviesIndex = /*#__PURE__*/function (_React$Component) {
           alt: ""
         })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "search")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           className: "user-btn",
-          onMouseOver: this.dropdown
+          onMouseOver: this.dropdown,
+          onMouseLeave: this.dropdownUp
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
           className: "circle-letter"
         }, "".concat(this.props.currentUser.first_name[0])), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, this.props.currentUser.first_name)))), window.addEventListener('scroll', function (e) {
@@ -1153,6 +1154,7 @@ var MoviesIndex = /*#__PURE__*/function (_React$Component) {
           }
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "user-dropdown-flex",
+          onMouseOver: this.dropdown,
           onMouseLeave: this.dropdownUp
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
           className: "user-dropdown-no-select"
