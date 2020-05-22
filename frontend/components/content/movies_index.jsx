@@ -38,11 +38,26 @@ class MoviesIndex extends React.Component {
                     <div className="nav-main">
                         <ul className="nav-left">
                             <li className="nav-logo">aqua</li>
-                            <li>browse</li>
-                            <li>my content</li>
+                            <li id="my-content">
+                                <span id="browse-space"><img id="browse-icon"
+                                    src="https://aqua-app-dev.s3-us-west-1.amazonaws.com/browse_icon.png" 
+                                alt=""/></span>
+                                <span>browse</span>
+                            </li>
+                            <li id="my-content">
+                                <span id="check-space"><img id="check-icon"
+                                src="https://aqua-app-dev.s3-us-west-1.amazonaws.com/check_icon.png" 
+                                alt=""/></span>
+                                <span>my content</span>
+                            </li>
                         </ul>
                         <ul className="nav-right">
-                            <li>search</li>
+                            <li id="search">
+                                <span id="search-space"><img id="search-icon" 
+                                src="https://aqua-app-dev.s3-us-west-1.amazonaws.com/search_icon.png" 
+                                alt=""/></span>
+                                <span>search</span>
+                            </li>
                             <li 
                                 className="user-btn"
                                 onMouseOver={this.dropdown}

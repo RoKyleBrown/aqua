@@ -1107,9 +1107,33 @@ var MoviesIndex = /*#__PURE__*/function (_React$Component) {
           className: "nav-left"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           className: "nav-logo"
-        }, "aqua"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "browse"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "my content")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        }, "aqua"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          id: "my-content"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+          id: "browse-space"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          id: "browse-icon",
+          src: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/browse_icon.png",
+          alt: ""
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "browse")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          id: "my-content"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+          id: "check-space"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          id: "check-icon",
+          src: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/check_icon.png",
+          alt: ""
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "my content"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
           className: "nav-right"
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "search"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          id: "search"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+          id: "search-space"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          id: "search-icon",
+          src: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/search_icon.png",
+          alt: ""
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "search")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           className: "user-btn",
           onMouseOver: this.dropdown
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
