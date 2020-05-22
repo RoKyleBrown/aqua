@@ -14,6 +14,12 @@ h1 {
     justify-content: center;
 }
 
+.movie-container a:hover {
+    cursor: pointer;
+}
+
+
+
 #movie-details {
     position: absolute;
     width: 30%;
@@ -40,9 +46,78 @@ h1 {
     color: white;
     /* transform: translateY(255%) translateX(8%); */
     font-size: 1vw;
-    font-family: "Graphik LC TT Thin";
-    letter-spacing: 1.6px;
+    font-family: "Graphik Web Light";
+    line-height: 115%;
+    letter-spacing: 1.1px;
     /* bottom: 20%; */
+}
+
+#feat-icons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 3%;
+}
+
+#feat-play {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    
+}
+
+#feat-play img {
+    width: 3vw;
+    z-index: 20;
+    opacity: 70%;
+}
+
+ .movie-container a:hover #feat-play img {
+    opacity: 100%;
+    transition: .5s;
+}
+
+#watch-container {
+    height: 100%;
+    position: relative;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 19;
+}
+
+#watch {
+    width: 100%;
+    text-transform: uppercase;
+    font-family: "Graphik Web Regular";
+    font-size: 1vw;
+}
+
+#feat-actions {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+}
+
+#feat-actions img {
+    width: 2vw;
+    opacity: 70%;
+}
+
+#feat-actions img:hover {
+    opacity: 100%;
+    cursor: pointer;
+}
+
+#feat-actions img:hover #feat-play img {
+    opacity: 70%;
 }
 
 #crop-image {

@@ -14,6 +14,18 @@ const FeaturedItem = (props) => {
                         <div id="movie-details">
                             <h3>{props.movie.title}</h3>
                             <p>{props.movie.description}</p>
+                            <div id="feat-icons">
+                            <div id="feat-play">
+                                <img src="https://aqua-app-dev.s3-us-west-1.amazonaws.com/feat-play-btn.png" alt=""/>
+                                <div id="watch-container">
+                                    <p id="watch">Watch movie</p>
+                                </div>
+                            </div>
+                            <div id="feat-actions">
+                                <img src="https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png" alt=""/>
+                            </div>
+
+                            </div>
                        </div>
                     </Link> 
                 </div>
