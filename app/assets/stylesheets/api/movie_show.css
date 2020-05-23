@@ -10,7 +10,10 @@
     background-color: #010116;
 } */
 
-#show-video {
+
+
+/* For when scroll width > offset width */
+#show-video-height {
     /* width: 100%; */
     height: 100vh;
     outline: none;
@@ -18,12 +21,14 @@
     /* transform: translateY(15.3%); */
 }
 
-@media only screen and (max-width: 1530px) {
-  #show-video {
+/* @media only screen and (max-width: 1530px) { */
+/* For when scroll height > offset height */ 
+  #show-video-width {
     width: 100%;
     height: auto;
     outline: none;
     position: absolute;
     }
 
-}
+
+/* } */

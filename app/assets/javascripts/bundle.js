@@ -954,6 +954,19 @@ var MovieShow = /*#__PURE__*/function (_React$Component) {
       this.props.fetchMovies();
     }
   }, {
+    key: "frameVideo",
+    value: function frameVideo(e) {
+      e.preventDefault();
+      var vid = document.getElementById("show-video-height") || document.getElementById("show-video-width");
+      var body = document.querySelector("body");
+
+      if (vid.offsetWidth > body.offsetWidth) {
+        vid.setAttribute("id", "show-video-width");
+      } else if (vid.offsetHeight > body.offsetHeight) {
+        vid.setAttribute("id", "show-video-height");
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       if (!this.props.movie) return null;
@@ -962,13 +975,14 @@ var MovieShow = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "video-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
-        id: "show-video",
+        id: "show-video-height",
+        onLoadStart: this.frameVideo,
         controls: true,
         autoPlay: true
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("source", {
         src: this.props.movie.video,
         type: "video/mp4"
-      }))));
+      }))), window.addEventListener('resize', this.frameVideo));
     }
   }]);
 
