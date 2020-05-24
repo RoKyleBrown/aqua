@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 class MovieShow extends React.Component {
     
@@ -19,14 +20,31 @@ class MovieShow extends React.Component {
             vid.setAttribute("id", "show-video-height");
         } 
     }
+    videoOver(e) {
+        e.preventDefault();
+        $(".vid-overlay-initial").addClass("vid-overlay");
+        document.addEventListener("mouseleave", () => {
+            $(".vid-overlay-initial").removeClass("vid-overlay");
+        })
+    }
     render () {
         if (!this.props.movie) return null;
         return (
-            <div id="video-background">
+            <div id="video-background" onMouseOver={this.videoOver}>
                 <div className="video-container">
-                    <video id="show-video-height" onLoadStart={this.frameVideo} 
+                    <div className="vid-overlay-initial" >
+                        <div id="vid-heading">
+                            <div id="vid-title">{this.props.movie.title}</div>
+                            <div id="vid-close" 
+                                onClick={() => 
+                                {this.props.history.push("/movies")}}>&#x2715;
+                            </div>
+                        </div>
+                    </div>
+                    <video id="show-video-height" className="video-dim" onLoadStart={this.frameVideo} 
                         controls autoPlay>
-                        <source src={this.props.movie.video} type="video/mp4" />
+                        <source 
+                         src={this.props.movie.video} type="video/mp4" />
                     </video>
                 </div>
                 {window.addEventListener('resize', this.frameVideo)}
