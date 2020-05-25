@@ -69,7 +69,7 @@ h1 {
 }
 
 #feat-play img {
-    width: 35px;
+    width: 3vw;
     z-index: 57;
     opacity: 70%;
 }
@@ -99,6 +99,7 @@ h1 {
 #feat-actions {
     display: flex;
     flex-direction: column;
+    margin-left: 9px;
     height: 100%;
     width: 50%;
     justify-content: center;
