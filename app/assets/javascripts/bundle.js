@@ -822,6 +822,15 @@ var FeaturedItem = function FeaturedItem(props) {
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, props.movie.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.movie.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "feat-icons"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: "feat-play"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/feat-play-btn.png",
+      alt: ""
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: "watch-container"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      id: "watch"
+    }, "Watch movie"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "feat-actions"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
