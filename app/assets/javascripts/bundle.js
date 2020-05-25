@@ -973,9 +973,16 @@ var MovieShow = /*#__PURE__*/function (_React$Component) {
     value: function videoOver(e) {
       e.preventDefault();
       $(".vid-overlay-initial").addClass("vid-overlay");
-      document.addEventListener("mouseleave", function () {
-        $(".vid-overlay-initial").removeClass("vid-overlay");
-      });
+      var vid = document.getElementById("show-video-height") || document.getElementById("show-video-width");
+
+      if (!vid.paused) {
+        document.addEventListener("mouseleave", function () {
+          $(".vid-overlay-initial").removeClass("vid-overlay");
+        });
+        setTimeout(function () {
+          $(".vid-overlay-initial").removeClass("vid-overlay");
+        }, 3000);
+      }
     }
   }, {
     key: "render",
@@ -984,10 +991,10 @@ var MovieShow = /*#__PURE__*/function (_React$Component) {
 
       if (!this.props.movie) return null;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "video-background",
-        onMouseOver: this.videoOver
+        id: "video-background"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "video-container"
+        className: "video-container",
+        onMouseMove: this.videoOver
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "vid-overlay-initial"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -998,7 +1005,8 @@ var MovieShow = /*#__PURE__*/function (_React$Component) {
         id: "vid-close",
         onClick: function onClick() {
           _this.props.history.push("/movies");
-        }
+        },
+        onMouseOver: this.videoOver
       }, "\u2715"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
         id: "show-video-height",
         className: "video-dim",
@@ -1008,7 +1016,7 @@ var MovieShow = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("source", {
         src: this.props.movie.video,
         type: "video/mp4"
-      }))), window.addEventListener('resize', this.frameVideo));
+      }))), window.addEventListener('resize', this.frameVideo), window.addEventListener('load', this.videoOver));
     }
   }]);
 
