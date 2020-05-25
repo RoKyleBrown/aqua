@@ -797,9 +797,42 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   !*** ./frontend/components/content/Featured_Item.jsx ***!
   \*******************************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/robertkbrown/Desktop/aA/aqua/aqua/frontend/components/content/Featured_Item.jsx: Expected corresponding JSX closing tag for <Link> (32:23)\n\n\u001b[0m \u001b[90m 30 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 31 | \u001b[39m                            \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 32 | \u001b[39m                       \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 33 | \u001b[39m                    \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mLink\u001b[39m\u001b[33m>\u001b[39m \u001b[0m\n\u001b[0m \u001b[90m 34 | \u001b[39m                \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 35 | \u001b[39m        )\u001b[0m\n    at Object.raise (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:7044:17)\n    at Object.jsxParseElementAt (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:4077:16)\n    at Object.jsxParseElementAt (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:4045:32)\n    at Object.jsxParseElement (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:4103:17)\n    at Object.parseExprAtom (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:4110:19)\n    at Object.parseExprSubscripts (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:9287:23)\n    at Object.parseMaybeUnary (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:9267:21)\n    at Object.parseExprOps (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:9137:23)\n    at Object.parseMaybeConditional (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:9110:23)\n    at Object.parseMaybeAssign (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:9065:21)\n    at Object.parseParenAndDistinguishExpression (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:9842:28)\n    at Object.parseExprAtom (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:9622:21)\n    at Object.parseExprAtom (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:4115:20)\n    at Object.parseExprSubscripts (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:9287:23)\n    at Object.parseMaybeUnary (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:9267:21)\n    at Object.parseExprOps (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:9137:23)\n    at Object.parseMaybeConditional (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:9110:23)\n    at Object.parseMaybeAssign (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:9065:21)\n    at Object.parseExpression (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:9017:23)\n    at Object.parseReturnStatement (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:11091:28)\n    at Object.parseStatementContent (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:10772:21)\n    at Object.parseStatement (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:10724:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:11298:25)\n    at Object.parseBlockBody (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:11285:10)\n    at Object.parseBlock (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:11269:10)\n    at Object.parseStatementContent (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:10800:21)\n    at Object.parseStatement (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:10724:17)\n    at Object.parseIfStatement (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:11076:28)\n    at Object.parseStatementContent (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:10769:21)\n    at Object.parseStatement (/Users/robertkbrown/Desktop/aA/aqua/aqua/node_modules/@babel/parser/lib/index.js:10724:17)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
+
+
+var FeaturedItem = function FeaturedItem(props) {
+  if (props.movie.top_feature) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "movie-container"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/movies/".concat(props.movie.id)
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: "crop-image"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: props.movie.imageUrl
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: "movie-details"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, props.movie.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.movie.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: "feat-icons"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: "feat-actions"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
+      alt: ""
+    }))))));
+  } else {
+    return null;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (FeaturedItem);
 
 /***/ }),
 
