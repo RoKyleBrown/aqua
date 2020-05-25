@@ -72,6 +72,7 @@ h1 {
     width: 3vw;
     z-index: 57;
     opacity: 70%;
+    height: 100%;
 }
 
  .movie-container a:hover #feat-play img {
