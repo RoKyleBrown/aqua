@@ -823,10 +823,12 @@ var FeaturedItem = function FeaturedItem(props) {
       id: "feat-icons"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "feat-play"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: "play-container"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/feat-play-btn.png",
       alt: ""
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "watch-container"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       id: "watch"

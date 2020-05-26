@@ -59,6 +59,7 @@ h1 {
     justify-content: space-between;
     position: relative;
     margin-top: 3%;
+    height: 3.15vw;
 }
 
 #feat-play {
@@ -68,16 +69,29 @@ h1 {
     
 }
 
+#play-container {
+    height: 100%;
+    width: 3.15vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    z-index: 19;
+}
+
 #feat-play img {
     width: 3vw;
     z-index: 57;
     opacity: 70%;
-    height: 100%;
+    transition: .25s;
+    /* height: 100%; */
 }
 
  .movie-container a:hover #feat-play img {
     opacity: 100%;
-    transition: .5s;
+    width: 3.15vw;
+    transition: .25s;
 }
 
 #watch-container {
