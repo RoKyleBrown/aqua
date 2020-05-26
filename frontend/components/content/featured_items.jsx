@@ -11,18 +11,16 @@ const FeaturedItems = (props) => {
             if (!movies[0][0]) return null;
              return  ( <div id="items">
                     <ul className="featured-items-flex">
-                        <Link to={`/movies/${movies[0][0].id}`}><li id="li-flex">
-                            <img src={movies[0][0].imageUrl} alt="" /> 
-                         <p>{movies[0][0].title}</p></li></Link>
-                        <Link to={`/movies/${movies[0][1].id}`}><li id="li-flex">
-                            <img src={movies[0][1].imageUrl} alt="" />
-                         <p>{movies[0][1].title}</p></li></Link>
-                        <Link to={`/movies/${movies[0][2].id}`}><li id="li-flex">
-                            <img    src={movies[0][2].imageUrl} alt="" />
-                         <p>{movies[0][2].title}</p></li></Link>
-                        <Link to={`/movies/${movies[0][3].id}`}><li id="li-flex">
-                            <img src={movies[0][3].imageUrl} alt="" />
-                         <p>{movies[0][3].title}</p></li></Link>
+                        {movies[0].map( movie => 
+                            <Link to={`/movies/${movie.id}`}><li id="li-flex">
+                                <img className="idx-thumb-hover" src="PulpFiction-thumb.png" alt=""/>
+                            <img className="idx-thumb" 
+                            //     onMouseMove={ () => {
+                            //     $(".idx-thumb").addClass("idx-thumb-b")
+                            // }}
+                                    src={movie.imageUrl} alt=""/>
+                            <p>{movie.title}</p></li></Link> 
+                        )}
                     </ul>
                 </div>)
     }
