@@ -132,9 +132,9 @@ h1 {
     cursor: pointer;
 }
 
- #feat-actions img:hover #feat-play img {
+ /* #feat-actions img:hover #feat-play img {
     opacity: 0%;
-}
+} */
 
 #crop-image {
     width: 100vw;
