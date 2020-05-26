@@ -12,14 +12,17 @@ const FeaturedItems = (props) => {
              return  ( <div id="items">
                     <ul className="featured-items-flex">
                         {movies[0].map( movie => 
-                            <Link to={`/movies/${movie.id}`}><li id="li-flex">
-                                <img className="idx-thumb-hover" src="PulpFiction-thumb.png" alt=""/>
-                            <img className="idx-thumb" 
-                            //     onMouseMove={ () => {
-                            //     $(".idx-thumb").addClass("idx-thumb-b")
-                            // }}
-                                    src={movie.imageUrl} alt=""/>
-                            <p>{movie.title}</p></li></Link> 
+                            <Link to={`/movies/${movie.id}`}>
+                                <li id="li-flex">
+                                    <img className="idx-thumb-hover" 
+                                        src="PulpFiction-thumb.png" alt=""/>
+                                    <img className="vid-cap-container" 
+                                    src="PulpFiction-back.png"/>
+                                    <img className="idx-thumb" 
+                                        src={movie.imageUrl} alt="" />
+                                    <p>{movie.title}</p>
+                                </li>
+                            </Link>
                         )}
                     </ul>
                 </div>)

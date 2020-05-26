@@ -223,11 +223,21 @@ h1 {
     position: relative;
 }
 
+#feature-thumbs {
+    height: 100%;
+    overflow: hidden;
+    
+   
+}
+
 #li-flex:hover .idx-thumb-hover {
+    z-index: 4;
+}
+
+#li-flex:hover .idx-thumb, #li-flex:hover .idx-thumb-hover {
     height: 68.358625762%;
     transition: .6s;
 }
-
 
 
 .featured-items-flex p {
@@ -268,23 +278,30 @@ h1 {
     align-items: flex-end;
 }
 .idx-thumb {
-    position: relative;
-    z-index: 3;
-    /* transition: .6s; */
-}
-
-
-.idx-thumb:hover {
-    z-index: 1;
-}
-.idx-thumb-hover {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     transition: .6s;
     object-fit: cover;
     object-position: 0 100%;
 }
 
-.idx-thumb-hover:hover {
-    
+
+.idx-thumb:hover {
+    height: 68.358625762%;
+}
+
+.vid-cap-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0%;
+}
+
+.idx-thumb-hover {
+    position: absolute;
+    /* z-index: 2; */
+    object-fit: cover;
+    object-position: 0 100%;
+    transition: .6s;
 }
