@@ -212,6 +212,7 @@ h1 {
 
 #li-flex {
     transition: .5s;
+    transition-delay: .2s;
     position: relative;
 }
 
@@ -226,17 +227,30 @@ h1 {
 #feature-thumbs {
     height: 100%;
     overflow: hidden;
-    
-   
 }
 
 #li-flex:hover .idx-thumb-hover {
-    z-index: 4;
+    animation: z-trans .4s forwards;
 }
+
+@keyframes z-trans {
+    from {
+        z-index: 0;
+      
+        }
+    to {
+        z-index: 4;
+        }
+}
+
+
+
+
 
 #li-flex:hover .idx-thumb, #li-flex:hover .idx-thumb-hover {
     height: 68.358625762%;
-    transition: .6s;
+    transition: .5s;
+    transition-delay: .2s;
 }
 
 
@@ -254,6 +268,7 @@ h1 {
     margin: 0%;
     margin-left: 3%;
     transition: .5s;
+    transition-delay: .2s;
 }
 
 /* #li-flex:hover p {
@@ -280,15 +295,12 @@ h1 {
 .idx-thumb {
     position: absolute;
     z-index: 3;
-    transition: .6s;
+    transition: .5s;
+    transition-delay: .2s;
     object-fit: cover;
     object-position: 0 100%;
 }
 
-
-.idx-thumb:hover {
-    height: 68.358625762%;
-}
 
 .vid-cap-container {
     position: relative;
@@ -303,5 +315,6 @@ h1 {
     /* z-index: 2; */
     object-fit: cover;
     object-position: 0 100%;
-    transition: .6s;
+    transition: .5s;
+    transition-delay: .2s;
 }
