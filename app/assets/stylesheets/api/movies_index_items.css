@@ -219,7 +219,7 @@ h1 {
 #li-flex:hover {
     transform: scale(1.027);
     /* transition: .5s; */
-    cursor: pointer;
+    /* cursor: pointer; */
     z-index: 26;
     position: relative;
 }
@@ -228,9 +228,6 @@ h1 {
     height: 100%;
     overflow: hidden;
 }
-
-
-
 
 
 #li-flex .idx-thumb-hover {
@@ -311,7 +308,7 @@ h1 {
     position: relative;
     width: 100%;
     height: 100%;
-    z-index: 2;
+    z-index: 1;
     opacity: 0%;
 }
 
@@ -323,10 +320,14 @@ h1 {
     flex-direction: column;
     align-items: flex-start;
 }
+#screenshot-form a {
+    height: 31.641374238%;
+}
 
 .screenshot {
     /* width: 100%; */
     position: relative;
+    z-index: 2;
 }
 
 .idx-thumb-hover {
@@ -336,4 +337,24 @@ h1 {
     object-position: 0 100%;
     transition: .4s;
     transition-delay: .2s;
+}
+
+
+#fun {
+    height: 33.12%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+#fun img {
+    transform: scale(.20);
+    transition: .25s;
+}
+
+#fun div:hover img{
+    transform: scale(.22);
 }

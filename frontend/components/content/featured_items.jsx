@@ -12,7 +12,7 @@ const FeaturedItems = (props) => {
              return  ( <div id="items">
                     <ul className="featured-items-flex">
                         {movies[0].map( movie => 
-                            <Link to={`/movies/${movie.id}`}>
+                            
                                 <li id="li-flex">
                                     <img className="idx-thumb-hover" 
                                         src={movie.thumb_hover}/>
@@ -20,16 +20,23 @@ const FeaturedItems = (props) => {
                                         src="PulpFiction-back.png">
                                         </img>
                                         <div className="screenshot-flex">
-                                            <div>
-                                            <img className="screenshot"
-                                                src={movie.screenshot} />
+                                            <div id="screenshot-form">
+                                                
+                                                    <img className="screenshot"
+                                                        src={movie.screenshot} />
+                                                
                                             </div>
+                                    
+                                            <div id="fun">
+                                        <Link to={`/movies/${movie.id}`}><div>
+                                            <img src="https://aqua-app-dev.s3-us-west-1.amazonaws.com/play-btn.png" />
+                                                </div>
+                                        </Link></div>
                                        </div>
                                     <img className="idx-thumb" 
                                         src={movie.imageUrl} alt="" />
                                     <p>{movie.title}</p>
                                 </li>
-                            </Link>
                         )}
                     </ul>
                 </div>)
