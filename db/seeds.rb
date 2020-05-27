@@ -17,7 +17,8 @@ m1 = Movie.create(
     imageUrl: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/godfather.png",
     feature: true,
     top_feature: true,
-    video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/TheGodfather.mp4"
+    video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/TheGodfather.mp4",
+    screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/godfather-screenshot.png"
 )   
 m2 = Movie.create(
     title: "Pulp Fiction",
@@ -25,7 +26,9 @@ m2 = Movie.create(
     imageUrl: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/pulp-fiction.png",
     feature: true,
     top_feature: false,
-    video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/PulpFiction.mp4"
+    video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/PulpFiction.mp4",
+    screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/PulpFiction-screenshot.png",
+    thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/PulpFiction-thumb.png"
 )   
 m3 = Movie.create(
     title: "Ex Machina",
@@ -33,7 +36,9 @@ m3 = Movie.create(
     imageUrl: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/ExMachina.png",
     feature: true,
     top_feature: false,
-    video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/ExMachina.mp4"
+    video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/ExMachina.mp4",
+    screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/ExMachina-screenshot.png",
+    thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/ExMachina-thumb.png"
 )   
 
 
@@ -43,7 +48,9 @@ m4 = Movie.create(
     imageUrl: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/BlueVelvet.png",
     feature: true,
     top_feature: false,
-    video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/BlueVelvet.mp4"
+    video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/BlueVelvet.mp4",
+    screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/BlueVelvet-screenshot.png",
+    thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/BlueVelvet-thumb.png"
 )
 
 
@@ -53,5 +60,7 @@ m5 = Movie.create(
     imageUrl: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/mad_max.png",
     feature: true,
     top_feature: false,
-    video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/MadMax.mp4"
+    video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/MadMax.mp4",
+    screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/MadMax-screenshot.png",
+    thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/MadMax-thumb.png"
 ) 

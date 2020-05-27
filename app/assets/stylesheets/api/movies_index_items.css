@@ -229,27 +229,32 @@ h1 {
     overflow: hidden;
 }
 
+
+
+
+
+#li-flex .idx-thumb-hover {
+    animation: z-back 1.4s forwards;
+}
+
 #li-flex:hover .idx-thumb-hover {
     animation: z-trans .4s forwards;
 }
 
 @keyframes z-trans {
-    from {
-        z-index: 0;
-      
-        }
-    to {
-        z-index: 4;
-        }
+    from { z-index: 0;}
+    to  {z-index: 4; }
 }
 
-
-
+@keyframes z-back {
+    from { z-index: 4;}
+    to  {z-index: 0; }
+}
 
 
 #li-flex:hover .idx-thumb, #li-flex:hover .idx-thumb-hover {
     height: 68.358625762%;
-    transition: .5s;
+    transition: .4s;
     transition-delay: .2s;
 }
 
@@ -295,7 +300,7 @@ h1 {
 .idx-thumb {
     position: absolute;
     z-index: 3;
-    transition: .5s;
+    transition: .4s;
     transition-delay: .2s;
     object-fit: cover;
     object-position: 0 100%;
@@ -310,11 +315,25 @@ h1 {
     opacity: 0%;
 }
 
+.screenshot-flex {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.screenshot {
+    /* width: 100%; */
+    position: relative;
+}
+
 .idx-thumb-hover {
     position: absolute;
-    /* z-index: 2; */
+    z-index: 1;
     object-fit: cover;
     object-position: 0 100%;
-    transition: .5s;
+    transition: .4s;
     transition-delay: .2s;
 }

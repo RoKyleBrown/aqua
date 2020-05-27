@@ -43,7 +43,7 @@ class MovieShow extends React.Component {
             <div id="video-background" >
                 <div className="video-container" onMouseMove={this.videoOver}>
                     <div className="vid-overlay-initial" >
-                        <div id="vid-heading">
+                        <div id="vid-heading" onMouseOver={this.videoOver}>
                             <div id="vid-title">{this.props.movie.title}</div>
                             <div id="vid-close" 
                                 onClick={() => 

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 
 const FeaturedItems = (props) => {
-
+    
         let movies = []
         movies.push(props.movies.filter( movie => 
             (movie.feature && !movie.top_feature)
@@ -15,9 +15,16 @@ const FeaturedItems = (props) => {
                             <Link to={`/movies/${movie.id}`}>
                                 <li id="li-flex">
                                     <img className="idx-thumb-hover" 
-                                        src="PulpFiction-thumb.png" alt=""/>
-                                    <img className="vid-cap-container" 
-                                    src="PulpFiction-back.png"/>
+                                        src={movie.thumb_hover}/>
+                                        <img className="vid-cap-container" 
+                                        src="PulpFiction-back.png">
+                                        </img>
+                                        <div className="screenshot-flex">
+                                            <div>
+                                            <img className="screenshot"
+                                                src={movie.screenshot} />
+                                            </div>
+                                       </div>
                                     <img className="idx-thumb" 
                                         src={movie.imageUrl} alt="" />
                                     <p>{movie.title}</p>
