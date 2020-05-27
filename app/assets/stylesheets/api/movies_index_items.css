@@ -207,7 +207,7 @@ h1 {
     background-size: center;
     width: 100%;
     height: 100%;
-    /* transition: .5s; */
+   
 }
 
 #li-flex {
@@ -218,8 +218,6 @@ h1 {
 
 #li-flex:hover {
     transform: scale(1.027);
-    /* transition: .5s; */
-    /* cursor: pointer; */
     z-index: 26;
     position: relative;
 }
@@ -231,11 +229,12 @@ h1 {
 
 
 #li-flex .idx-thumb-hover {
-    animation: z-back 1.4s forwards;
+    animation: z-back 1.2s forwards;
 }
 
 #li-flex:hover .idx-thumb-hover {
-    animation: z-trans .4s forwards;
+    animation: z-trans .2s forwards;
+    animation-delay: .2s;
 }
 
 @keyframes z-trans {
@@ -256,7 +255,7 @@ h1 {
 }
 
 
-.featured-items-flex p {
+/* .featured-items-flex p {
     z-index: 5;
     list-style: none;
     text-decoration: none;
@@ -271,6 +270,58 @@ h1 {
     margin-left: 3%;
     transition: .5s;
     transition-delay: .2s;
+} */
+
+#features-info {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 4;
+}
+
+#feats-info-container {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: .4s;
+    transition-delay: .2s;
+}
+
+#feats-title {
+    height: 45%;
+    font-family: "Graphik LC TT Thin";
+    text-transform: uppercase;
+    font-size: 2vw;
+    text-decoration: none;
+    color: white;
+    margin: 0%;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* transform: translateY(30%); */
+}
+
+#feats-title p {
+    margin: 0%;
+}
+
+#li-flex:hover #feats-info-container {
+    height: 100%;
+    transition: .4s;
+    transition-delay: .2s;
+}
+
+#feats-descrip {
+    height: 55%;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    background-color: lawngreen;
 }
 
 /* #li-flex:hover p {
@@ -341,7 +392,7 @@ h1 {
 
 
 #fun {
-    height: 33.12%;
+    height: 31.641374238%;
     width: 100%;
     position: absolute;
     display: flex;
@@ -350,11 +401,42 @@ h1 {
     z-index: 3;
 }
 
-#fun img {
+#li-flex:hover #fun{
+    animation: z-up .4s forwards;
+    animation-delay: .4s;
+}
+
+@keyframes z-up {
+    from { z-index: 3;}
+    to  {z-index: 6; }
+}
+
+#fun a{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+#feats-play-link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#feats-play-scale img {
+    /* object-fit: cover; */
+    width: 100%;
+}
+
+#feats-play-scale {
+    /* height: 100%; */
+    /* position: relative; */
     transform: scale(.20);
     transition: .25s;
 }
 
-#fun div:hover img{
+#feats-play-link:hover #feats-play-scale{
     transform: scale(.22);
 }

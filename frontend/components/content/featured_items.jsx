@@ -28,14 +28,28 @@ const FeaturedItems = (props) => {
                                             </div>
                                     
                                             <div id="fun">
-                                        <Link to={`/movies/${movie.id}`}><div>
-                                            <img src="https://aqua-app-dev.s3-us-west-1.amazonaws.com/play-btn.png" />
+                                        <Link to={`/movies/${movie.id}`}>
+                                                <div id="feats-play-link">
+                                                    <div id="feats-play-scale">
+                                                        <img src="https://aqua-app-dev.s3-us-west-1.amazonaws.com/play-btn.png" />
+                                                    </div>
                                                 </div>
                                         </Link></div>
                                        </div>
                                     <img className="idx-thumb" 
                                         src={movie.imageUrl} alt="" />
-                                    <p>{movie.title}</p>
+                                    <div id="features-info">
+                                        <div id="feats-info-container">
+                                            <div id="feats-title">
+                                                <p>{movie.title}</p> 
+                                            </div>
+                                            <div id="feats-descrip">
+                                                <div id="feats-details"></div>
+                                                <div id="feats-actions"></div>
+                                                {/* <p>{movie.description}</p> */}
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
                         )}
                     </ul>
