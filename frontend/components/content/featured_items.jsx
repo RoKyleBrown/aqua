@@ -44,9 +44,10 @@ const FeaturedItems = (props) => {
                                                 <p>{movie.title}</p> 
                                             </div>
                                             <div id="feats-descrip">
-                                                <div id="feats-details"></div>
+                                                <div id="feats-details">
+                                                    <p>{movie.description}</p>
+                                                </div>
                                                 <div id="feats-actions"></div>
-                                                {/* <p>{movie.description}</p> */}
                                             </div>
                                         </div>
                                     </div>

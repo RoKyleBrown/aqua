@@ -62,7 +62,7 @@ class MovieShow extends React.Component {
                     </video>
                 </div>
                 {document.addEventListener('resize', this.frameVideo)}
-                {window.addEventListener('load', this.videoOver)}
+                {/* {window.addEventListener('load', this.videoOver)} */}
             </div>
         )
     }

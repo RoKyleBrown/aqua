@@ -47,8 +47,9 @@ h1 {
     /* transform: translateY(255%) translateX(8%); */
     font-size: 1vw;
     font-family: "Graphik Web Light";
-    line-height: 115%;
     letter-spacing: 1.1px;
+    word-spacing: .05vw;
+    line-height: 1.35vw;
     /* bottom: 20%; */
 }
 
@@ -295,7 +296,7 @@ h1 {
     height: 45%;
     font-family: "Graphik LC TT Thin";
     text-transform: uppercase;
-    font-size: 2vw;
+    font-size: 3vw;
     text-decoration: none;
     color: white;
     margin: 0%;
@@ -321,7 +322,7 @@ h1 {
     width: 100%;
     display: block;
     overflow: hidden;
-    background-color: lawngreen;
+    /* background-color: lawngreen; */
 }
 
 /* #li-flex:hover p {
@@ -439,4 +440,46 @@ h1 {
 
 #feats-play-link:hover #feats-play-scale{
     transform: scale(.22);
+}
+
+#feats-details {
+    height: 28%;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    position: relative;
+    /* background-color: lightcoral; */
+    margin: 3% 3% 0 3%;
+    font-family: "Graphik Web Light";
+    color: white;
+    font-size: 1.3vw;
+    word-spacing: .05vw;
+    line-height: 1.8vw;
+    overflow: hidden;
+    opacity: 0%;
+    transition: .4s;
+    transition-delay: .2s;
+}
+
+#li-flex:hover #feats-details {
+    opacity: 100%;
+}
+
+#feats-details:before {
+    content: '. . .';
+    position: absolute;
+}
+
+#feats-details:before {
+    content: '';
+    position: absolute;
+}
+
+
+#feats-actions {
+    height: 60%;
+    /* background-color: lightseagreen; */
+    margin-left: 3%;
+    margin-right: 3%;
 }
