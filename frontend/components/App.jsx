@@ -8,6 +8,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util'
 import { withRouter } from "react-router";
 import { useEffect } from "react"
 import MovieShowContainer from "./content/movie_show_container";
+import ContentPage from "./content/content_page";
 const App = () => {
 
     function ScrollToTopOnMount() {
@@ -23,8 +24,9 @@ const App = () => {
             <Route exact path="/" component={SplashPage}/>
             <AuthRoute exact path="/session/login" component={LoginFormContainer}/>
             <AuthRoute exact path="/users/new" component={SignupFormContainer} />
-            <Route exact path="/movies" component={MoviesIndexContainer} />
-            <Route path="/movies/:moviesId" component={MovieShowContainer}/>
+            <ProtectedRoute exact path="/movies" component={MoviesIndexContainer} />
+            <ProtectedRoute path="/movies/:moviesId" component={MovieShowContainer}/>
+            <ProtectedRoute path="/content" component={ContentPage}/>
          </Switch>
 
     </div> )

@@ -1,6 +1,7 @@
 import React from "react";
 import FeaturedItem from './Featured_Item';
-import FeaturedItems from './featured_items'
+import FeaturedItems from './featured_items';
+import {Link} from 'react-router-dom';
 
 
 class MoviesIndex extends React.Component {
@@ -44,12 +45,12 @@ class MoviesIndex extends React.Component {
                                 alt=""/></span>
                                 <span>browse</span>
                             </li>
-                            <li id="my-content">
+                            <Link to="/content"><li id="my-content">
                                 <span id="check-space"><img id="check-icon"
                                 src="https://aqua-app-dev.s3-us-west-1.amazonaws.com/check_icon.png" 
                                 alt=""/></span>
                                 <span>my content</span>
-                            </li>
+                            </li></Link>
                         </ul>
                         <ul className="nav-right">
                             <li id="search">

@@ -63,7 +63,8 @@ html, body {
 .nav-left {
     display: flex;
     flex-direction: row;
-    margin-left: 20px;
+    /* margin-left: 20px; */
+    margin-left: 3%;
     list-style: none;
     transform: translateX(-40px);
     align-items: center;
@@ -141,7 +142,13 @@ html, body {
     align-items: center;
     transition: 0.1s;
 }
-
+.nav-main a {
+    text-decoration: none;
+}
+.nav-main a:visited {
+    color: white;
+    text-decoration: none;
+}
 #my-content:hover, #search:hover, #browse:hover {
     opacity: 80%;
     cursor: pointer;

@@ -56,7 +56,7 @@
 
 .splash-nav li {
     margin-inline-end: 4.35%;
-    margin-inline-start: 1%;
+    margin-inline-start: 2%;
 }
 
 #login-btn {
@@ -70,6 +70,7 @@
     text-transform: lowercase;
     font-weight: 900;
     color: white;
+    display: flex;
  }
 
  .logo-splash-scroll {

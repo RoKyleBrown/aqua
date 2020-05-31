@@ -57,4 +57,4 @@ const FeaturedItems = (props) => {
                 </div>)
     }
 
-export default FeaturedItems
+export default FeaturedItems;

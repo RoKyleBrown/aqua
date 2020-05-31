@@ -1,0 +1,111 @@
+ /* black #00000    */
+ /* NAVY #010116    */
+ /* teal #16b9be    */
+ /* magenta #cc038f    */
+ /* white #ffff    */
+ /* night #021623  */
+ /* light-gray #bfbfbf */
+ /* magenta hover #5e1638  */
+ /* charcoal #1b1a1b    */
+
+.content-back {
+    background-color: #010116;
+    min-height: 200vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.content-head {
+    background-color: #021623;
+    height: 262px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    padding-top: 2%;
+}
+
+#content-head-info {
+    /* margin-left: 20px; */
+    margin-top: 45px;
+    font: 37px "Graphik LC TT Thin";
+    color: white;
+    margin-left: 3.8%;
+}
+
+#content-head-info h3 {
+    margin: 0%;
+}
+
+#content-head-info p {
+    margin: 0%;
+    margin-top: 1%;
+    font-size: 20px;
+}
+
+#content-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: none;
+    color: white;
+    height: 45px;
+    /* padding: 1%; */
+    /* padding: 1% 1%; */
+    padding-top: 1%;
+    padding-bottom: 1%;
+    transition: 0s;
+    position: fixed;
+    width: 100%;
+    z-index: 76;
+    /* transform: translateY(-12.594px); */
+}
+
+.selected-content {
+    width: 100%;
+    transform: translateY(10%);
+}
+
+#content-row {
+    display: flex;
+    margin-left: 3.7%;
+    padding: 0%;
+    margin-bottom: 4%;
+}
+
+#content-row  li {
+    margin-right: .1%;
+    margin-left: .1%;
+}
+
+.selected-content img {
+    width: 23vw;
+}
+
+#movies-top {
+    color: white;
+    margin: 0%;
+    margin-left: 3.8%;
+    font-family: "GraphikLCGMedium";
+    text-transform: uppercase;
+    font-size: 18.72px;
+}
+
+#w-m {
+    font-family: "GraphikLCGMedium";
+    text-transform: uppercase;
+    color: #bfbfbf;
+    font-size: 12px;
+}
+
+#selected-movie-title {
+    text-transform: capitalize;
+    font: 20px "Graphik Web Light";
+    color: white;
+    margin: 0%;
+}
