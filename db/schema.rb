@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_26_223934) do
+ActiveRecord::Schema.define(version: 2020_06_05_190914) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2020_05_26_223934) do
     t.string "video"
     t.string "screenshot"
     t.string "thumb_hover"
+    t.string "selected_thumb"
     t.index ["user_id"], name: "index_movies_on_user_id"
   end
 
@@ -41,6 +42,9 @@ ActiveRecord::Schema.define(version: 2020_05_26_223934) do
     t.datetime "updated_at", null: false
     t.string "last_name"
     t.string "first_name", null: false
+    t.integer "selected_movies", default: [], array: true
+    t.string "selected_vids", default: [], array: true
+    t.string "test"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
   end

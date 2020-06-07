@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 
 const FeaturedItems = (props) => {
-    
         let movies = []
         movies.push(props.movies.filter( movie => 
             (movie.feature && !movie.top_feature)
@@ -21,10 +20,8 @@ const FeaturedItems = (props) => {
                                         </img>
                                         <div className="screenshot-flex">
                                             <div id="screenshot-form">
-                                                
                                                     <img className="screenshot"
                                                         src={movie.screenshot} />
-                                                
                                             </div>
                                     
                                             <div id="fun">
@@ -47,7 +44,19 @@ const FeaturedItems = (props) => {
                                                 <div id="feats-details">
                                                     <p>{movie.description}</p>
                                                 </div>
-                                                <div id="feats-actions"></div>
+                                                <div id="feats-actions">
+                                                    <div id="feats-plus">
+                                                        <img onClick={ (e) => {
+                                                            e.preventDefault();
+                                                            let user = props.user;
+                                                            user.selected_movies.push(movie.id);
+                                                            props.updateUser(user)
+                                                                .then(props.history.push('/movies'));
+                                                            //changeToCheckmark
+                                                        }} 
+                                                        src="https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png" />
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

@@ -8,7 +8,9 @@ class SignupForm extends React.Component {
             email: '',
             password: '',
             first_name: '',
-            last_name: ''
+            last_name: '',
+            selected_movies: [],
+            test: 'test'
         }
         this.doTheRightThing = this.doTheRightThing.bind(this)
     }
@@ -54,6 +56,9 @@ class SignupForm extends React.Component {
                                 onChange={this.update('last_name')}
                             />
                         </label>
+                                <input type="hidden"
+                                    value={this.state.selected_movies}
+                                />
                         <label><span id="signup-email">email</span> 
                             <input type="text"
                                 value={this.state.email}

@@ -7,8 +7,8 @@ class User < ApplicationRecord
 
     attr_reader :password
 
-    # has_many :movie_selections,
-    #     foreign_key: :movie_id,
+    # has_many :movies,
+    #     foreign_key: :user_id,
     #     class_name: :Movie
 
     def self.find_by_credentials(email, password)

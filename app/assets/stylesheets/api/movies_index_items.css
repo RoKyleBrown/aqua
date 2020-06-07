@@ -12,6 +12,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 1;
 }
 
 .movie-container a:hover {
@@ -23,9 +24,13 @@ h1 {
 #movie-details {
     position: absolute;
     width: 30%;
-    margin-left: 3%;
+    margin-left: 7%;
     display: flex;
     flex-direction: column;
+}
+
+#movie-details a {
+    z-index: 1;
 }
 
 .movie-container h3 {
@@ -57,7 +62,7 @@ h1 {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     position: relative;
     margin-top: 3%;
     height: 3.15vw;
@@ -66,7 +71,7 @@ h1 {
 #feat-play {
     display: flex;
     flex-direction: row;
-    width: 50%;
+    width: 47%;
     
 }
 
@@ -114,13 +119,13 @@ h1 {
 
 #feat-actions {
     display: flex;
-    flex-direction: column;
-    margin-left: 9px;
+    flex-direction: row;
     height: 100%;
     width: 50%;
-    justify-content: center;
-    align-items: flex-end;
-    position: absolute;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    z-index: 19;
 }
 
 #feat-actions img {
@@ -128,7 +133,16 @@ h1 {
     opacity: 70%;
 }
 
-#feat-actions img:hover {
+/* #feat-actions img:hover {
+    opacity: 100%;
+    cursor: pointer;
+} */
+
+#feature-plus-btn {
+    
+}
+
+#feature-plus-btn:hover img {
     opacity: 100%;
     cursor: pointer;
 }
@@ -215,6 +229,7 @@ h1 {
     transition: .5s;
     transition-delay: .2s;
     position: relative;
+    height: 60%;
 }
 
 #li-flex:hover {
@@ -251,7 +266,7 @@ h1 {
 
 #li-flex:hover .idx-thumb, #li-flex:hover .idx-thumb-hover {
     height: 68.358625762%;
-    transition: .4s;
+    transition: .6s;
     transition-delay: .2s;
 }
 
@@ -284,11 +299,11 @@ h1 {
 }
 
 #feats-info-container {
-    height: 43%;
+    height: 25%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    transition: .4s;
+    transition: .6s;
     transition-delay: .2s;
 }
 
@@ -315,7 +330,7 @@ h1 {
 
 #li-flex:hover #feats-info-container {
     height: 100%;
-    transition: .4s;
+    transition: .6s;
     transition-delay: .2s;
 }
 
@@ -358,7 +373,7 @@ h1 {
 .idx-thumb {
     position: absolute;
     z-index: 3;
-    transition: .4s;
+    transition: .6s;
     transition-delay: .2s;
     object-fit: cover;
     object-position: 0 100%;
@@ -396,7 +411,7 @@ h1 {
     z-index: 1;
     object-fit: cover;
     object-position: 0 100%;
-    transition: .4s;
+    transition: .6s;
     transition-delay: .2s;
 }
 
@@ -412,7 +427,7 @@ h1 {
 }
 
 #li-flex:hover #fun{
-    animation: z-up .4s forwards;
+    animation: z-up .6s forwards;
     animation-delay: .4s;
 }
 
@@ -467,11 +482,11 @@ h1 {
     line-height: 1.8vw;
     overflow: hidden;
     opacity: 0%;
-    transition: .4s;
+    transition: .6s;
     transition-delay: .2s;
 }
 
-#li-flex:hover #feats-details {
+#li-flex:hover #feats-details, #li-flex:hover #feats-plus {
     opacity: 100%;
 }
 
@@ -482,4 +497,17 @@ h1 {
     /* background-color: lightseagreen; */
     margin-left: 3%;
     margin-right: 3%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+}
+
+#feats-plus {
+    width: 10%;
+    opacity: 0%;
+    transition: .6s;
+    transition-delay: .2s;
+    margin-bottom: 5%;
+    margin-left: 5%;
 }

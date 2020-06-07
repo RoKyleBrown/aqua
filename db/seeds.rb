@@ -9,17 +9,26 @@
 #16:9, 9:16
 
 Movie.destroy_all
+User.destroy_all
 
+#Movies
+
+#Top-feature
 
 m1 = Movie.create(
     title: "The Godfather",
     description: "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son . . .",
-    imageUrl: "godfather-hero.png",
+    imageUrl: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/godfather-hero.png",
     feature: true,
     top_feature: true,
     video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/TheGodfather.mp4",
-    screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/godfather-screenshot.png"
+    screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/godfather-screenshot.png",
+    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/godfather_16_9.jpg"
 )   
+
+
+#features 
+
 m2 = Movie.create(
     title: "Pulp Fiction",
     description: "Starring John Travolta, Samuel L. Jackson, Bruce Willis, Tim Roth, Ving Rhames, and Uma Thurman, it tells several stories of criminal Los Angeles.",
@@ -28,7 +37,8 @@ m2 = Movie.create(
     top_feature: false,
     video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/PulpFiction.mp4",
     screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/PulpFiction-screenshot.png",
-    thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/PulpFiction-thumb.png"
+    thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/PulpFiction-thumb.png",
+    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/pulp_fiction_16_9.jpg"
 )   
 m3 = Movie.create(
     title: "Ex Machina",
@@ -38,7 +48,8 @@ m3 = Movie.create(
     top_feature: false,
     video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/ExMachina.mp4",
     screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/ExMachina-screenshot.png",
-    thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/ExMachina-thumb.png"
+    thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/ExMachina-thumb.png",
+    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/ex_machina_16_9.png"
 )   
 
 
@@ -50,7 +61,8 @@ m4 = Movie.create(
     top_feature: false,
     video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/BlueVelvet.mp4",
     screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/BlueVelvet-screenshot.png",
-    thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/BlueVelvet-thumb.png"
+    thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/BlueVelvet-thumb.png",
+    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Blue_Velvet_16_9.jpg"
 )
 
 
@@ -62,5 +74,32 @@ m5 = Movie.create(
     top_feature: false,
     video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/MadMax.mp4",
     screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/MadMax-screenshot.png",
-    thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/MadMax-thumb.png"
+    thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/MadMax-thumb.png",
+    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Mad_Max_16_9.png"
 ) 
+
+#non-featured
+
+#users
+
+u1 = User.create(
+    email: "guest@aqua.com",
+    password: "123asd",
+    last_name: "",
+    first_name: "guest",
+    selected_movies: [m3.id, m2.id]
+)
+u2 = User.create(
+    email: "chris@aqua.com",
+    password: "123asd",
+    last_name: "Jordan",
+    first_name: "Chris",
+    selected_movies: [m2.id]
+)
+
+
+
+
+
+
+

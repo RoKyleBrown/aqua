@@ -32,7 +32,9 @@ class MoviesIndex extends React.Component {
         e.preventDefault();
         $(".featured-items").addClass("featured-items-load");
     }
+
     render () {
+        
         if (this.props.currentUser) {
             return (
                 <div  className="app-background">
@@ -45,7 +47,7 @@ class MoviesIndex extends React.Component {
                                 alt=""/></span>
                                 <span>browse</span>
                             </li>
-                            <Link to="/content"><li id="my-content">
+                            <Link  to="/content"><li id="my-content">
                                 <span id="check-space"><img id="check-icon"
                                 src="https://aqua-app-dev.s3-us-west-1.amazonaws.com/check_icon.png" 
                                 alt=""/></span>
@@ -98,22 +100,30 @@ class MoviesIndex extends React.Component {
                             onClick={this.rightThing}>Log Out</li>
                         </ul>
                     </div>
-                    <div id="featured-container" > 
-                        <div className="featured-items"
-                        >
+                    <div className="pre-featured-container" > 
+                        <div className="featured-items">
                             {this.props.movies.map(movie =>
                                <FeaturedItem
                                     className="item-container"
                                     movie={movie}
+                                    user={this.props.currentUser}
+                                    updateUser = {this.props.updateUser}
+                                    history={this.props.history}
                                 />
                             )}
                         </div>
                             <div className="sub-items">
                                     <FeaturedItems
                                         movies={this.props.movies}
+                                        user={this.props.currentUser}
+                                        updateUser={this.props.updateUser}
+                                        history={this.props.history}
                                     />
                         </div>
                     </div>
+                    {setTimeout(() => {
+                        $(".pre-featured-container").addClass("featured-container")
+                    }, 300)}
                 </div>
             )
         }

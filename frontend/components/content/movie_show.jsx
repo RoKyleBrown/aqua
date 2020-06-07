@@ -47,7 +47,7 @@ class MovieShow extends React.Component {
                             <div id="vid-title">{this.props.movie.title}</div>
                             <div id="vid-close" 
                                 onClick={() => 
-                                {this.props.history.push("/movies")}}
+                                {this.props.history.goBack()}}
                                 onMouseOver={this.videoOver}
                                 >&#x2715;
                                 

@@ -230,3 +230,11 @@ html, body {
 .sub-items {
     position: relative;
 }
+
+.pre-featured-container{
+    display: none;
+}
+
+.featured-container {
+    display: block;
+}

@@ -7,7 +7,9 @@ const mapStateToProps = (state, ownProps) => ({
         email: '',
         password: '',
         first_name: '',
-        last_name: ''
+        last_name: '',
+        selected_movies: [],
+        test: ''
     },
     errors: state.errors.session
 })
