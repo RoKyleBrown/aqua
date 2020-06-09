@@ -109,6 +109,7 @@ class MoviesIndex extends React.Component {
                                     user={this.props.currentUser}
                                     updateUser = {this.props.updateUser}
                                     history={this.props.history}
+                                    updateMovie={this.props.updateMovie}
                                 />
                             )}
                         </div>
@@ -118,8 +119,10 @@ class MoviesIndex extends React.Component {
                                         user={this.props.currentUser}
                                         updateUser={this.props.updateUser}
                                         history={this.props.history}
+                                        updateMovie={this.props.updateMovie}
                                     />
                         </div>
+                        
                     </div>
                     {setTimeout(() => {
                         $(".pre-featured-container").addClass("featured-container")

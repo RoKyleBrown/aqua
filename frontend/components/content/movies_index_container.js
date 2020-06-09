@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { logout, updateUser } from '../../actions/session_actions';
-import { fetchMovies, fetchMovie } from '../../actions/movie_actions';
+import { fetchMovies, fetchMovie, updateMovie } from '../../actions/movie_actions';
 import MoviesIndex from './movies_index';
 
 const mapStateProps = (state) => {
@@ -20,7 +20,8 @@ const mapDispatchToProps = (dispatch) => {
      fetchMovies: movies => dispatch(fetchMovies(movies)),
      fetchMovie: movieId => dispatch( fetchMovie(movieId)),
      logout: user => dispatch(logout(user)),
-     updateUser: user => dispatch(updateUser(user))
+     updateUser: user => dispatch(updateUser(user)),
+     updateMovie: movie => dispatch(updateMovie(movie))
 }
 }
 

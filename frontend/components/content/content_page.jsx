@@ -229,7 +229,7 @@ class ContentPage extends React.Component {
                 })}
 
                 {setTimeout(() => { 
-                    $(".content-pre-load").addClass("content-load")}, 250)}
+                    $(".content-pre-load").addClass("content-load")}, 350)}
             </div>
         )
     }

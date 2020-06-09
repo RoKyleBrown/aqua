@@ -65,11 +65,11 @@ const SplashPage = (props) => {
                 </div>
             </div>
 
-        <div id="continue">
+        {/* <div id="continue">
             <div id="devices">
 
             </div>
-        </div>
+        </div> */}
                 
     </div>)
 

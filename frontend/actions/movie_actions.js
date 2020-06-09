@@ -25,3 +25,8 @@ export const fetchMovie = (movieId) => (dispatch) => (
     APIUtil.fetchMovie(movieId)
         .then(movie => dispatch(receiveMovie(movie)))
 )
+
+export const updateMovie = (movie) => dispatch => {
+    return APIUtil.updateMovie(movie)
+        .then(movie => dispatch(receiveMovie(movie)))
+}

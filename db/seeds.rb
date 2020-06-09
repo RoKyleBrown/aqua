@@ -23,7 +23,9 @@ m1 = Movie.create(
     top_feature: true,
     video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/TheGodfather.mp4",
     screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/godfather-screenshot.png",
-    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/godfather_16_9.jpg"
+    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/godfather_16_9.jpg",
+    plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
+    current_msg: "The Godfather was added to My Content."
 )   
 
 
@@ -38,7 +40,9 @@ m2 = Movie.create(
     video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/PulpFiction.mp4",
     screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/PulpFiction-screenshot.png",
     thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/PulpFiction-thumb.png",
-    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/pulp_fiction_16_9.jpg"
+    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/pulp_fiction_16_9.jpg",
+    plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
+    current_msg: "Pulp Fiction was added to My Content."
 )   
 m3 = Movie.create(
     title: "Ex Machina",
@@ -49,7 +53,9 @@ m3 = Movie.create(
     video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/ExMachina.mp4",
     screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/ExMachina-screenshot.png",
     thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/ExMachina-thumb.png",
-    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/ex_machina_16_9.png"
+    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/ex_machina_16_9.png",
+    plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
+    current_msg: "Ex Machina was added to My Content."
 )   
 
 
@@ -62,7 +68,9 @@ m4 = Movie.create(
     video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/BlueVelvet.mp4",
     screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/BlueVelvet-screenshot.png",
     thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/BlueVelvet-thumb.png",
-    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Blue_Velvet_16_9.jpg"
+    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Blue_Velvet_16_9.jpg",
+    plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
+    current_msg: "Blue Velvet was added to My Content."
 )
 
 
@@ -75,7 +83,9 @@ m5 = Movie.create(
     video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/MadMax.mp4",
     screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/MadMax-screenshot.png",
     thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/MadMax-thumb.png",
-    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Mad_Max_16_9.png"
+    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Mad_Max_16_9.jpg",
+    plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
+    current_msg: "Mad Max was added to My Content."
 ) 
 
 #non-featured
@@ -87,7 +97,7 @@ u1 = User.create(
     password: "123asd",
     last_name: "",
     first_name: "guest",
-    selected_movies: [m3.id, m2.id]
+    selected_movies: [m2.id, m5.id]
 )
 u2 = User.create(
     email: "chris@aqua.com",

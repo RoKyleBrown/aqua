@@ -20,6 +20,15 @@ class Api::MoviesController < ApplicationController
     end
   end
 
+    def update
+        @movie = Movie.find(params[:id])
+        if @movie.update(movie_params)
+            render "api/movies/show"
+        else
+            render json: @movie.errors.full_messages, status: 422
+        end
+    end
+
     private
 
     def movie_params
@@ -28,7 +37,9 @@ class Api::MoviesController < ApplicationController
             :description,
             :feature,
             :top_feature,
-            :video
+            :video,
+            :plus_check,
+            :current_msg
         )
 
     end
