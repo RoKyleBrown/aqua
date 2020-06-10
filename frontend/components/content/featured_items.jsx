@@ -56,7 +56,7 @@ class FeaturedItems extends React.Component {
         $('.notify-contain-a').addClass('notify-contain');
         $('.notify-contain-a').removeClass('notify-contain-a');
 
-        $('.notify-contain').height($(window).height() - $('.movie-container').height());
+        $('.notify-contain').height($(window).height());
         setTimeout( () => {
             $('.notify-contain').addClass('notify-contain-a'); 
             $('.notify-contain').removeClass('notify-contain'); 
@@ -133,7 +133,7 @@ class FeaturedItems extends React.Component {
                                             <p>{movie.description}</p>
                                         </div>
                                         <div id="feats-actions">
-                                                <div className={`${movie.id}b feats-hov-msg`}>
+                                            <div className={`${movie.id}b feats-hov-msg`}>
                                                 <img className={`${movie.id} msg`} 
                                                  src={this.state.hovMsg}/>
                                             </div>
@@ -175,8 +175,7 @@ class FeaturedItems extends React.Component {
 
                      {window.addEventListener('resize', (e) => {
                          e.preventDefault();
-                         $('.notify-contain').height($(window).height() 
-                         - $('.movie-container').height());
+                         $('.notify-contain').height($(window).height());
                      })}
                 </div>)
 

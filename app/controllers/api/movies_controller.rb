@@ -39,7 +39,8 @@ class Api::MoviesController < ApplicationController
             :top_feature,
             :video,
             :plus_check,
-            :current_msg
+            :current_msg,
+            :plus_minus
         )
 
     end

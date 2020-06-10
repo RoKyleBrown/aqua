@@ -5,14 +5,42 @@ class ContentPage extends React.Component {
     constructor(props) {
         super(props);
         this.rightThing = this.rightThing.bind(this);
-        this.state = { user: this.props.currentUser, checkMinus: ''};
+        this.state = { user: this.props.currentUser, movies: this.props.movies};
         this.removeVid = this.removeVid.bind(this);
-        this.state.checkMinus = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png";
+        this.minus = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png";
+        this.check = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/check-circle.png";
         this.switchIcon = this.switchIcon.bind(this);
+        this.playIcon = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/play-btn.png";
+        this.minusOut = this.minusOut.bind(this); 
     }
 
     componentDidMount(){
         this.props.fetchMovies();
+        this.minusOut(this.props.movies);
+    }
+
+
+    numItems() {
+        let num = 0;
+        let itemS = "item";
+
+        this.state.movies.forEach( movie => {
+            if (movie.plus_minus === this.check) num++;
+        })
+
+        if (num > 1) itemS = "items";
+
+        return (
+            <h1 id="num-selected"><span>{num}</span> {itemS} Selected</h1>
+        )
+    }
+    minusOut(movies){
+        movies.forEach((mov, i) => {
+            movies[i].plus_minus = this.minus;
+        })
+        this.setState({ movies: this.props.movies });
+        
+        
     }
 
     dropdown(e) {
@@ -43,12 +71,25 @@ class ContentPage extends React.Component {
         })
     }
 
-    switchIcon(e) {
-        e.preventDefault();
-        
+    switchIcon(movie) {
 
-        if (this.state.checkMinus === 
-            "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png"){
+        let video = movie;
+        let moreThanOneCheck = false;
+        let count = 0;
+
+        for (let i = 0; i < this.state.movies.length; i++){
+            if (this.state.movies[i].plus_minus === this.check){
+                count++;
+                if (count > 1){
+                    moreThanOneCheck = true;
+                    break;
+                } 
+            }
+        }
+        
+       
+
+        if (video.plus_minus === this.minus){
 
             $(".sel-thumb").addClass("sel-thumb-b");
             $(".sel-thumb").removeClass("sel-thumb");
@@ -58,24 +99,30 @@ class ContentPage extends React.Component {
             $(".content-vid-buttons").removeClass("content-vid-buttons");
             $(".vid-link-a").addClass("vid-link-b");
             $(".vid-link-a").removeClass("vid-link-a");
+            $(".delete-back-a").addClass("delete-back");
+            $(".delete-back-a").removeClass("delete-back-a");
 
-             this.state.checkMinus = 
-             "https://aqua-app-dev.s3-us-west-1.amazonaws.com/check-circle.png";
+            video.plus_minus = this.check;
+
             } else {
-            $(".sel-thumb-b").addClass("sel-thumb");
-            $(".sel-thumb-b").removeClass("sel-thumb-b");
-            $(".play-flex-b").addClass("play-flex");
-            $(".play-flex-b").removeClass("play-flex-b");
-            $(".content-vid-buttons-b").addClass("content-vid-buttons");
-            $(".content-vid-buttons-b").removeClass("content-vid-buttons-b");
-            $(".vid-link-b").addClass("vid-link-a");
-            $(".vid-link-b").removeClass("vid-link-b");
+            if (!moreThanOneCheck) {
+                $(".sel-thumb-b").addClass("sel-thumb");
+                $(".sel-thumb-b").removeClass("sel-thumb-b");
+                $(".play-flex-b").addClass("play-flex");
+                $(".play-flex-b").removeClass("play-flex-b");
+                $(".content-vid-buttons-b").addClass("content-vid-buttons");
+                $(".content-vid-buttons-b").removeClass("content-vid-buttons-b");
+                $(".vid-link-b").addClass("vid-link-a");
+                $(".vid-link-b").removeClass("vid-link-b");
+                $(".delete-back").addClass("delete-back-a");
+                $(".delete-back").removeClass("delete-back");
+              }
             
-             this.state.checkMinus =
-             "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png";
+            video.plus_minus = this.minus;
             }
         
-        this.setState({ checkMinus: this.state.checkMinus })
+            this.setState({ movies: this.props.movies})
+            this.props.updateMovie(video);
     }
 
     path(movieId) {
@@ -95,7 +142,7 @@ class ContentPage extends React.Component {
         let gridTitle = "movies"
 
         if (this.props.currentUser.selected_movies !== null) {
-            let selectedMovies = this.props.movies.filter(movie =>
+            let selectedMovies = this.state.movies.filter(movie =>
                 this.state.user.selected_movies.includes(movie.id)
             )
 
@@ -127,13 +174,17 @@ class ContentPage extends React.Component {
                                     <img className="sel-thumb" src={movie.selected_thumb} />
                                     <div className="content-vid-buttons">
                                         <div id="minus-flex">
-                                            <img id="sel-minus"
-                                                onClick={this.switchIcon} 
-                                            src={this.state.checkMinus} />
+                                            <img id="sel-minus" 
+                                                className={`${movie.id}`}
+                                                onClick={ (e) => {
+                                                    e.preventDefault();
+                                                    this.switchIcon(movie);
+                                                }} 
+                                            src={movie.plus_minus} />
                                         </div>
                                         <div className="play-flex">
                                             <img id="sel-play"
-                                            src="https://aqua-app-dev.s3-us-west-1.amazonaws.com/play-btn.png" />
+                                            src={this.playIcon} />
                                         </div>
                                     </div>
                                     <img id="sel-screenshot" src={movie.screenshot} />
@@ -228,8 +279,48 @@ class ContentPage extends React.Component {
                     }
                 })}
 
+                {window.addEventListener('load', (e) => {
+                    e.preventDefault();
+                    this.minusOut(this.state.movies);
+                })}
+
+                {document.addEventListener('pagehide', (e) => {
+                    e.preventDefault();
+                    this.minusOut(this.state.movies);
+                })}
+
                 {setTimeout(() => { 
-                    $(".content-pre-load").addClass("content-load")}, 350)}
+                    $(".content-pre-load").addClass("content-load");
+                }, 350)}
+                <div className="delete-container"
+                    style={{ height: $(window).height()}}
+                >
+                    <div className="delete-back">
+                        <div className="items-selected">
+                            {this.numItems()}
+                        </div>
+                        <div className="content-btns">
+                            <div className="cancel-btn">
+                                <h1>Cancel</h1>
+                            </div>
+                            <div className="remove-yes-btn">
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                {window.addEventListener('resize', (e) => {
+                    e.preventDefault();
+                    $('.delete-container').height($(window).height());
+                    
+                })}
+                {window.addEventListener('load', (e) => {
+                    e.preventDefault();
+                    $('.delete-container').height($(window).height());
+                })}
             </div>
         )
     }

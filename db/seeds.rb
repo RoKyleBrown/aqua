@@ -25,7 +25,8 @@ m1 = Movie.create(
     screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/godfather-screenshot.png",
     selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/godfather_16_9.jpg",
     plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
-    current_msg: "The Godfather was added to My Content."
+    current_msg: "The Godfather was added to My Content.",
+    plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png"
 )   
 
 
@@ -42,7 +43,8 @@ m2 = Movie.create(
     thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/PulpFiction-thumb.png",
     selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/pulp_fiction_16_9.jpg",
     plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
-    current_msg: "Pulp Fiction was added to My Content."
+    current_msg: "Pulp Fiction was added to My Content.",
+    plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png"
 )   
 m3 = Movie.create(
     title: "Ex Machina",
@@ -55,7 +57,8 @@ m3 = Movie.create(
     thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/ExMachina-thumb.png",
     selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/ex_machina_16_9.png",
     plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
-    current_msg: "Ex Machina was added to My Content."
+    current_msg: "Ex Machina was added to My Content.",
+    plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png"
 )   
 
 
@@ -70,7 +73,8 @@ m4 = Movie.create(
     thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/BlueVelvet-thumb.png",
     selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Blue_Velvet_16_9.jpg",
     plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
-    current_msg: "Blue Velvet was added to My Content."
+    current_msg: "Blue Velvet was added to My Content.",
+    plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png"
 )
 
 
@@ -85,7 +89,8 @@ m5 = Movie.create(
     thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/MadMax-thumb.png",
     selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Mad_Max_16_9.jpg",
     plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
-    current_msg: "Mad Max was added to My Content."
+    current_msg: "Mad Max was added to My Content.",
+    plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png"
 ) 
 
 #non-featured

@@ -15,9 +15,15 @@ const App = () => {
         useEffect(() => {
             window.scrollTo(0, 0);
         }, []);
-
         return null;
     }
+
+    function minusOut(state) {
+        state.entities.movies.forEach( (movie, i) => {
+            state.entities.movies[i] = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png"; 
+        })
+    }
+
     return ( <div>
         <ScrollToTopOnMount />
         <Switch>
