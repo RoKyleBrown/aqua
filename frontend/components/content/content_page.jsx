@@ -5,20 +5,41 @@ class ContentPage extends React.Component {
     constructor(props) {
         super(props);
         this.rightThing = this.rightThing.bind(this);
-        this.state = { user: this.props.currentUser, movies: this.props.movies};
+        this.state = { user: this.props.currentUser, movies: this.props.movies,
+        deleteCount: 0};
         this.removeVid = this.removeVid.bind(this);
         this.minus = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png";
         this.check = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/check-circle.png";
         this.switchIcon = this.switchIcon.bind(this);
         this.playIcon = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/play-btn.png";
-        this.minusOut = this.minusOut.bind(this); 
+        this.minusOut = this.minusOut.bind(this);
+        this.minusOutPageLeave = this.minusOutPageLeave.bind(this);
+        this.deleteCount = 0;
     }
 
     componentDidMount(){
         this.props.fetchMovies();
-        this.minusOut(this.props.movies);
+        this.minusOut(this.state.movies);
     }
 
+    deleteClicks(e) {
+        e.preventDefault();
+        this.state.deleteCount++;
+        this.setState({ deleteCount: this.state.deleteCount})
+    }
+
+    removeYes() {
+        if (this.state.deleteCount === 0){
+            return (
+                <h1 className="remove">Remove</h1>
+            )
+        } else {
+            return (
+                <h1 className="remove">yes</h1>
+            )
+        }
+        
+    }
 
     numItems() {
         let num = 0;
@@ -34,13 +55,30 @@ class ContentPage extends React.Component {
             <h1 id="num-selected"><span>{num}</span> {itemS} Selected</h1>
         )
     }
+
+    minusOutPageLeave(movies){
+        movies.forEach((mov, i) => {
+            movies[i].plus_minus = this.minus;
+        })
+        this.setState({ movies: this.props.movies })
+            this.props.history.push('/movies')
+    }
     minusOut(movies){
         movies.forEach((mov, i) => {
             movies[i].plus_minus = this.minus;
         })
+        $(".sel-thumb-b").addClass("sel-thumb");
+        $(".sel-thumb-b").removeClass("sel-thumb-b");
+        $(".play-flex-b").addClass("play-flex");
+        $(".play-flex-b").removeClass("play-flex-b");
+        $(".content-vid-buttons-b").addClass("content-vid-buttons");
+        $(".content-vid-buttons-b").removeClass("content-vid-buttons-b");
+        $(".vid-link-b").addClass("vid-link-a");
+        $(".vid-link-b").removeClass("vid-link-b");
+        $(".delete-back").addClass("delete-back-a");
+        $(".delete-back").removeClass("delete-back");
+
         this.setState({ movies: this.props.movies });
-        
-        
     }
 
     dropdown(e) {
@@ -142,7 +180,7 @@ class ContentPage extends React.Component {
         let gridTitle = "movies"
 
         if (this.props.currentUser.selected_movies !== null) {
-            let selectedMovies = this.state.movies.filter(movie =>
+            let selectedMovies = this.props.movies.filter(movie =>
                 this.state.user.selected_movies.includes(movie.id)
             )
 
@@ -208,7 +246,15 @@ class ContentPage extends React.Component {
             <div className="content-back">
                 <div className="nav-main" id="content-nav">
                     <ul className="nav-left">
-                        <Link  to="/movies"><li className="nav-logo">aqua</li></Link>
+                        <div >
+                            <li className="nav-logo"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    this.minusOutPageLeave(this.state.movies)
+                                }}
+                            >aqua</li>
+                        </div >
+ 
                         <li id="browse">
                             <span id="browse-space"><img id="browse-icon"
                                 src="https://aqua-app-dev.s3-us-west-1.amazonaws.com/browse_icon.png"
@@ -284,10 +330,6 @@ class ContentPage extends React.Component {
                     this.minusOut(this.state.movies);
                 })}
 
-                {document.addEventListener('pagehide', (e) => {
-                    e.preventDefault();
-                    this.minusOut(this.state.movies);
-                })}
 
                 {setTimeout(() => { 
                     $(".content-pre-load").addClass("content-load");
@@ -300,11 +342,18 @@ class ContentPage extends React.Component {
                             {this.numItems()}
                         </div>
                         <div className="content-btns">
-                            <div className="cancel-btn">
+                            <div className="cancel-btn"
+                                 onClick={ e => {
+                                     e.preventDefault();
+                                     this.minusOut(this.state.movies)
+                                 }}
+                            >
                                 <h1>Cancel</h1>
                             </div>
-                            <div className="remove-yes-btn">
-
+                            <div className="remove-yes-btn"
+                                 onClick={this.deleteClicks}
+                            >
+                                 {this.removeYes()}
                             </div>
 
 

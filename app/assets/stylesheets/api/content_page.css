@@ -257,6 +257,7 @@
     margin-right: 3.5%;
     color: white;
     display: flex;
+    align-items: center;
 }
 
 #num-selected {
@@ -300,6 +301,23 @@
     min-height: 50px;
     width: 10vw;
     min-width: 80px;
-    background-color: coral;
+    background-color: white;
     margin-left: 5%;
+    pointer-events: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.remove-yes-btn:hover {
+    cursor: pointer;
+}
+
+.remove {
+font-family: "Graphik Web Light";
+    color: black;
+    font-size: 1.47vw;
+    text-transform: uppercase;
+    
+}
+
