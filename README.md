@@ -8,17 +8,23 @@
 
 Aqua is a take on the streaming service, Hulu. It hosts movie content.
 
-Things you may want to cover:
+## Configuration
 
-* Ruby version
+ ### Backend
 
-* System dependencies
+  * PostgreSQL Database
 
-* Configuration
+  * Ruby on Rails
+### Frontend
 
-* Database creation
+  * React.js with Redux
 
-* Database initialization
+  * JavaScript
+
+  * HTML5
+  
+  * CSS3
+
 
 * How to run the test suite
 
