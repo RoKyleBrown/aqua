@@ -391,6 +391,8 @@ class ContentPage extends React.Component {
                                  onClick={ e => {
                                      e.preventDefault();
                                      this.minusOut(this.state.movies)
+                                     this.deleteCount = 0;
+                                     this.setState({ deleteCount: this.deleteCount });
                                  }}
                             >
                                 <h1>Cancel</h1>
