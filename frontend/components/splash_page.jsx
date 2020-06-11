@@ -51,7 +51,7 @@ const SplashPage = (props) => {
             })}
 
         </div>
-            <div className="login-modal">
+            <div className="login-modal" style={{ height: $(window).height()}}>
                 <button id='login-modal-close' onClick={(e) => {
                     e.preventDefault();
                     $(".login-modal").removeClass("login-modal-open");

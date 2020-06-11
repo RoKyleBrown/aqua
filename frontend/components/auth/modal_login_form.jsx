@@ -45,10 +45,10 @@ class ModalLoginForm extends React.Component {
                     Log In as a guest
                     </button>
                 <div id="modal-line">
-                    <p>or</p>  
-                </div>
                 <hr id="left-ln"></hr>
+                    <p>or</p>  
                 <hr id="right-ln"></hr>
+                </div>
                 <form onSubmit={ this.doTheRightThing}>
                 <div 
                 className="login-modal-form-container">

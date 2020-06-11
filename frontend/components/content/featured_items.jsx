@@ -38,11 +38,11 @@ class FeaturedItems extends React.Component {
         if (user.selected_movies.includes(movie.id)){
             currMovie.plus_check = this.check;
             this.setState({ movie: currMovie })
-            this.props.updateMovie(currMovie)
+            // this.props.updateMovie(currMovie)
         } else {
             currMovie.plus_check = this.plus;
             this.setState({ movie: currMovie });
-            this.props.updateMovie(currMovie);
+            // this.props.updateMovie(currMovie);
         }
       
     }

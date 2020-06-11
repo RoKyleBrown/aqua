@@ -108,8 +108,11 @@ class ContentPage extends React.Component {
             this.props.history.push('/movies')
     }
     minusOut(movies){
+
+        let vids = movies;
+
         movies.forEach((mov, i) => {
-            movies[i].plus_minus = this.minus;
+            vids[i].plus_minus = this.minus;
         })
         $(".sel-thumb-b").addClass("sel-thumb");
         $(".sel-thumb-b").removeClass("sel-thumb-b");
@@ -122,7 +125,7 @@ class ContentPage extends React.Component {
         $(".delete-back").addClass("delete-back-a");
         $(".delete-back").removeClass("delete-back");
 
-        this.setState({ movies: this.props.movies });
+        this.setState({ movies: vids })
     }
 
     dropdown(e) {
@@ -205,7 +208,7 @@ class ContentPage extends React.Component {
             }
         
             this.setState({ movies: this.state.movies})
-            this.props.updateMovie(video);
+            // this.props.updateMovie(video);
     }
 
     path(movieId) {
@@ -369,7 +372,7 @@ class ContentPage extends React.Component {
 
                 {window.addEventListener('load', (e) => {
                     e.preventDefault();
-                    this.minusOut(this.state.movies);
+                    this.minusOut(this.props.movies);
                 })}
 
 
@@ -406,11 +409,13 @@ class ContentPage extends React.Component {
                                     arr.forEach( el => {
                                     newArr = this.removeVid(el);
                                     })
-                                    this.minusOut(this.state.movies);
+                                    this.deleteCount = 0;
+                                    this.setState({ deleteCount: this.deleteCount })
                                     this.state.user.selected_movies = newArr;
                                     this.setState({user: this.state.user });
+                                    this.minusOut(this.state.movies);
                                     this.props.updateUser(this.state.user)
-                                        .then(this.props.history.push('/content'));
+                                         .then( () => this.props.history.push('/content'));
                                     window.location.reload();
                                     
                                  }}}
