@@ -155,6 +155,8 @@ h1 {
 } */
 
 
+
+
 #feature-plus-btn:hover img {
     opacity: 100%;
     cursor: pointer;
@@ -618,7 +620,7 @@ h1 {
 }
 
 .add-notify h1 {
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     font-family: "Graphik Web Regular";
 }
 
@@ -630,7 +632,7 @@ h1 {
     margin-bottom: 2%;
     display: flex;
     align-items: baseline;
-    transform: translateY(-46%) translateX(-12.5%);
+    transform: translateY(-37.5%) translateX(-21.5%) scale(.8);
 }
 
 .feat-hov-msg-b {
@@ -640,7 +642,7 @@ h1 {
     margin-bottom: 2%;
     display: flex;
     align-items: baseline;
-    transform: translateY(-46%) translateX(-9%);
+    transform: translateY(-37%) translateX(-18%) scale(.8);
 }
 
 .feat-msg {

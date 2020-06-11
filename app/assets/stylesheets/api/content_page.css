@@ -76,6 +76,15 @@
     margin-left: 3.7%;
     padding: 0%;
     margin-bottom: 4%;
+    position: relative;
+}
+
+.content-row:not(:nth-child(2)) {
+    display: flex;
+    margin-left: 3.7%;
+    padding: 0%;
+    margin-bottom: 4%;
+    position: absolute;
 }
 
 .content-row  li {
@@ -333,3 +342,12 @@ font-family: "GraphikLCGMedium";
     cursor: pointer;
 }
 
+#plus-icon {
+    width: 25px;
+    margin: 0 .6% 0 .6%;
+}
+
+#content-head-info p {
+    display: flex;
+    align-items: center;
+}

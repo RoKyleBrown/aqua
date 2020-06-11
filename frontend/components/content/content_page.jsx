@@ -12,6 +12,7 @@ class ContentPage extends React.Component {
         this.check = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/check-circle.png";
         this.switchIcon = this.switchIcon.bind(this);
         this.playIcon = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/play-btn.png";
+        this.plus = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png";
         this.minusOut = this.minusOut.bind(this);
         this.minusOutPageLeave = this.minusOutPageLeave.bind(this);
         this.deleteCount = 0;
@@ -343,7 +344,8 @@ class ContentPage extends React.Component {
                 <div className="content-head">
                     <div id="content-head-info">
                         <h3>My Content</h3>
-                        <p>Use the +  button to add content you want to keep track of.</p>
+                        <p>Use the <img id="plus-icon" src={this.plus}/>  
+                        button to add content you want to keep track of.</p>
                     </div>
                 </div>
                 <div className="selected-content">
