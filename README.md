@@ -24,12 +24,5 @@ Aqua is a take on the streaming service, Hulu. It hosts movie content.
   * HTML5
   
   * CSS3
-
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  
+ ## Features
