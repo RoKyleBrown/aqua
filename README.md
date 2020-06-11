@@ -28,7 +28,7 @@ Aqua is a take on the streaming service, Hulu. It hosts movie content.
  ## Features
  
  ### User Authentication
-  *Users are able to sign in with a unique e-mail and password combination
+  * Users are able to sign in with a unique e-mail and password combination
   
-  *A user's password is encrypted using a BCrypt algorithm
+  * A user's password is encrypted using a BCrypt algorithm
  
