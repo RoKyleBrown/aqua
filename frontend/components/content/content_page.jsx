@@ -147,9 +147,6 @@ class ContentPage extends React.Component {
         this.state.user.selected_movies.forEach( (selection, i) => {
             if (selection === movieId) {
                 delete this.state.user.selected_movies[i];
-                // this.setState({ user: this.state.user });
-                // this.props.updateUser(this.state.user)
-                    // .then(this.props.history.push('/content'));
             }
         })
 
