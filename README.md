@@ -1,5 +1,7 @@
 # Aqua
 
+[I'm an inline-style link](https://www.google.com)
+
 ## Overview
 
 Aqua is a take on the streaming service, Hulu. It hosts movie content.
