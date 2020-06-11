@@ -2,9 +2,7 @@
 
 ## Overview
 
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Aqua is a take on the streaming service, Hulu. It hosts movie content.
 
 Things you may want to cover:
 
