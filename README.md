@@ -33,7 +33,7 @@ Aqua is a take on the streaming service, Hulu. It hosts movie content and featur
   * A user's password is encrypted using a BCrypt algorithm
   
  ### Index Page
- * The user experience on the main page was made to be comparable to Hulu
+ * The user experience on the main page was made to be comparable to Hulu's "Night Mode"
  
  * Users can navigate to different movies with the ability to play them
  
