@@ -28,11 +28,13 @@ Aqua is a take on the streaming service, Hulu. It hosts movie content and featur
  ## Features
  
  ### User Authentication
+ 
   * Users are able to sign in with a unique e-mail and password combination
   
   * A user's password is encrypted using a BCrypt algorithm
   
  ### Index Page
+ 
  * The user experience on the main page was made to be comparable to Hulu's "Night Mode"
  
  * Users can navigate to different movies with the ability to play them
@@ -44,16 +46,23 @@ Aqua is a take on the streaming service, Hulu. It hosts movie content and featur
  ![alt text](https://aqua-app-dev.s3-us-west-1.amazonaws.com/Screen+Shot+2020-06-11+at+12.32.23+PM.png "ScreenShot 2")
  
  ### Video Page
+ 
  * The video page hosts an adaptive video PLAYER that adjusts to the user's browser dimensions
+ 
  * It features normal video interation, including seeking, title display/auto-hide, and video close-out
  
  ### "My Content" Page
+ 
  * This page replicates Hulu's "My Stuff" page with a similar user experience
+ 
  * A user can view the movies previously added from the index page
+ 
  * When users hover, a thumbnail from the movie is displayed also revealing minus (-) icon
+ 
  * When users click on the minus they are prompted with the abiity to select more movies
+ 
  * Once the user has selected all of his or her movies, he or she is able to remove them from the "My Content" page
  
- ![alt text](https://aqua-app-dev.s3-us-west-1.amazonaws.com/Screen+Shot+2020-06-11+at+12.32.23+PM.png "ScreenShot 2")
+ ![alt text](https://aqua-app-dev.s3-us-west-1.amazonaws.com/Screen+Shot+2020-06-11+at+12.53.39+PM.png "ScreenShot 3")
  
  
