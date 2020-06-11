@@ -15,6 +15,8 @@ class ContentPage extends React.Component {
         this.minusOut = this.minusOut.bind(this);
         this.minusOutPageLeave = this.minusOutPageLeave.bind(this);
         this.deleteCount = 0;
+        this.deleteClicks = this.deleteClicks.bind(this);
+        this.removeSelected = this.removeSelected.bind(this);
     }
 
     componentDidMount(){
@@ -22,13 +24,42 @@ class ContentPage extends React.Component {
         this.minusOut(this.state.movies);
     }
 
+    removeSelected(){
+        let selectedIds = [];
+        let currentUser = this.state.user;
+
+        this.state.movies.forEach( movie => {
+            if (movie.plus_minus === this.check) selectedIds.push(movie.id)
+        })
+
+        return selectedIds;
+
+        // currentUser.selected_movies.forEach( (selection, i) => {
+        //     if (selectedIds.includes(selection)) {
+        //         delete currentUser.selected_movies[i]
+        //     }
+        // })
+        
+        // for ( let i = 0; i > selectedIds.length; i++){
+            // this.removeVid(selectedIds[0]);
+        // }
+
+        // this.setState({ user: currentUser})
+        // this.props.updateUser(currentUser)
+        //   this.props.history.push('/content');
+
+    }
+
     deleteClicks(e) {
         e.preventDefault();
         this.state.deleteCount++;
+        if (this.state.deleteCount > 1) this.removeSelected();
         this.setState({ deleteCount: this.state.deleteCount})
     }
 
     removeYes() {
+
+
         if (this.state.deleteCount === 0){
             return (
                 <h1 className="remove">Remove</h1>
@@ -44,16 +75,28 @@ class ContentPage extends React.Component {
     numItems() {
         let num = 0;
         let itemS = "item";
+        let thisThese = "this"
 
         this.state.movies.forEach( movie => {
             if (movie.plus_minus === this.check) num++;
         })
 
-        if (num > 1) itemS = "items";
+        if (num > 1) {
+            itemS = "items";
+            thisThese = "these";
+        } 
 
-        return (
-            <h1 id="num-selected"><span>{num}</span> {itemS} Selected</h1>
-        )
+        if (this.state.deleteCount === 0) {
+
+            return (
+                <h1 id="num-selected"><span>{num}</span> {itemS} Selected</h1>
+            )
+        } else {
+           return ( 
+                <h1 id="num-selected-b">Are you sure you want 
+            to remove {thisThese} {itemS} from My Content?</h1>
+            )
+        }
     }
 
     minusOutPageLeave(movies){
@@ -100,13 +143,14 @@ class ContentPage extends React.Component {
         this.state.user.selected_movies.forEach( (selection, i) => {
             if (selection === movieId) {
                 delete this.state.user.selected_movies[i];
-                this.setState({ user: this.state.user });
-                this.props.updateUser(this.state.user)
-                    .then(this.props.history.push('/content'));
-                    window.location.reload(true);
-                    window.location.reload(true);
-            } 
+                // this.setState({ user: this.state.user });
+                // this.props.updateUser(this.state.user)
+                    // .then(this.props.history.push('/content'));
+            }
         })
+
+        this.deleteCount = 0;
+        return this.state.user.selected_movies;
     }
 
     switchIcon(movie) {
@@ -159,7 +203,7 @@ class ContentPage extends React.Component {
             video.plus_minus = this.minus;
             }
         
-            this.setState({ movies: this.props.movies})
+            this.setState({ movies: this.state.movies})
             this.props.updateMovie(video);
     }
 
@@ -180,7 +224,7 @@ class ContentPage extends React.Component {
         let gridTitle = "movies"
 
         if (this.props.currentUser.selected_movies !== null) {
-            let selectedMovies = this.props.movies.filter(movie =>
+            let selectedMovies = this.state.movies.filter(movie =>
                 this.state.user.selected_movies.includes(movie.id)
             )
 
@@ -201,10 +245,6 @@ class ContentPage extends React.Component {
                 <ul className="content-row">
                     {row.map( movie =>
                         <li>
-                            <button onClick={(e) => {
-                                e.preventDefault;
-                                this.removeVid(movie.id)
-                            }}>hey</button>
                     
                                 <Link className="vid-link-a" 
                                     to={this.path(movie.id)}
@@ -247,7 +287,7 @@ class ContentPage extends React.Component {
                 <div className="nav-main" id="content-nav">
                     <ul className="nav-left">
                         <div >
-                            <li className="nav-logo"
+                            <li className="nav-logo" id="content-nav-logo"
                                 onClick={(e) => {
                                     e.preventDefault();
                                     this.minusOutPageLeave(this.state.movies)
@@ -351,7 +391,27 @@ class ContentPage extends React.Component {
                                 <h1>Cancel</h1>
                             </div>
                             <div className="remove-yes-btn"
-                                 onClick={this.deleteClicks}
+                                 onClick={ (e) => {
+                                 e.preventDefault;
+                                // this.deleteClicks()
+                                this.deleteCount++;
+                                this.setState({ deleteCount: this.deleteCount})
+
+                                if (this.deleteCount > 1){
+                                    let arr = this.removeSelected();
+                                    let newArr = []
+
+                                    arr.forEach( el => {
+                                    newArr = this.removeVid(el);
+                                    })
+                                    this.minusOut(this.state.movies);
+                                    this.state.user.selected_movies = newArr;
+                                    this.setState({user: this.state.user });
+                                    this.props.updateUser(this.state.user)
+                                        .then(this.props.history.push('/content'));
+                                    window.location.reload();
+                                    
+                                 }}}
                             >
                                  {this.removeYes()}
                             </div>

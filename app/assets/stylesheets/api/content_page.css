@@ -262,8 +262,16 @@
 
 #num-selected {
     font-family: "Graphik Web Light";
-    font-size: 1.1vw;
+    font-size: 1.3vw;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+#num-selected-b {
+    font-family: "Graphik Web Light";
+    font-size: 1.3vw;
     display: flex;
     align-items: center;
     white-space: nowrap;
@@ -284,7 +292,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Graphik Web Light";
+    font-family: "GraphikLCGMedium";
     font-size: 0.7vw;
     text-transform: uppercase;
     pointer-events: visible;
@@ -314,10 +322,14 @@
 }
 
 .remove {
-font-family: "Graphik Web Light";
+font-family: "GraphikLCGMedium";
     color: black;
     font-size: 1.47vw;
     text-transform: uppercase;
     
+}
+
+#content-nav-logo:hover {
+    cursor: pointer;
 }
 
