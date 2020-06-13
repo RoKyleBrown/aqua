@@ -34,21 +34,6 @@ class ContentPage extends React.Component {
         })
 
         return selectedIds;
-
-        // currentUser.selected_movies.forEach( (selection, i) => {
-        //     if (selectedIds.includes(selection)) {
-        //         delete currentUser.selected_movies[i]
-        //     }
-        // })
-        
-        // for ( let i = 0; i > selectedIds.length; i++){
-            // this.removeVid(selectedIds[0]);
-        // }
-
-        // this.setState({ user: currentUser})
-        // this.props.updateUser(currentUser)
-        //   this.props.history.push('/content');
-
     }
 
     deleteClicks(e) {
@@ -151,7 +136,7 @@ class ContentPage extends React.Component {
         })
 
         this.deleteCount = 0;
-        return this.state.user.selected_movies;
+        return (this.state.user.selected_movies.filter(el => el !== null))
     }
 
     switchIcon(movie) {

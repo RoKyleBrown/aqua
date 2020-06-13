@@ -43,6 +43,7 @@ h1 {
     font-family: "Graphik LC TT Thin";
     /* transform: translateY( 268%) translateX(7%); */
     margin: 0%;
+    margin-bottom: 2%;
     text-transform: uppercase;
 }
 

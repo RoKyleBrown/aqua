@@ -18,6 +18,7 @@ export const updateMovie = (movie) => {
     $.ajax({
         url: `/api/movies/${movie.id}`,
         method: 'PATCH',
-        data: { movie }
+        data: { movie },
+        error: (err) => console.log(err)
     })
 }
