@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 class FeaturedItem extends React.Component {
     constructor(props) {
         super(props)
-        // this.addVid = this.addVid.bind(this);
         this.removeMesage = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/removeMsg.png";
         this.addMsg = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/hoverMenu.png"
         this.state = ({ movie: this.props.movie, hovMsg: this.addMsg, clkMsg: ''});
@@ -16,28 +15,6 @@ class FeaturedItem extends React.Component {
         this.check = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/check-circle.png";
         this.play = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/play-btn.png";
     }
-
-    // addVid(e){
-    //         e.preventDefault();
-    //         let currentUser = this.props.user;
-
-    //     if (currentUser.selected_movies !== null){
-    //         if (!currentUser.selected_movies.includes(this.props.movie.id)) {
-    //             currentUser.selected_movies.push(this.props.movie.id);
-    //             this.props.updateUser(currentUser)
-    //                 .then(this.props.history.push('/movies'))
-    //                 window.location.reload(true);
-    //                 window.location.reload(true);
-    //         }
-    //     } else {
-    //         currentUser.selected_movies = [];
-    //         currentUser.selected_movies.push(this.props.movie.id);
-    //         this.props.updateUser(currentUser)
-    //             .then(this.props.history.push('/movies'))
-    //             window.location.reload(true);
-    //             window.location.reload(true);
-    //     }
-    // }
 
     showMsg(movieId) {
 
@@ -120,7 +97,7 @@ class FeaturedItem extends React.Component {
             return (
 
                 <div className="movie-container" >
-                    <Link to={`/movies/${this.props.movie.id}`} >
+                    <Link >
                         <div id="crop-image">
                             <img src={this.props.movie.imageUrl} />
                         </div>
@@ -134,7 +111,8 @@ class FeaturedItem extends React.Component {
                                 </div>
                             </div>
                             <div id="feat-icons">
-                                <div id="feat-play">
+                                <div className="feat-play" 
+                                    onClick={() => this.props.history.push(`/movies/${this.state.movie.id}`)}>
                                     <div id="play-container">
                                         <img
                                             src="https://aqua-app-dev.s3-us-west-1.amazonaws.com/feat-play-btn.png" />

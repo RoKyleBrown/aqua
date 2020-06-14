@@ -71,7 +71,7 @@ h1 {
     height: 3.15vw;
 }
 
-#feat-play {
+.feat-play {
     display: flex;
     flex-direction: row;
     width: 47%;
@@ -89,7 +89,7 @@ h1 {
     z-index: 19;
 }
 
-#feat-play img {
+.feat-play img {
     width: 3vw;
     z-index: 57;
     opacity: 70%;
@@ -97,10 +97,10 @@ h1 {
     /* height: 100%; */
 }
 
- .movie-container a:hover #feat-play img {
+ .feat-play img:hover {
     opacity: 100%;
-    width: 3.15vw;
     transition: .25s;
+    cursor: pointer;
 }
 
 #watch-container {
@@ -569,6 +569,7 @@ h1 {
 #check-plus:hover {
     opacity: 100%;
     transform: scale(1.13);
+    cursor: pointer;
 }
 
 .msg-b {
@@ -686,5 +687,13 @@ h1 {
     top: 0%;
     transform: translateX(-7%);
     pointer-events: none;
+}
+
+.movie-container a {
+    text-decoration: none;
+}
+
+.movie-container a:hover {
+    cursor: default;
 }
 

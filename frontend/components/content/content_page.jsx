@@ -23,6 +23,15 @@ class ContentPage extends React.Component {
     componentDidMount(){
         this.props.fetchMovies();
         this.minusOut(this.state.movies);
+
+        if (document.readyState == 'complete') {
+            setTimeout(() => {
+                $(".content-pre-load").addClass("content-load");
+                $(".content-ripple-flex")
+                    .addClass("content-ripple-flex-b");
+            }, 360)
+        }
+        
     }
 
     removeSelected(){
@@ -207,7 +216,7 @@ class ContentPage extends React.Component {
     grid() {
 
         let rows = [];
-        let gridTitle = "movies"
+        let gridTitle = "movies";
 
         if (this.props.currentUser.selected_movies !== null) {
             let selectedMovies = this.state.movies.filter(movie =>
@@ -235,7 +244,8 @@ class ContentPage extends React.Component {
                                 <Link className="vid-link-a" 
                                     to={this.path(movie.id)}
                                     ><div className="thumb-size">
-                                    <img className="sel-thumb" src={movie.selected_thumb} />
+                                    <img className="sel-thumb" 
+                                         src={movie.selected_thumb} />
                                     <div className="content-vid-buttons">
                                         <div id="minus-flex">
                                             <img id="sel-minus" 
@@ -251,7 +261,8 @@ class ContentPage extends React.Component {
                                             src={this.playIcon} />
                                         </div>
                                     </div>
-                                    <img id="sel-screenshot" src={movie.screenshot} />
+                                    <img id="sel-screenshot" 
+                                         src={movie.screenshot} />
                                 </div></Link>
                             <p id="w-m">watch movie</p>
                             <p id="selected-movie-title">{movie.title}</p>
@@ -335,6 +346,11 @@ class ContentPage extends React.Component {
                 </div>
                 <div className="selected-content">
                     {this.grid()}
+                    <div className="content-ripple-flex" 
+                    style={{ height: $(window).height() 
+                        - $(".content-head").height() }}>
+                            <img src="https://aqua-app-dev.s3-us-west-1.amazonaws.com/aqua_ripple.gif" />    
+                    </div>
                 </div>
                 {window.addEventListener('scroll', (e) => {
                     e.preventDefault();
@@ -356,11 +372,18 @@ class ContentPage extends React.Component {
                     e.preventDefault();
                     this.minusOut(this.props.movies);
                 })}
+                
 
+                {document.onreadystatechange = () => {
+                    if (document.readyState === 'complete') {
+                        setTimeout( () => {
+                            $(".content-pre-load").addClass("content-load");
+                            $(".content-ripple-flex")
+                                .addClass("content-ripple-flex-b");
+                        }, 2000) 
+                    }   
+                }}
 
-                {setTimeout(() => { 
-                    $(".content-pre-load").addClass("content-load");
-                }, 350)}
                 <div className="delete-container"
                     style={{ height: $(window).height()}}
                 >
@@ -382,7 +405,6 @@ class ContentPage extends React.Component {
                             <div className="remove-yes-btn"
                                  onClick={ (e) => {
                                  e.preventDefault;
-                                // this.deleteClicks()
                                 this.deleteCount++;
                                 this.setState({ deleteCount: this.deleteCount})
 

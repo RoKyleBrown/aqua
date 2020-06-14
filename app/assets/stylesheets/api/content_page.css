@@ -351,3 +351,20 @@ font-family: "GraphikLCGMedium";
     display: flex;
     align-items: center;
 }
+
+.content-ripple-flex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-10%);
+}
+
+.content-ripple-flex img {
+    position: absolute;
+    width: 13vw;
+}
+
+.content-ripple-flex-b {
+    display: none;
+}
