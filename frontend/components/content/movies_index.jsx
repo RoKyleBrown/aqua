@@ -13,6 +13,14 @@ class MoviesIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchMovies();
+
+        if (document.readyState == 'complete') {
+            setTimeout(() => {
+                $(".pre-featured-container").addClass("featured-container");
+                $(".content-ripple-flex")
+                    .addClass("content-ripple-flex-b");
+            }, 2500)
+        }
     }
 
     rightThing() {
@@ -104,6 +112,13 @@ class MoviesIndex extends React.Component {
                             onClick={this.rightThing}>Log Out</li>
                         </ul>
                     </div>
+                    <div className="content-ripple-flex"
+                        style={{
+                            height: $(window).height() + 
+                            $(".nav-main").outerHeight(true)
+                        }}>
+                        <img src="https://aqua-app-dev.s3-us-west-1.amazonaws.com/aqua_ripple.gif" />
+                    </div>
                     <div className="pre-featured-container" > 
                         <div className="featured-items">
                             {this.props.movies.map(movie =>
@@ -128,9 +143,16 @@ class MoviesIndex extends React.Component {
                         </div>
                         
                     </div>
-                    {setTimeout(() => {
-                        $(".pre-featured-container").addClass("featured-container")
-                    }, 300)}
+                    {document.onreadystatechange = () => {
+                        if (document.readyState === 'complete') {
+                            setTimeout(() => {
+                                $(".pre-featured-container")
+                                    .addClass("featured-container");
+                                $(".content-ripple-flex")
+                                    .addClass("content-ripple-flex-b");
+                            }, 2000)
+                        }
+                    }}
                 </div>
             )
         }

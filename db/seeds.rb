@@ -18,7 +18,7 @@ User.destroy_all
 m1 = Movie.create(
     title: "The Godfather",
     description: "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son . . .",
-    imageUrl: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/godfather-hero.png",
+    imageUrl: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/godfather-hero.jpg",
     feature: true,
     top_feature: true,
     video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/TheGodfather.mp4",
