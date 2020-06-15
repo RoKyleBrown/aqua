@@ -182,7 +182,7 @@ html, body {
     list-style: none;
     font-family: "Graphik Web Regular";
     font-size: 13px;
-    height: 250px;
+    height: 100px;
     width: 250px;
     transform: translateX(-12%);
     /* transform: translateY(-18px) translateX(-12px); */
