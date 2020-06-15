@@ -105,9 +105,6 @@ class MoviesIndex extends React.Component {
                          onMouseLeave={this.dropdownUp}>
                         <ul className="user-dropdown-no-select">
                             <li className="line-top"><hr /></li>
-                            <li>Manage Profiles</li>
-                            <li>Account</li>
-                            <li>Help Center</li>
                             <li id="logout-dropdown"
                             onClick={this.rightThing}>Log Out</li>
                         </ul>

@@ -16,7 +16,7 @@ class ContentPage extends React.Component {
         this.minusOut = this.minusOut.bind(this);
         this.minusOutPageLeave = this.minusOutPageLeave.bind(this);
         this.deleteCount = 0;
-        this.deleteClicks = this.deleteClicks.bind(this);
+        // this.deleteClicks = this.deleteClicks.bind(this);
         this.removeSelected = this.removeSelected.bind(this);
     }
 
@@ -38,19 +38,19 @@ class ContentPage extends React.Component {
         let selectedIds = [];
         let currentUser = this.state.user;
 
-        this.state.movies.forEach( movie => {
+        this.props.movies.forEach( movie => {
             if (movie.plus_minus === this.check) selectedIds.push(movie.id)
         })
 
         return selectedIds;
     }
 
-    deleteClicks(e) {
-        e.preventDefault();
-        this.state.deleteCount++;
-        if (this.state.deleteCount > 1) this.removeSelected();
-        this.setState({ deleteCount: this.state.deleteCount})
-    }
+    // deleteClicks(e) {
+    //     e.preventDefault();
+    //     this.state.deleteCount++;
+    //     if (this.state.deleteCount > 1) this.removeSelected();
+    //     this.setState({ deleteCount: this.state.deleteCount})
+    // }
 
     removeYes() {
 
@@ -72,7 +72,7 @@ class ContentPage extends React.Component {
         let itemS = "item";
         let thisThese = "this"
 
-        this.state.movies.forEach( movie => {
+        this.props.movies.forEach( movie => {
             if (movie.plus_minus === this.check) num++;
         })
 
@@ -103,10 +103,10 @@ class ContentPage extends React.Component {
     }
     minusOut(movies){
 
-        let vids = movies;
+        
 
         movies.forEach((mov, i) => {
-            vids[i].plus_minus = this.minus;
+            movies[i].plus_minus = this.minus;
         })
         $(".sel-thumb-b").addClass("sel-thumb");
         $(".sel-thumb-b").removeClass("sel-thumb-b");
@@ -119,7 +119,7 @@ class ContentPage extends React.Component {
         $(".delete-back").addClass("delete-back-a");
         $(".delete-back").removeClass("delete-back");
 
-        this.setState({ movies: vids })
+        this.setState({ movies: this.props.movies })
     }
 
     dropdown(e) {
@@ -143,6 +143,8 @@ class ContentPage extends React.Component {
                 delete this.state.user.selected_movies[i];
             }
         })
+
+        let vid = this.props.fetchMovie(movieId);
 
         this.deleteCount = 0;
         return (this.state.user.selected_movies.filter(el => el !== null))
@@ -219,7 +221,7 @@ class ContentPage extends React.Component {
         let gridTitle = "movies";
 
         if (this.props.currentUser.selected_movies !== null) {
-            let selectedMovies = this.state.movies.filter(movie =>
+            let selectedMovies = this.props.movies.filter(movie =>
                 this.state.user.selected_movies.includes(movie.id)
             )
 
