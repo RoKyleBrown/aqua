@@ -358,10 +358,11 @@ font-family: "GraphikLCGMedium";
     justify-content: center;
     align-items: center;
     transform: translateY(-10%);
+    position: fixed;
 }
 
 .content-ripple-flex img {
-    position: absolute;
+    position: fixed;
     width: 13vw;
 }
 

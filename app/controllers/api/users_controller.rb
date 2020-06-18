@@ -13,7 +13,9 @@ class Api::UsersController < ApplicationController
 
     def update
         @user= current_user
+       
         if @user.update(user_params)
+       
             render "api/users/show"
         else
             render json: @user.errors.full_messages, status: 422
@@ -26,6 +28,7 @@ class Api::UsersController < ApplicationController
     def user_params
        params.require(:user).permit(:email, :first_name, :last_name).tap do|whitelisted|
             whitelisted[:selected_movies] = params[:user][:selected_movies]
+            whitelisted[:minus_check] = params[:user][:minus_check].permit!
        end 
     end
 end

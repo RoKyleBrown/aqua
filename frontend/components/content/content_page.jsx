@@ -22,7 +22,7 @@ class ContentPage extends React.Component {
 
     componentDidMount(){
         this.props.fetchMovies();
-        this.minusOut(this.state.movies);
+        this.minusOut();
 
         if (document.readyState == 'complete') {
             setTimeout(() => {
@@ -45,12 +45,7 @@ class ContentPage extends React.Component {
         return selectedIds;
     }
 
-    // deleteClicks(e) {
-    //     e.preventDefault();
-    //     this.state.deleteCount++;
-    //     if (this.state.deleteCount > 1) this.removeSelected();
-    //     this.setState({ deleteCount: this.state.deleteCount})
-    // }
+   
 
     removeYes() {
 
@@ -94,20 +89,26 @@ class ContentPage extends React.Component {
         }
     }
 
-    minusOutPageLeave(movies){
-        movies.forEach((mov, i) => {
-            movies[i].plus_minus = this.minus;
+    minusOutPageLeave(){
+        let user = this.props.currentUser;
+
+        Object.keys(user.minus_check).forEach((key) => {
+            user.minus_check[key] = this.minus;
         })
-        this.setState({ movies: this.props.movies })
-            this.props.history.push('/movies')
+
+        this.setState({ user: user });
+        this.props.history.push('/movies')
+        // this.props.updateUser(user);
     }
-    minusOut(movies){
 
-        
 
-        movies.forEach((mov, i) => {
-            movies[i].plus_minus = this.minus;
+    minusOut(){
+        let user = this.props.currentUser;
+
+        Object.keys(user.minus_check).forEach((key) => {
+            user.minus_check[key] = this.minus;
         })
+
         $(".sel-thumb-b").addClass("sel-thumb");
         $(".sel-thumb-b").removeClass("sel-thumb-b");
         $(".play-flex-b").addClass("play-flex");
@@ -119,7 +120,8 @@ class ContentPage extends React.Component {
         $(".delete-back").addClass("delete-back-a");
         $(".delete-back").removeClass("delete-back");
 
-        this.setState({ movies: this.props.movies })
+        this.setState({ user: user });
+        // this.props.updateUser(user);
     }
 
     dropdown(e) {
@@ -138,26 +140,28 @@ class ContentPage extends React.Component {
 
     removeVid(movieId) {
 
-        this.state.user.selected_movies.forEach( (selection, i) => {
-            if (selection === movieId) {
-                delete this.state.user.selected_movies[i];
-            }
-        })
+        // this.state.user.selected_movies.forEach( (selection, i) => {
+        //     if (selection === movieId) {
+        //         delete this.state.user.selected_movies[i];
+        //     }
+        // })
+        // this.setState({ user: this.state.user})
 
-        let vid = this.props.fetchMovie(movieId);
+        delete this.state.user.minus_check[movieId];
 
         this.deleteCount = 0;
-        return (this.state.user.selected_movies.filter(el => el !== null))
+        return (this.state.user.minus_check)
     }
 
     switchIcon(movie) {
 
         let video = movie;
         let moreThanOneCheck = false;
+        let user = this.props.currentUser;
         let count = 0;
 
-        for (let i = 0; i < this.state.movies.length; i++){
-            if (this.state.movies[i].plus_minus === this.check){
+        for (let i = 0; i < Object.keys(user.minus_check).length; i++){
+            if (Object.values(user.minus_check)[i] === this.check){
                 count++;
                 if (count > 1){
                     moreThanOneCheck = true;
@@ -181,7 +185,8 @@ class ContentPage extends React.Component {
             $(".delete-back-a").addClass("delete-back");
             $(".delete-back-a").removeClass("delete-back-a");
 
-            video.plus_minus = this.check;
+            user.minus_check[video.id] = this.check;
+            video.plus_minus = user.minus_check[video.id];
 
             } else {
             if (!moreThanOneCheck) {
@@ -197,11 +202,14 @@ class ContentPage extends React.Component {
                 $(".delete-back").removeClass("delete-back");
               }
             
-            video.plus_minus = this.minus;
+            user.minus_check[video.id] = this.minus;
+            video.plus_minus = user.minus_check[video.id];
             }
         
-            this.setState({ movies: this.state.movies})
-            // this.props.updateMovie(video);
+            this.setState({ movies: this.props.movies});
+            this.setState({ user: user});
+            this.props.updateUser(user);
+            this.props.updateMovie(video);
     }
 
     path(movieId) {
@@ -220,20 +228,23 @@ class ContentPage extends React.Component {
         let rows = [];
         let gridTitle = "movies";
 
-        if (this.props.currentUser.selected_movies !== null) {
+        if (this.props.currentUser.minus_check !== null) {
             let selectedMovies = this.props.movies.filter(movie =>
-                this.state.user.selected_movies.includes(movie.id)
+                Object.keys(this.props.currentUser.minus_check).includes(`${movie.id}`)
             )
+        
+        selectedMovies.forEach( (movie, i) => {
+            selectedMovies[i].plus_minus = this.props.currentUser.minus_check[movie.id];
+        })
+        let numRows = Math.ceil(selectedMovies.length / 4);
+        let rowStart = 0;
 
-            let numRows = Math.ceil(selectedMovies.length / 4);
-            let rowStart = 0;
+        for (let i = 0; i < numRows; i++) {
+            rows[i] = selectedMovies.slice(rowStart, rowStart + 4);
+            rowStart += 4;
+        }
 
-            for (let i = 0; i < numRows; i++) {
-                rows[i] = selectedMovies.slice(rowStart, rowStart + 4);
-                rowStart += 4;
-            }
-
-            if (!rows.length) gridTitle = "";
+        if (!rows.length) gridTitle = "";
         
         return ( 
         <div className="content-pre-load">
@@ -289,7 +300,7 @@ class ContentPage extends React.Component {
                             <li className="nav-logo" id="content-nav-logo"
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    this.minusOutPageLeave(this.state.movies)
+                                    this.minusOutPageLeave()
                                 }}
                             >aqua</li>
                         </div >
@@ -332,9 +343,6 @@ class ContentPage extends React.Component {
                     onMouseLeave={this.dropdownUp}>
                     <ul className="user-dropdown-no-select">
                         <li className="line-top"><hr /></li>
-                        <li>Manage Profiles</li>
-                        <li>Account</li>
-                        <li>Help Center</li>
                         <li id="logout-dropdown"
                             onClick={this.rightThing}>Log Out</li>
                     </ul>
@@ -372,7 +380,7 @@ class ContentPage extends React.Component {
 
                 {window.addEventListener('load', (e) => {
                     e.preventDefault();
-                    this.minusOut(this.props.movies);
+                    this.minusOut();
                 })}
                 
 
@@ -382,7 +390,7 @@ class ContentPage extends React.Component {
                             $(".content-pre-load").addClass("content-load");
                             $(".content-ripple-flex")
                                 .addClass("content-ripple-flex-b");
-                        }, 2000) 
+                        }, 360) 
                     }   
                 }}
 
@@ -397,7 +405,7 @@ class ContentPage extends React.Component {
                             <div className="cancel-btn"
                                  onClick={ e => {
                                      e.preventDefault();
-                                     this.minusOut(this.state.movies)
+                                     this.minusOut()
                                      this.deleteCount = 0;
                                      this.setState({ deleteCount: this.deleteCount });
                                  }}
@@ -412,19 +420,19 @@ class ContentPage extends React.Component {
 
                                 if (this.deleteCount > 1){
                                     let arr = this.removeSelected();
-                                    let newArr = []
+                                    let newObj = {};
 
                                     arr.forEach( el => {
-                                    newArr = this.removeVid(el);
+                                    newObj = this.removeVid(el);
                                     })
                                     this.deleteCount = 0;
                                     this.setState({ deleteCount: this.deleteCount })
-                                    this.state.user.selected_movies = newArr;
+                                    this.state.user.minus_check = newObj;
                                     this.setState({user: this.state.user });
-                                    this.minusOut(this.state.movies);
+                                    this.minusOut();
                                     this.props.updateUser(this.state.user)
                                          .then( () => this.props.history.push('/content'));
-                                    window.location.reload();
+                                    // window.location.reload();
                                     
                                  }}}
                             >
