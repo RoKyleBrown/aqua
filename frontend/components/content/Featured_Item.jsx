@@ -64,7 +64,7 @@ class FeaturedItem extends React.Component {
             $('.feat-notify-contain').removeClass('feat-notify-contain');
         }, 4000)
 
-        if (!Object.keys(user.minus_check).includes(movie.id)) {
+        if (!Object.keys(user.minus_check).includes(`${movie.id}`)) {
             currMovie.plus_check = this.check;
             user.minus_check[movie.id] = this.minus;
             currMovie.current_msg = clkAdd;
@@ -76,7 +76,7 @@ class FeaturedItem extends React.Component {
 
         } else {
             Object.keys(user.minus_check).forEach((selected) => {
-                if (selected === movie.id) {
+                if (selected === `${movie.id}`) {
                     delete user.minus_check[movie.id]
                     currMovie.plus_check = this.plus;
                     currMovie.current_msg = clkRmv;

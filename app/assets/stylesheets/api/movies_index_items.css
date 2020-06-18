@@ -214,10 +214,9 @@ h1 {
 } */
 
 
-
 .sub-items ul{
 
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: row;
     z-index: 2;
@@ -373,14 +372,13 @@ h1 {
 
 .featured-items-flex {
     text-decoration: none;
-    position: absolute;
+    position: relative;
     z-index: 56;
 }
 
 
-#items {
+.items {
     position: relative;
-    height: 100%;
 } 
 
 #li-flex {

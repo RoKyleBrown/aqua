@@ -238,3 +238,11 @@ html, body {
 .featured-container {
     display: block;
 }
+.hello {
+    transform: translateY(-40%);
+}
+
+.hello img {
+    width: 23vw;
+}
+

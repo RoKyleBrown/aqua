@@ -140,13 +140,6 @@ class ContentPage extends React.Component {
 
     removeVid(movieId) {
 
-        // this.state.user.selected_movies.forEach( (selection, i) => {
-        //     if (selection === movieId) {
-        //         delete this.state.user.selected_movies[i];
-        //     }
-        // })
-        // this.setState({ user: this.state.user})
-
         delete this.state.user.minus_check[movieId];
 
         this.deleteCount = 0;
