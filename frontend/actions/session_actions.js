@@ -43,6 +43,5 @@ export const signup = (user) => dispatch => {
 export const updateUser = (user) => dispatch => {
     
     return APIUtil.updateUser(user)
-        .then((user) => dispatch(receiveCurrentUser(user)),
-    err => dispatch(receiveErrors(err.responseJSON)))
+        .then((user) => dispatch(receiveCurrentUser(user)));
 };

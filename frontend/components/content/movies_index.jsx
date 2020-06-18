@@ -2,6 +2,8 @@ import React from "react";
 import FeaturedItem from './Featured_Item';
 import FeaturedItems from './featured_items';
 import {Link} from 'react-router-dom';
+import ContentPageContainer from "./content_page_container";
+import NonFeatured from "./non_featured";
 
 
 class MoviesIndex extends React.Component {
@@ -137,6 +139,15 @@ class MoviesIndex extends React.Component {
                                         history={this.props.history}
                                         updateMovie={this.props.updateMovie}
                                     />
+                        </div>
+                        <div>
+                            <NonFeatured 
+                                movies={this.props.movies}
+                                currentUser={this.props.currentUser}
+                                updateUser={this.props.updateUser}
+                                history={this.props.history}
+                                updateMovie={this.props.updateMovie}
+                            />
                         </div>
                         
                     </div>

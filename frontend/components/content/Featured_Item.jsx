@@ -12,13 +12,14 @@ class FeaturedItem extends React.Component {
         this.clickPlus = this.clickPlus.bind(this);
         this.whichIcon = this.whichIcon.bind(this);
         this.plus = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png";
+        this.minus = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png";
         this.check = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/check-circle.png";
         this.play = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/play-btn.png";
     }
 
     showMsg(movieId) {
 
-        if (this.props.user.selected_movies.includes(movieId)) {
+        if (Object.keys(this.props.user.minus_check).includes(movieId)) {
             this.setState({ hovMsg: this.removeMesage });
             $(`.${movieId}b`).addClass("feat-hov-msg-b");
         }
@@ -36,7 +37,7 @@ class FeaturedItem extends React.Component {
         let user = this.props.user;
         let currMovie = movie;
 
-        if (user.selected_movies.includes(movie.id)) {
+        if (Object.keys(user.minus_check).includes(`${movie.id}`)) {
             currMovie.plus_check = this.check;
             this.setState({ movie: currMovie })
             // this.props.updateMovie(currMovie)
@@ -63,9 +64,9 @@ class FeaturedItem extends React.Component {
             $('.feat-notify-contain').removeClass('feat-notify-contain');
         }, 4000)
 
-        if (!user.selected_movies.includes(movie.id)) {
-            user.selected_movies.push(movie.id);
+        if (!Object.keys(user.minus_check).includes(movie.id)) {
             currMovie.plus_check = this.check;
+            user.minus_check[movie.id] = this.minus;
             currMovie.current_msg = clkAdd;
             this.setState({
                 movie: currMovie, hovMsg: this.removeMesage,
@@ -74,9 +75,9 @@ class FeaturedItem extends React.Component {
             $(`.${movie.id}b`).addClass("feat-hov-msg-b")
 
         } else {
-            user.selected_movies.forEach((selected, i) => {
+            Object.keys(user.minus_check).forEach((selected) => {
                 if (selected === movie.id) {
-                    delete user.selected_movies[i];
+                    delete user.minus_check[movie.id]
                     currMovie.plus_check = this.plus;
                     currMovie.current_msg = clkRmv;
                     this.setState({ movie: currMovie });
