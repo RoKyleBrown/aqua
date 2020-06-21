@@ -301,24 +301,6 @@ h1 {
     transition-delay: .2s;
 }
 
-
-/* .featured-items-flex p {
-    z-index: 5;
-    list-style: none;
-    text-decoration: none;
-    color: white;
-    position: absolute;
-    transform: translateY(-500%);
-    font-family: "Graphik LC TT Thin";
-    text-transform: uppercase;
-    font-size: 2vw;
-    object-fit: contain;
-    margin: 0%;
-    margin-left: 3%;
-    transition: .5s;
-    transition-delay: .2s;
-} */
-
 #features-info {
     height: 100%;
     width: 100%;
