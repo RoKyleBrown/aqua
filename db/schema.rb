@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_16_232014) do
+ActiveRecord::Schema.define(version: 2020_06_18_202118) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2020_06_16_232014) do
     t.string "plus_check"
     t.string "current_msg"
     t.string "plus_minus"
+    t.string "year"
     t.index ["user_id"], name: "index_movies_on_user_id"
   end
 

@@ -61,6 +61,18 @@ h1 {
     /* bottom: 20%; */
 }
 
+#feat-genre {
+    font-size: 1vw;
+    font-family: "GraphikLCGMedium";
+    text-transform: capitalize;
+    word-spacing: 3px;
+}
+
+#feat-genre span {
+    word-spacing: normal;
+    margin-left: 6px;
+}
+
 #feat-icons {
     width: 100%;
     display: flex;
@@ -100,6 +112,10 @@ h1 {
  .feat-play img:hover {
     opacity: 100%;
     transition: .25s;
+    cursor: pointer;
+}
+
+#watch:hover {
     cursor: pointer;
 }
 
@@ -364,6 +380,17 @@ h1 {
     /* background-color: lawngreen; */
 }
 
+#feats-descrip p {
+    margin: 0%;
+}
+
+#feats-descrip p:first-child {
+    text-transform: capitalize;
+    word-spacing: 3px;
+    font-family: "GraphikLCGMedium";
+    font-size: 1.2vw;
+}
+
 /* #li-flex:hover p {
     z-index: 26;
     font-size: 2.1vw;
@@ -482,7 +509,7 @@ h1 {
 }
 
 #feats-details {
-    height: 28%;
+    height: 29.9%;
     -webkit-line-clamp: 3;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -508,7 +535,7 @@ h1 {
 
 
 #feats-actions {
-    height: 60%;
+    height: 65%;
     margin-left: 3%;
     margin-right: 3%;
     display: flex;
@@ -584,7 +611,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    z-index: 2;
+    z-index: 8;
     opacity: 100%;
     transition: .5s;
     top: 0%;
@@ -598,7 +625,7 @@ h1 {
     display: none;
     justify-content: center;
     align-items: flex-end;
-    z-index: 2;
+    z-index: 8;
     opacity: 0%;
     transition: .5s;
     top: 0%;
@@ -633,6 +660,7 @@ h1 {
     display: flex;
     align-items: baseline;
     transform: translateY(-37.5%) translateX(-21.5%) scale(.8);
+    pointer-events: none;
 }
 
 .feat-hov-msg-b {
@@ -643,6 +671,7 @@ h1 {
     display: flex;
     align-items: baseline;
     transform: translateY(-37%) translateX(-18%) scale(.8);
+    pointer-events: none;
 }
 
 .feat-msg {

@@ -40,7 +40,9 @@ class Api::MoviesController < ApplicationController
             :video,
             :plus_check,
             :current_msg,
-            :plus_minus
+            :plus_minus,
+            :genre,
+            :year
         )
 
     end
