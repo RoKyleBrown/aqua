@@ -4,6 +4,7 @@ import FeaturedItems from './featured_items';
 import {Link} from 'react-router-dom';
 import ContentPageContainer from "./content_page_container";
 import NonFeatured from "./non_featured";
+import FeaturedItems2 from "./featured_items_2";
 
 
 class MoviesIndex extends React.Component {
@@ -47,7 +48,7 @@ class MoviesIndex extends React.Component {
         
         if (this.props.currentUser) {
             return (
-                <div  className="app-background">
+                <div  className="app-background-a">
                     <div className="nav-main">
                         <ul className="nav-left">
                             <li className="nav-logo">aqua</li>
@@ -121,25 +122,26 @@ class MoviesIndex extends React.Component {
                     <div className="pre-featured-container" > 
                         <div className="featured-items">
                             {this.props.movies.map(movie =>
-                               <FeaturedItem
-                                    className="item-container"
-                                    movie={movie}
-                                    user={this.props.currentUser}
-                                    updateUser = {this.props.updateUser}
-                                    history={this.props.history}
-                                    updateMovie={this.props.updateMovie}
-                                />
+                            <FeaturedItem
+                                className="item-container"
+                                movie={movie}
+                                user={this.props.currentUser}
+                                updateUser = {this.props.updateUser}
+                                history={this.props.history}
+                                updateMovie={this.props.updateMovie}
+                            />
                             )}
                         </div>
                         <div className="sub-items">
-                                    <FeaturedItems
-                                        movies={this.props.movies}
-                                        user={this.props.currentUser}
-                                        updateUser={this.props.updateUser}
-                                        history={this.props.history}
-                                        updateMovie={this.props.updateMovie}
-                                    />
+                            <FeaturedItems
+                                movies={this.props.movies}
+                                user={this.props.currentUser}
+                                updateUser={this.props.updateUser}
+                                history={this.props.history}
+                                updateMovie={this.props.updateMovie}
+                            />
                         </div>
+                        
                         <div className="hello">
                             <NonFeatured 
                                 movies={this.props.movies}
@@ -149,8 +151,17 @@ class MoviesIndex extends React.Component {
                                 updateMovie={this.props.updateMovie}
                             />
                         </div>
-                        
-                        
+
+                        <div className="sub-items2">
+                            <FeaturedItems2
+                                movies={this.props.movies}
+                                user={this.props.currentUser}
+                                updateUser={this.props.updateUser}
+                                history={this.props.history}
+                                updateMovie={this.props.updateMovie}
+                            />
+                        </div>
+
                     </div>
                     {document.onreadystatechange = () => {
                         if (document.readyState === 'complete') {
