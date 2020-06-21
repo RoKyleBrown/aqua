@@ -67,8 +67,8 @@ class ContentPage extends React.Component {
         let itemS = "item";
         let thisThese = "this"
 
-        this.props.movies.forEach( movie => {
-            if (movie.plus_minus === this.check) num++;
+        Object.values(this.props.currentUser.minus_check).forEach( sign => {
+            if (sign === this.check) num++;
         })
 
         if (num > 1) {

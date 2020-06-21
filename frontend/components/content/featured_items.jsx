@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 class FeaturedItems extends React.Component {
     constructor(props) {
         super(props);
-        this.removeMesage = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/removeMsg.png";
+        this.removeMessage = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/removeMsg.png";
         this.addMsg = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/hoverMenu.png"
         this.state = { movies: this.props.movies, hovMsg: this.addMsg, clkMsg: '',
                      user: this.props.user}
@@ -19,8 +19,8 @@ class FeaturedItems extends React.Component {
     
     showMsg(movieId) {
 
-        if (Object.keys(this.props.user.minus_check).includes(movieId)){
-            this.setState({ hovMsg: this.removeMesage });
+        if (Object.keys(this.props.user.minus_check).includes(`${movieId}`)){
+            this.setState({ hovMsg: this.removeMessage });
             $(`.${movieId}b`).addClass("feats-hov-msg-b");
         }
 
@@ -68,7 +68,7 @@ class FeaturedItems extends React.Component {
             user.minus_check[movie.id] = this.minus;
             currMovie.plus_check = this.check;
             currMovie.current_msg = clkAdd;
-            this.setState({ movie: currMovie, hovMsg: this.removeMesage, 
+            this.setState({ movie: currMovie, hovMsg: this.removeMessage, 
                 clkMsg: currMovie.current_msg, user: user });
             $(`.${movie.id}b`).addClass("feats-hov-msg-b")
 
@@ -132,6 +132,7 @@ class FeaturedItems extends React.Component {
                                     </div>
                                     <div id="feats-descrip">
                                         <div id="feats-details">
+                                                <p>{movie.year} &#8226; {movie.genre}</p>
                                             <p>{movie.description}</p>
                                         </div>
                                         <div id="feats-actions">

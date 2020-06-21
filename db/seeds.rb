@@ -26,7 +26,9 @@ m1 = Movie.create(
     selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/godfather_16_9.jpg",
     plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
     current_msg: "The Godfather was added to My Content.",
-    plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png"
+    plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png",
+    genre: "crime drama",
+    year: "1972"
 )   
 
 
@@ -44,7 +46,9 @@ m2 = Movie.create(
     selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/pulp_fiction_16_9.jpg",
     plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
     current_msg: "Pulp Fiction was added to My Content.",
-    plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png"
+    plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png",
+    genre: "crime drama",
+    year: "1994"
 )   
 m3 = Movie.create(
     title: "Ex Machina",
@@ -58,7 +62,9 @@ m3 = Movie.create(
     selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/ex_machina_16_9.png",
     plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
     current_msg: "Ex Machina was added to My Content.",
-    plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png"
+    plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png",
+    genre: "sci-fi",
+    year: "2014"
 )   
 
 
@@ -74,7 +80,9 @@ m4 = Movie.create(
     selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Blue_Velvet_16_9.jpg",
     plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
     current_msg: "Blue Velvet was added to My Content.",
-    plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png"
+    plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png",
+    genre: "crime drama",
+    year: "1986"
 )
 
 
@@ -90,10 +98,78 @@ m5 = Movie.create(
     selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Mad_Max_16_9.jpg",
     plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
     current_msg: "Mad Max was added to My Content.",
-    plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png"
+    plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png",
+    genre: "action",
+    year: "2015"
 ) 
 
 #non-featured
+
+m6 = Movie.create(
+    title: "Vertigo",
+    description: "Following his early retirement as a detective from the San Francisco Police Department, John Ferguson - Scottie to his friends - becomes obsessed with two women in succession, those obsessions which trouble his long time friend and former fiancée, Midge Wood, a designer of women's undergarments.",
+    imageUrl: "none",
+    feature: false,
+    top_feature: false,
+    video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Vertigo.mp4",
+    screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/vertigo-screenshot.png",
+    thumb_hover: "",
+    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Vertigo_16_9.png",
+    plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
+    current_msg: "Vertigo was added to My Content.",
+    plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png",
+    genre: "romance",
+    year: "1958"
+) 
+m7 = Movie.create(
+    title: "Spirited Away",
+    description: "Chihiro and her parents are moving to a small Japanese town in the countryside, much to Chihiro's dismay. On the way to their new home, Chihiro's father makes a wrong turn and drives down a lonely one-lane road which dead-ends in front of a tunnel. Her parents decide to stop the car and explore the area.",
+    imageUrl: "none",
+    feature: false,
+    top_feature: false,
+    video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/SpiritedAway.mp4",
+    screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/SpirtedAway-screenshot.png",
+    thumb_hover: "",
+    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/SpiritedAway_16_9.jpg",
+    plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
+    current_msg: "Spirited Away was added to My Content.",
+    plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png",
+    genre: "animation",
+    year: "2001"
+) 
+m8 = Movie.create(
+    title: "Mo' Better Blues",
+    description: "Financially irresponsible Giant (Spike Lee) manages a jazz group, but his sax player, Shadow (Wesley Snipes), wants to replace him with a better businessman. Bleak (Denzel Washington), the band's trumpeter, then tries to defend his close pal Giant, leading to a power struggle between the two musicians.",
+    imageUrl: "none",
+    feature: false,
+    top_feature: false,
+    video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/mobetter.mp4",
+    screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/mobetter-screenshot.png",
+    thumb_hover: "",
+    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/MoBetta_16_9.jpg",
+    plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
+    current_msg: "Mo' Better Blues was added to My Content.",
+    plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png",
+    genre: "romance",
+    year: "1990"
+) 
+m9 = Movie.create(
+    title: "Birdman",
+    description: "Actor Riggan Thomson is most famous for his movie role from over twenty years ago of the comic book superhero Birdman in the blockbuster movie of the same name and its two equally popular sequels. His association with the role took over his life, where Birdman is more renowned than 'Riggan Thomson' the actor.",
+    imageUrl: "none",
+    feature: false,
+    top_feature: false,
+    video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/birdman.mp4",
+    screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/birdman-screenshot.png",
+    thumb_hover: "",
+    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Birdman_16_9.jpg",
+    plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
+    current_msg: "Birdman was added to My Content.",
+    plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png",
+    genre: "drama",
+    year: "2014"
+) 
+
 
 #users
 

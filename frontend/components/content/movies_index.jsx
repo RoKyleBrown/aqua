@@ -140,7 +140,7 @@ class MoviesIndex extends React.Component {
                                         updateMovie={this.props.updateMovie}
                                     />
                         </div>
-                        {/* <div className="hello">
+                        <div className="hello">
                             <NonFeatured 
                                 movies={this.props.movies}
                                 currentUser={this.props.currentUser}
@@ -148,7 +148,8 @@ class MoviesIndex extends React.Component {
                                 history={this.props.history}
                                 updateMovie={this.props.updateMovie}
                             />
-                        </div> */}
+                        </div>
+                        
                         
                     </div>
                     {document.onreadystatechange = () => {

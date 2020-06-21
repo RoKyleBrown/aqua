@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 class FeaturedItem extends React.Component {
     constructor(props) {
         super(props)
-        this.removeMesage = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/removeMsg.png";
+        this.removeMessage = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/removeMsg.png";
         this.addMsg = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/hoverMenu.png"
         this.state = ({ movie: this.props.movie, hovMsg: this.addMsg, clkMsg: ''});
         this.clickPlus = this.clickPlus.bind(this);
@@ -19,8 +19,8 @@ class FeaturedItem extends React.Component {
 
     showMsg(movieId) {
 
-        if (Object.keys(this.props.user.minus_check).includes(movieId)) {
-            this.setState({ hovMsg: this.removeMesage });
+        if (Object.keys(this.props.user.minus_check).includes(`${movieId}`)) {
+            this.setState({ hovMsg: this.removeMessage });
             $(`.${movieId}b`).addClass("feat-hov-msg-b");
         }
 
@@ -69,7 +69,7 @@ class FeaturedItem extends React.Component {
             user.minus_check[movie.id] = this.minus;
             currMovie.current_msg = clkAdd;
             this.setState({
-                movie: currMovie, hovMsg: this.removeMesage,
+                movie: currMovie, hovMsg: this.removeMessage,
                 clkMsg: currMovie.current_msg
             });
             $(`.${movie.id}b`).addClass("feat-hov-msg-b")
@@ -104,6 +104,10 @@ class FeaturedItem extends React.Component {
                         </div>
                         <div id="movie-details">
                             <h3>{this.props.movie.title}</h3>
+                            <p id="feat-genre">
+                                {this.props.movie.year} &#8226; 
+                                <span>{this.props.movie.genre}</span>
+                            </p>
                             <p>{this.props.movie.description}</p>
                             <div className="disp-msg">
                                 <div className={`${this.state.movie.id}b feat-hov-msg`}>
