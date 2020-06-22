@@ -48,7 +48,7 @@ class MoviesIndex extends React.Component {
         
         if (this.props.currentUser) {
             return (
-                <div  className="app-background-a">
+                <div  className="app-background">
                     <div className="nav-main">
                         <ul className="nav-left">
                             <li className="nav-logo">aqua</li>

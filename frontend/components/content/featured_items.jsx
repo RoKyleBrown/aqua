@@ -92,10 +92,10 @@ class FeaturedItems extends React.Component {
     render () {
     
     let movies = []
-        movies.push(this.props.movies.filter( movie => 
-            (movie.feature && !movie.top_feature)
+        movies.push(this.props.movies.filter( (movie, i) => 
+            (movie.feature && !movie.top_feature && i < 5)
             ))
-            if (!movies[0][0]) return null;
+            if (!movies.length) return null;
 
 
              return  ( <div className="items">

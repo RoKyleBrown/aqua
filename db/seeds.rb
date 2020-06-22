@@ -168,7 +168,29 @@ m9 = Movie.create(
     plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png",
     genre: "drama",
     year: "2014"
-) 
+)
+
+
+#second-features
+
+m10 = Movie.create(
+    title: "Jaws",
+    description: "When a killer shark unleashes chaos on a beach community, it's up to a local sheriff, a marine biologist, and an old seafarer to hunt the beast down. —Patrick Boldt. It's a hot summer on Amity Island, a small community whose main business is its beaches.",
+    imageUrl: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/pulp-fiction.png",
+    feature: true,
+    top_feature: false,
+    video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/PulpFiction.mp4",
+    screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/PulpFiction-screenshot.png",
+    thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/PulpFiction-thumb.png",
+    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/pulp_fiction_16_9.jpg",
+    plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
+    current_msg: "Pulp Fiction was added to My Content.",
+    plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png",
+    genre: "crime drama",
+    year: "1994"
+)   
+
+
 
 
 #users

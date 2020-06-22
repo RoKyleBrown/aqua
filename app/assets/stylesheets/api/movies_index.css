@@ -16,17 +16,12 @@ html, body {
     overflow: hidden;
 }
 
-.app-background-a {
-    background-color: #010116;
-    position: relative;
-    min-height: 1000px;
-    overflow-x: hidden;
-}
 .app-background {
     background-color: #010116;
-    position: absolute;
-    min-height: 1000px;
+    /* position: absolute; */
+    min-height: 100vh;
     overflow-x: hidden;
+    z-index: -4;  
 }
 
 .movie-container a {
@@ -246,9 +241,9 @@ html, body {
     display: block;
 }
 .hello {
-    top: 82vw;
+    top: -4vw;
     width: 100%;
-    position: absolute;
+    position: relative;
     /* display: flex;
     justify-content: center; */
 }
@@ -526,8 +521,7 @@ html, body {
 }
 
 .sub-items2 {
-    position: absolute;
-    transform: translateY(21vw);
+    position: relative;
     z-index: 5;
     
 }
