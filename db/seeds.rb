@@ -176,18 +176,66 @@ m9 = Movie.create(
 m10 = Movie.create(
     title: "Jaws",
     description: "When a killer shark unleashes chaos on a beach community, it's up to a local sheriff, a marine biologist, and an old seafarer to hunt the beast down. —Patrick Boldt. It's a hot summer on Amity Island, a small community whose main business is its beaches.",
-    imageUrl: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/pulp-fiction.png",
+    imageUrl: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Jaws.jpg",
     feature: true,
     top_feature: false,
-    video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/PulpFiction.mp4",
-    screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/PulpFiction-screenshot.png",
-    thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/PulpFiction-thumb.png",
-    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/pulp_fiction_16_9.jpg",
+    video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/jaws.mp4",
+    screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/jaws-screenshot.jpg",
+    thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Jaws-thumb.png",
+    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/jaws_16_9.jpg",
     plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
-    current_msg: "Pulp Fiction was added to My Content.",
+    current_msg: "Jaws was added to My Content.",
     plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png",
-    genre: "crime drama",
-    year: "1994"
+    genre: "thriller",
+    year: "1975"
+)   
+m11 = Movie.create(
+    title: "Breakfast at Tiffany's",
+    description: "Breakfast at Tiffany's is the story of a young woman in World War II-era New York who hobnobs with famous people, gets into a lot of trouble, and breaks many hearts along the way, all while struggling to find her place in the world.",
+    imageUrl: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Tiffs.png",
+    feature: true,
+    top_feature: false,
+    video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/tiffs.mp4",
+    screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/tiffs-screenshot.jpg",
+    thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Tiffs-thumb.png",
+    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/tiffs_16_9.jpg",
+    plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
+    current_msg: "Breakfast at Tiffany's was added to My Content.",
+    plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png",
+    genre: "romance",
+    year: "1961"
+)   
+m12 = Movie.create(
+    title: "The Grey",
+    description: "In Alaska, a team of oil workers board a flight home; however, they cross a storm and the airplane crashes. Only seven workers survive in the wilderness and John Ottway, who is a huntsman that kills wolves to protect the workers, assumes leadership of the group.",
+    imageUrl: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/grey.jpg",
+    feature: true,
+    top_feature: false,
+    video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/grey.mp4",
+    screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/grey-screenshot.png",
+    thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/grey-thumb.png",
+    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/grey_16_9.jpg",
+    plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
+    current_msg: "The Grey was added to My Content.",
+    plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png",
+    genre: "action",
+    year: "2011"
+)   
+m13 = Movie.create(
+    title: "Parasite",
+    description: "The Kims - mother and father Chung-sook and Ki-taek, and their young adult offspring, son Ki-woo and daughter Ki-jung - are a poor family living in a shabby and cramped half basement apartment in a busy lower working class commercial district of Seoul. Without even knowing it, they, especially Mr. and Mrs. Kim, literally smell of poverty. ",
+    imageUrl: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Parasite.png",
+    feature: true,
+    top_feature: false,
+    video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Parasite.mp4",
+    screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Parasite-screenshot.png",
+    thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Parasite-thumb.png",
+    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Parasite_16_9.jpg",
+    plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
+    current_msg: "The Grey was added to My Content.",
+    plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png",
+    genre: "thriller",
+    year: "2019"
 )   
 
 
