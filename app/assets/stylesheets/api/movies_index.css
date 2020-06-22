@@ -470,6 +470,7 @@ html, body {
 .non-hov-msg-b {
 
     width: 68%;
+    height: 20%;
     margin-left: 7%;
     margin-bottom: 2%;
     display: flex;

@@ -172,23 +172,23 @@ m9 = Movie.create(
 
 
 #second-features
-
 m10 = Movie.create(
-    title: "Jaws",
-    description: "When a killer shark unleashes chaos on a beach community, it's up to a local sheriff, a marine biologist, and an old seafarer to hunt the beast down. —Patrick Boldt. It's a hot summer on Amity Island, a small community whose main business is its beaches.",
-    imageUrl: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Jaws.jpg",
+    title: "Parasite",
+    description: "The Kims - mother and father Chung-sook and Ki-taek, and their young adult offspring, son Ki-woo and daughter Ki-jung - are a poor family living in a shabby and cramped half basement apartment in a busy lower working class commercial district of Seoul. Without even knowing it, they, especially Mr. and Mrs. Kim, literally smell of poverty. ",
+    imageUrl: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Parasite.png",
     feature: true,
     top_feature: false,
-    video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/jaws.mp4",
-    screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/jaws-screenshot.jpg",
-    thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Jaws-thumb.png",
-    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/jaws_16_9.jpg",
+    video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Parasite.mp4",
+    screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Parasite-screenshot.png",
+    thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Parasite-thumb.png",
+    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Parasite_16_9.jpg",
     plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
-    current_msg: "Jaws was added to My Content.",
+    current_msg: "The Grey was added to My Content.",
     plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png",
     genre: "thriller",
-    year: "1975"
-)   
+    year: "2019"
+)
+
 m11 = Movie.create(
     title: "Breakfast at Tiffany's",
     description: "Breakfast at Tiffany's is the story of a young woman in World War II-era New York who hobnobs with famous people, gets into a lot of trouble, and breaks many hearts along the way, all while struggling to find her place in the world.",
@@ -221,21 +221,22 @@ m12 = Movie.create(
     genre: "action",
     year: "2011"
 )   
+
 m13 = Movie.create(
-    title: "Parasite",
-    description: "The Kims - mother and father Chung-sook and Ki-taek, and their young adult offspring, son Ki-woo and daughter Ki-jung - are a poor family living in a shabby and cramped half basement apartment in a busy lower working class commercial district of Seoul. Without even knowing it, they, especially Mr. and Mrs. Kim, literally smell of poverty. ",
-    imageUrl: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Parasite.png",
+    title: "Jaws",
+    description: "When a killer shark unleashes chaos on a beach community, it's up to a local sheriff, a marine biologist, and an old seafarer to hunt the beast down. —Patrick Boldt. It's a hot summer on Amity Island, a small community whose main business is its beaches.",
+    imageUrl: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Jaws.jpg",
     feature: true,
     top_feature: false,
-    video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Parasite.mp4",
-    screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Parasite-screenshot.png",
-    thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Parasite-thumb.png",
-    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Parasite_16_9.jpg",
+    video: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/jaws.mp4",
+    screenshot: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/jaws-screenshot.jpg",
+    thumb_hover: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/Jaws-thumb.png",
+    selected_thumb: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/jaws_16_9.jpg",
     plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
-    current_msg: "The Grey was added to My Content.",
+    current_msg: "Jaws was added to My Content.",
     plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png",
     genre: "thriller",
-    year: "2019"
+    year: "1975"
 )   
 
 

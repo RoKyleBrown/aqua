@@ -70,7 +70,8 @@ class FeaturedItems2 extends React.Component {
             currMovie.current_msg = clkAdd;
             this.setState({ movie: currMovie, hovMsg: this.removeMessage, 
                 clkMsg: currMovie.current_msg, user: user });
-            $(`.${movie.id}b`).addClass("feats-hov-msg-b")
+            $(`.${movie.id}b`).addClass("feats-hov-msg-b");
+            $(`.${movie.id}b`).removeClass("feats-hov-msg");
 
         } else {
             Object.keys(user.minus_check).forEach((selected) => {
@@ -81,7 +82,8 @@ class FeaturedItems2 extends React.Component {
                     this.setState({ movie: currMovie });
                     this.setState({ hovMsg: this.addMsg, 
                         clkMsg: currMovie.current_msg, user: user });
-                    $(`.${movie.id}b`).removeClass("feats-hov-msg-b")
+                    $(`.${movie.id}b`).addClass("feats-hov-msg");
+                    $(`.${movie.id}b`).removeClass("feats-hov-msg-b");
                 }
             })
         }
