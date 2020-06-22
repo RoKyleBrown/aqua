@@ -321,7 +321,7 @@ h1 {
 }
 
 #feats-title {
-    height: 45%;
+    height: 53%;
     font-family: "Graphik LC TT Thin";
     text-transform: uppercase;
     font-size: 3vw;
@@ -491,7 +491,7 @@ h1 {
 }
 
 #feats-details {
-    height: 29.9%;
+    height: 34.1%;
     -webkit-line-clamp: 3;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -517,7 +517,7 @@ h1 {
 
 
 #feats-actions {
-    height: 65%;
+    height: 59%;
     margin-left: 3%;
     margin-right: 3%;
     display: flex;

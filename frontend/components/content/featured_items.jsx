@@ -91,16 +91,22 @@ class FeaturedItems extends React.Component {
 
     render () {
     
-    let movies = []
-        movies.push(this.props.movies.filter( (movie, i) => 
-            (movie.feature && !movie.top_feature && i < 5)
-            ))
+    let movies =  [];
+    let count = 0;
+    
+        this.props.movies.forEach( (movie) => {
+            if (movie.feature && !movie.top_feature){
+                if (count < 4) movies.push(movie);
+                count++;
+            }
+        })
+
             if (!movies.length) return null;
 
 
              return  ( <div className="items">
                     <ul className="featured-items-flex">
-                        {movies[0].map( movie => 
+                        {movies.map( movie => 
                             
                         <li id="li-flex">
                             <img className="idx-thumb-hover" 

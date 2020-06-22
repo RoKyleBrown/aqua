@@ -55,13 +55,13 @@ class FeaturedItems2 extends React.Component {
         let clkAdd = `${movie.title} was added to My Content.`;
         let clkRmv = `${movie.title} was removed from My Content.`;
 
-        $('.notify-contain-a').addClass('notify-contain');
-        $('.notify-contain-a').removeClass('notify-contain-a');
+        $('.feats2-notify-contain-a').addClass('feats2-notify-contain');
+        $('.feats2-notify-contain-a').removeClass('feats2-notify-contain-a');
 
-        $('.notify-contain').height($(window).height());
+        $('.feats2-notify-contain').height($(window).height());
         setTimeout( () => {
-            $('.notify-contain').addClass('notify-contain-a'); 
-            $('.notify-contain').removeClass('notify-contain'); 
+            $('.feats2-notify-contain').addClass('feats2-notify-contain-a'); 
+            $('.feats2-notify-contain').removeClass('feats2-notify-contain'); 
         }, 4000)
 
         if (!(Object.keys(user.minus_check).includes(`${movie.id}`))) {
@@ -91,16 +91,22 @@ class FeaturedItems2 extends React.Component {
 
     render () {
     
-    let movies = []
-        movies.push(this.props.movies.filter( movie => 
-            (movie.feature && !movie.top_feature)
-            ))
-            if (!movies[0][0]) return null;
+        let movies = [];
+        let count = 0;
+
+        this.props.movies.forEach((movie) => {
+            if (movie.feature && !movie.top_feature) {
+                if (count > 3 && count < 8) movies.push(movie);
+                count++;
+            }
+        })
+
+        if (!movies.length) return null;
 
 
-             return  ( <div className="items">
-                    <ul className="featured-items-flex">
-                        {movies[0].map( movie => 
+        return (<div className="items">
+            <ul className="featured-items-flex">
+                {movies.map(movie =>
                             
                         <li id="li-flex">
                             <img className="idx-thumb-hover" 
@@ -169,7 +175,7 @@ class FeaturedItems2 extends React.Component {
                         </li>
                         )}
                     </ul>
-                     <div className="notify-contain-a"
+                     <div className="feats2-notify-contain-a"
                      >
                         <div className="add-notify">
                             <h1>{this.state.clkMsg}</h1>
