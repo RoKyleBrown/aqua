@@ -72,7 +72,8 @@ class FeaturedItem extends React.Component {
                 movie: currMovie, hovMsg: this.removeMessage,
                 clkMsg: currMovie.current_msg
             });
-            $(`.${movie.id}b`).addClass("feat-hov-msg-b")
+            $(`.${movie.id}b`).addClass("feat-hov-msg-b");
+            $(`.${movie.id}b`).removeClass("feat-hov-msg");
 
         } else {
             Object.keys(user.minus_check).forEach((selected) => {
@@ -85,7 +86,8 @@ class FeaturedItem extends React.Component {
                         hovMsg: this.addMsg,
                         clkMsg: currMovie.current_msg
                     });
-                    $(`.${movie.id}b`).removeClass("feat-hov-msg-b")
+                    $(`.${movie.id}b`).addClass("feat-hov-msg");
+                    $(`.${movie.id}b`).removeClass("feat-hov-msg-b");
                 }
             })
         }

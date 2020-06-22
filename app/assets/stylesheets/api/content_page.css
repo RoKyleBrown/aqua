@@ -10,9 +10,9 @@
 
 .content-back {
     background-color: #010116;
-    min-height: 200vh;
+    min-height: 100vh;
     width: 100%;
-    position: relative;
+    z-index: -4;
     overflow: hidden;
 }
 
@@ -24,13 +24,11 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
     padding-top: 2%;
 }
 
 #content-head-info {
-    /* margin-left: 20px; */
     margin-top: 45px;
     font: 37px "Graphik LC TT Thin";
     color: white;
@@ -55,15 +53,12 @@
     padding: none;
     color: white;
     height: 45px;
-    /* padding: 1%; */
-    /* padding: 1% 1%; */
     padding-top: 1%;
     padding-bottom: 1%;
     transition: 0s;
     position: fixed;
     width: 100%;
     z-index: 76;
-    /* transform: translateY(-12.594px); */
 }
 
 .selected-content {
@@ -77,24 +72,6 @@
     margin-bottom: 4%;
     position: relative;
 }
-
-/* .content-row:not(:nth-child(2)) {
-    display: flex;
-    margin-left: 3.7%;
-    padding: 0%;
-    margin-bottom: 4%;
-    position: absolute;
-     transform: translateY(130%);
-} */
-
-/* .content-row:nth-child(3) {
-    display: flex;
-    margin-left: 3.7%;
-    padding: 0%;
-    margin-bottom: 4%;
-    position: absolute;
-    transform: translateY(130%);
-} */
 
 .content-row  li {
     margin-right: .1%;
@@ -237,14 +214,13 @@
 
 .content-load {
     display: flex;
+    background-color: #010116;
     flex-direction: column;
     width: 100%;
     position: absolute;
     margin-top: 5%;
 }
-/* .vid-link-b {
-    display: none;
-} */
+
 
 .delete-container {
     top: 0%;
