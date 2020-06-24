@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom';
 import ContentPageContainer from "./content_page_container";
 import NonFeatured from "./non_featured";
 import FeaturedItems2 from "./featured_items_2";
+import BrowseMenu from "./browse_menu";
 
 
 class MoviesIndex extends React.Component {
@@ -24,6 +25,32 @@ class MoviesIndex extends React.Component {
                     .addClass("content-ripple-flex-b");
             }, 2500)
         }
+    }
+
+    browseDropdown(e){
+        e.preventDefault();
+        $(".browse-dropdown-b").addClass("browse-dropdown");
+        $(".browse-dropdown-b").removeClass("browse-dropdown-b");
+    }
+    browseUp(e){
+        e.preventDefault();
+        $(".browse-dropdown").addClass("browse-dropdown-b");
+        $(".browse-dropdown").removeClass("browse-dropdown");
+    }
+
+    browseToggle(e) {
+        e.preventDefault();
+
+        if ($(".browse-dropdown").length) {
+            $(".browse-dropdown").addClass("browse-dropdown-b"); 
+            $(".browse-dropdown").removeClass("browse-dropdown"); 
+        } else {
+            $(".browse-dropdown-b").addClass("browse-dropdown");
+            $(".browse-dropdown-b").removeClass("browse-dropdown-b");
+        }
+
+        
+
     }
 
     rightThing() {
@@ -52,7 +79,11 @@ class MoviesIndex extends React.Component {
                     <div className="nav-main">
                         <ul className="nav-left">
                             <li className="nav-logo">aqua</li>
-                            <li id="browse">
+                            <li id="browse"
+                                onMouseMove={this.browseDropdown}
+                                onMouseLeave={this.browseUp}
+                                onClick={this.browseToggle}
+                            >
                                 <span id="browse-space"><img id="browse-icon"
                                     src="https://aqua-app-dev.s3-us-west-1.amazonaws.com/browse_icon.png" 
                                 alt=""/></span>
@@ -85,6 +116,14 @@ class MoviesIndex extends React.Component {
                             </span> 
                             <span>{this.props.currentUser.first_name}</span></li>
                         </ul>
+                    </div>
+                    <div className="browse-dropdown-b"
+                         onMouseMove={this.browseDropdown}
+                         onMouseLeave={this.browseUp}
+                    >
+                            <BrowseMenu 
+                                movies={this.props.movies}
+                            />
                     </div>
                     {window.addEventListener('scroll', (e) => {
                         e.preventDefault();
@@ -153,6 +192,7 @@ class MoviesIndex extends React.Component {
                         </div>
 
                         <div className="sub-items2">
+                            <h1 id="sub2-title">newly added ></h1>
                             <FeaturedItems2
                                 movies={this.props.movies}
                                 user={this.props.currentUser}
