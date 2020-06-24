@@ -27,7 +27,7 @@ m1 = Movie.create(
     plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
     current_msg: "The Godfather was added to My Content.",
     plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png",
-    genre: "crime drama",
+    genre: "crime-drama",
     year: "1972"
 )   
 
@@ -47,7 +47,7 @@ m2 = Movie.create(
     plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
     current_msg: "Pulp Fiction was added to My Content.",
     plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png",
-    genre: "crime drama",
+    genre: "crime-drama",
     year: "1994"
 )   
 m3 = Movie.create(
@@ -81,7 +81,7 @@ m4 = Movie.create(
     plus_check: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png",
     current_msg: "Blue Velvet was added to My Content.",
     plus_minus: "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png",
-    genre: "crime drama",
+    genre: "crime-drama",
     year: "1986"
 )
 

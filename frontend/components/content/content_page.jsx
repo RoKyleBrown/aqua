@@ -16,7 +16,6 @@ class ContentPage extends React.Component {
         this.minusOut = this.minusOut.bind(this);
         this.minusOutPageLeave = this.minusOutPageLeave.bind(this);
         this.deleteCount = 0;
-        // this.deleteClicks = this.deleteClicks.bind(this);
         this.removeSelected = this.removeSelected.bind(this);
     }
 
@@ -98,7 +97,6 @@ class ContentPage extends React.Component {
 
         this.setState({ user: user });
         this.props.history.push('/movies')
-        // this.props.updateUser(user);
     }
 
 
@@ -121,7 +119,6 @@ class ContentPage extends React.Component {
         $(".delete-back").removeClass("delete-back");
 
         this.setState({ user: user });
-        // this.props.updateUser(user);
     }
 
     dropdown(e) {
@@ -246,7 +243,6 @@ class ContentPage extends React.Component {
                 <ul className="content-row">
                     {row.map( movie =>
                         <li>
-                    
                                 <Link className="vid-link-a" 
                                     to={this.path(movie.id)}
                                     ><div className="thumb-size">
