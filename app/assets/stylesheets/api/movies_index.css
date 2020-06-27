@@ -162,6 +162,15 @@ html, body {
 #search-space, #check-space, #browse-space {
     margin-right: 8%;
 }
+
+#search {
+    opacity: 0;
+}
+
+#search:hover {
+    cursor: default;
+    opacity: 0;
+}
 .user-dropdown-flex {
     display: flex;
     flex-direction: row;
@@ -238,9 +247,13 @@ html, body {
     display: block;
 }
 .hello {
-    top: -4vw;
     width: 100%;
     position: relative;
+    background-color: #010116;
+}
+
+#funny-guy{
+    background-color: #010116;
 }
 
 .non-content-row {
@@ -249,7 +262,17 @@ html, body {
     margin-right: 2.8%;
     padding: 0%;
     margin-bottom: 4%;
+    position: relative;
+    width: 100%;
+}
+.non-content-row:not(:nth-child(2)) {
+    display: flex;
+    margin-left: 2.8%;
+    margin-right: 2.8%;
+    padding: 0%;
+    margin-bottom: 4%;
     position: absolute;
+    margin-top: 5%;
     width: 100%;
 }
 
@@ -326,7 +349,7 @@ html, body {
 .non-info-back{
     background-color: #021623;
     width: 23vw;
-    height: 15.94vw;
+    height: 13.94vw;
     position: absolute;
     opacity: 0%;
     z-index: 1;
@@ -399,13 +422,14 @@ html, body {
 }
 
 .non-click-plus {
-    position: relative;
+    position: absolute;
 }
 
 #non-info {
     display: flex;
     flex-direction: column;
     width: 23vw;
+    position: absolute;
 }
 
 #non-info-appear {
@@ -428,8 +452,19 @@ html, body {
     opacity: 0%;
     height: 25vw;
     z-index: 5;
-    transform: translateY(17.2vw);
-    position: relative;
+    transform: translateY(15.9vw) translateX(-3%);
+    position: absolute;
+    display: block;
+}
+
+#non-div-filler {
+    background-color: #010116;
+    width: 101vw;
+    opacity: 100%;
+    height: 25vw;
+    z-index: -1;
+    transform: translateY(15.9vw) translateX(-3%);
+    position: absolute;
     display: block;
 }
 
@@ -446,14 +481,14 @@ html, body {
 
     width: 68%;
     height: 20%;
-    margin-left: 7%;
+    margin-left: 11.5%;
     margin-bottom: 2%;
     display: flex;
     align-items: baseline;
 }
 
 .non-msg {
-    transform: translateY(.4vw) translateX(-.7vw);
+    transform: translateY(-1.3vw) translateX(2.5vw) scale(2);
     opacity: 0%;
     height: 17%;
     position: absolute;
@@ -461,9 +496,11 @@ html, body {
 
 .non-msg-b {
 
-    transform: translateY(.4vw) translateX(-.7vw);
+    transform: translateY(-1.3vw) translateX(2.5vw) scale(2);
     opacity: 100%;
     transition: .5s;
+    height: 17%;
+    position: absolute;
 }
 
 .non-notify-contain {
@@ -492,9 +529,9 @@ html, body {
 }
 
 .sub-items2 {
-    position: relative;
     z-index: 5;
-    top: -6.75vw;
+    background-color: #010116;
+    margin-top: 4vw;
     
 }
 
@@ -570,4 +607,13 @@ html, body {
 }
 .browse-dropdown-b {
     display: none;
+}
+
+#sub-index {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: -5vw;
 }

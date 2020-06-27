@@ -15,8 +15,19 @@ class NonFeatured extends React.Component {
         this.whichIcon = this.whichIcon.bind(this);
         this.plus = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png";
         this.check = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/check-circle.png";
-        // this.play = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/play-btn.png";
         this.minus = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png";
+    }
+
+    noStinkinHyphens(item) {
+        let newStr = ""
+
+        if (item !== "sci-fi") {
+            newStr = item.replace(/-/g, " ");
+        } else {
+            newStr = item;
+        }
+
+        return newStr;
     }
 
     showMsg(movieId) {
@@ -42,11 +53,9 @@ class NonFeatured extends React.Component {
         if (Object.keys(user.minus_check).includes(`${movie.id}`)) {
             currMovie.plus_check = this.check;
             this.setState({ movie: currMovie })
-            // this.props.updateMovie(currMovie)
         } else {
             currMovie.plus_check = this.plus;
             this.setState({ movie: currMovie });
-            // this.props.updateMovie(currMovie);
         }
 
     }
@@ -109,18 +118,12 @@ class NonFeatured extends React.Component {
 
         let rows = [];
         let gridTitle = "Aqua's Choice";
-        let mov = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/pulp_fiction_16_9.jpg";
 
         if (this.props.currentUser.minus_check !== null) {
             let selectedMovies = this.props.movies.filter((movie, i) =>
                 i > 4 && i < 9
             )
-        // let selectedMovies = [mov, mov, mov, mov]
 
-
-            // selectedMovies.forEach((movie, i) => {
-            //     selectedMovies[i].plus_minus = this.props.currentUser.minus_check[movie.id];
-            // })
             let numRows = Math.ceil(selectedMovies.length / 4);
             let rowStart = 0;
 
@@ -165,7 +168,7 @@ class NonFeatured extends React.Component {
                                     <div id="non-info-appear">
                                         <div id="non-descrip">
                                             <p>
-                                                {movie.year} &#8226; {movie.genre}
+                                                {movie.year} &#8226; {this.noStinkinHyphens(movie.genre)}
                                             </p>
                                             <p> {movie.description}</p>
                                         </div>
@@ -201,11 +204,15 @@ class NonFeatured extends React.Component {
                                 </li>
                                 
                             )}
+                            <div id="non-div">
+
+                            </div>
+                            <div id="non-div-filler">
+
+                            </div>
                         </ul>
                     )}
-                    <div id="non-div">
-
-                        </div>
+                    
                     <div className="non-notify-contain-a"
                     >
                         <div className="add-notify">

@@ -1,4 +1,3 @@
-json.extract! user, :id, :email, :first_name, :last_name, :selected_movies,
-:minus_check
+json.extract! user, :id, :email, :first_name, :last_name, :minus_check
 
    

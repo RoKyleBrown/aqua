@@ -9,6 +9,8 @@ import { withRouter } from "react-router";
 import { useEffect } from "react"
 import MovieShowContainer from "./content/movie_show_container";
 import ContentPageContainer from "./content/content_page_container";
+import YearsPageContainer from './content/years_page_container';
+import GenresPageContainer from './content/genres_page_container';
 const App = () => {
 
     function ScrollToTopOnMount() {
@@ -33,6 +35,8 @@ const App = () => {
             <ProtectedRoute exact path="/movies" component={MoviesIndexContainer} />
             <ProtectedRoute path="/movies/:moviesId" component={MovieShowContainer}/>
             <ProtectedRoute path="/content" component={ContentPageContainer}/>
+            <ProtectedRoute path="/years/:decade" component={YearsPageContainer}/>
+            <ProtectedRoute path="/genres/:genre" component={GenresPageContainer}/>
          </Switch>
 
     </div> )
