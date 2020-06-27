@@ -3,12 +3,14 @@ import { logout, updateUser } from '../../actions/session_actions';
 import { fetchMovies, fetchMovie, updateMovie } from '../../actions/movie_actions';
 import ContentPage from './content_page';
 
-const mapStateProps = (state) => {
+const mapStateProps = (state, ownProps) => {
 
     return {
 
         currentUser: state.entities.users[state.session.id],
-        movies: Object.values(state.entities.movies)
+        movies: Object.values(state.entities.movies),
+        history: ownProps.history
+        
     }
 
 }

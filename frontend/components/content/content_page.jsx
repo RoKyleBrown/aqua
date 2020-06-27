@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import BrowseMenu from "./browse_menu";
 
 class ContentPage extends React.Component {
     constructor(props) {
@@ -29,8 +30,30 @@ class ContentPage extends React.Component {
                 $(".content-ripple-flex")
                     .addClass("content-ripple-flex-b");
             }, 360)
+        } 
+    }
+
+    browseDropdown(e) {
+        e.preventDefault();
+        $(".browse-dropdown-b").addClass("browse-dropdown");
+        $(".browse-dropdown-b").removeClass("browse-dropdown-b");
+    }
+    browseUp(e) {
+        e.preventDefault();
+        $(".browse-dropdown").addClass("browse-dropdown-b");
+        $(".browse-dropdown").removeClass("browse-dropdown");
+    }
+
+    browseToggle(e) {
+        e.preventDefault();
+
+        if ($(".browse-dropdown").length) {
+            $(".browse-dropdown").addClass("browse-dropdown-b");
+            $(".browse-dropdown").removeClass("browse-dropdown");
+        } else {
+            $(".browse-dropdown-b").addClass("browse-dropdown");
+            $(".browse-dropdown-b").removeClass("browse-dropdown-b");
         }
-        
     }
 
     removeSelected(){
@@ -294,7 +317,11 @@ class ContentPage extends React.Component {
                             >aqua</li>
                         </div >
  
-                        <li id="browse">
+                        <li id="browse"
+                            onMouseMove={this.browseDropdown}
+                            onMouseLeave={this.browseUp}
+                            onClick={this.browseToggle}
+                        >
                             <span id="browse-space"><img id="browse-icon"
                                 src="https://aqua-app-dev.s3-us-west-1.amazonaws.com/browse_icon.png"
                                 alt="" /></span>
@@ -326,6 +353,16 @@ class ContentPage extends React.Component {
                                 {this.props.currentUser.first_name}
                             </span></li>
                     </ul>
+                </div>
+                <div className="browse-dropdown-b"
+                    onMouseMove={this.browseDropdown}
+                    onMouseLeave={this.browseUp}
+                >
+                    <BrowseMenu
+                        movies={this.props.movies}
+                        history={this.props.history}
+                        fetchMovies={this.props.fetchMovies}
+                    />
                 </div>
                 <div className="user-dropdown-flex"
                     onMouseOver={this.dropdown}

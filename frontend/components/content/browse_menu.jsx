@@ -7,6 +7,10 @@ class BrowseMenu extends React.Component {
         this.itemSelected = this.itemSelected.bind(this);
     }
 
+    componentDidMount() {
+        this.props.fetchMovies();
+    }
+
     itemSelected(e) {
         e.preventDefault();
         let item = e.currentTarget.textContent;
@@ -28,20 +32,22 @@ class BrowseMenu extends React.Component {
     noStinkinHyphens(item) {
         let newStr = ""
 
-        if ( item !== "sci-fi") {
-            newStr = item.replace(/-/g, " ");
-        } else {
-            newStr = item;
-        }
+       if (item !== undefined){ 
+            if ( item !== "sci-fi") {
+                newStr = item.replace(/-/g, " ");
+            } else {
+                newStr = item;
+            }
+       }
 
         return newStr;
     }
 
-    subItemSelected(e) {
-        e.preventDefault();
+    subItemSelected(e, page) {
         $(".browse-sub-item-b").removeClass("browse-sub-item-b")
         let item = e.currentTarget.classList[1];
         $(`.${item}`).addClass("browse-sub-item-b")
+        this.props.history.push(`/${page}/${item}`)
 
     }
 
@@ -64,9 +70,13 @@ class BrowseMenu extends React.Component {
                             <div id="browse-col-div">
                                 <p 
                                     className={`browse-sub-item ${item}`}
-                                    onClick={this.subItemSelected}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        this.subItemSelected(e, 'genres');
+                                    }}
                                 >
                                   {this.noStinkinHyphens(item)}
+                                  {/* {item} */}
                                 </p>
                             </div>
                         )}
@@ -77,14 +87,21 @@ class BrowseMenu extends React.Component {
             )
     }
     decades() {
-        let years = this.props.movies.map(movie => 
-                movie.year.slice(0,3)
-            );
+        if (this.props.movies.length){
+            let years = []
+            
+            this.props.movies.forEach(movie => {
+                if (movie.year !== undefined){
+                    years.push(movie.year.slice(0,3))
+                }
+            })
+
         let list = [...new Set(years)].sort();
         list = list.map( item => `${item}0s`);
         let colNum = Math.ceil(list.length / 5);
         let columns = [];
         let colStart = 0;
+        
 
         for (let i = 0; i < colNum; i++) {
             columns[i] = list.slice(colStart, colStart + 5)
@@ -98,7 +115,10 @@ class BrowseMenu extends React.Component {
                             <div id="browse-col-div">
                                 <p 
                                     className={`browse-sub-item ${item}`}
-                                    onClick={this.subItemSelected}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        this.subItemSelected(e, 'years');
+                                    }}
                                 >
                                     {item}
                                 </p>
@@ -108,7 +128,9 @@ class BrowseMenu extends React.Component {
 
                 )}
             </div>
-        )
+        )} else {
+            return null;
+        }
     }
 
     render() {

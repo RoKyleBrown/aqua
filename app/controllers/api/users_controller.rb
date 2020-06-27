@@ -26,9 +26,8 @@ class Api::UsersController < ApplicationController
     private
 
     def user_params
-       params.require(:user).permit(:email, :first_name, :last_name).tap do|whitelisted|
-            whitelisted[:selected_movies] = params[:user][:selected_movies]
-            whitelisted[:minus_check] = params[:user][:minus_check].permit!
-       end 
+
+        params.require(:user).permit(:email, :first_name, :last_name, :minus_check => {})
     end
+
 end

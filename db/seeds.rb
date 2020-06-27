@@ -249,7 +249,6 @@ u1 = User.create(
     password: "123asd",
     last_name: "",
     first_name: "guest",
-    selected_movies: [m2.id, m5.id],
     minus_check: { "#{m2.id}" => "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png", 
     "#{m5.id}" => "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png"}
 )
@@ -258,7 +257,6 @@ u2 = User.create(
     password: "123asd",
     last_name: "Jordan",
     first_name: "Chris",
-    selected_movies: [m2.id],
     minus_check: { "#{m2.id}" => "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png"}
   
 )

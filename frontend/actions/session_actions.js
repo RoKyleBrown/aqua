@@ -43,5 +43,5 @@ export const signup = (user) => dispatch => {
 export const updateUser = (user) => dispatch => {
     
     return APIUtil.updateUser(user)
-        .then((user) => dispatch(receiveCurrentUser(user)));
+        .then(() => dispatch(receiveCurrentUser(user)))
 };

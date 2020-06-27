@@ -15,7 +15,7 @@ export const fetchMovie = (movieId) => {
 }
 
 export const updateMovie = (movie) => {
-    $.ajax({
+    return $.ajax({
         url: `/api/movies/${movie.id}`,
         method: 'PATCH',
         data: { movie },

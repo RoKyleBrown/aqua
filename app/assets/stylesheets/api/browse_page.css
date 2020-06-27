@@ -1,0 +1,32 @@
+ /* black #00000    */
+ /* NAVY #010116    */
+ /* teal #16b9be    */
+ /* magenta #cc038f    */
+ /* white #ffff    */
+ /* night #021623  */
+ /* light-gray #bfbfbf */
+ /* magenta hover #5e1638  */
+ /* charcoal #1b1a1b    */
+
+.browse-page-back {
+    background-color: #010116;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.browse-grid{
+    position: absolute;
+    top: calc(45px);
+    margin-top: 5%;
+    width: 100%;
+}
+
+#browse-title {
+    margin: 0%;
+    margin-left: 3.8%;
+    margin-bottom: 3.8%;
+    font-family: "Graphik LC TT Thin";
+    color: white;
+    font-size: 4vw;
+    text-transform: capitalize;
+}

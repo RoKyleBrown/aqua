@@ -17,6 +17,18 @@ class FeaturedItems2 extends React.Component {
         this.minus = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png";
         }
     
+    noStinkinHyphens(item) {
+        let newStr = ""
+
+        if (item !== "sci-fi") {
+            newStr = item.replace(/-/g, " ");
+        } else {
+            newStr = item;
+        }
+
+        return newStr;
+    }
+
     showMsg(movieId) {
 
         if (Object.keys(this.props.user.minus_check).includes(`${movieId}`)){
@@ -140,7 +152,7 @@ class FeaturedItems2 extends React.Component {
                                     </div>
                                     <div id="feats-descrip">
                                         <div id="feats-details">
-                                                <p>{movie.year} &#8226; {movie.genre}</p>
+                                                <p>{movie.year} &#8226; {this.noStinkinHyphens(movie.genre)}</p>
                                             <p>{movie.description}</p>
                                         </div>
                                         <div id="feats-actions">

@@ -17,6 +17,18 @@ class FeaturedItem extends React.Component {
         this.play = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/play-btn.png";
     }
 
+    noStinkinHyphens(item) {
+        let newStr = ""
+
+        if (item !== "sci-fi") {
+            newStr = item.replace(/-/g, " ");
+        } else {
+            newStr = item;
+        }
+
+        return newStr;
+    }
+
     showMsg(movieId) {
 
         if (Object.keys(this.props.user.minus_check).includes(`${movieId}`)) {
@@ -108,7 +120,7 @@ class FeaturedItem extends React.Component {
                             <h3>{this.props.movie.title}</h3>
                             <p id="feat-genre">
                                 {this.props.movie.year} &#8226; 
-                                <span>{this.props.movie.genre}</span>
+                                <span>{this.noStinkinHyphens(this.props.movie.genre)}</span>
                             </p>
                             <p>{this.props.movie.description}</p>
                             <div className="disp-msg">

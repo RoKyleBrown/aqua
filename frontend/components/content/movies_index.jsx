@@ -48,9 +48,6 @@ class MoviesIndex extends React.Component {
             $(".browse-dropdown-b").addClass("browse-dropdown");
             $(".browse-dropdown-b").removeClass("browse-dropdown-b");
         }
-
-        
-
     }
 
     rightThing() {
@@ -123,6 +120,8 @@ class MoviesIndex extends React.Component {
                     >
                             <BrowseMenu 
                                 movies={this.props.movies}
+                                history={this.props.history}
+                                fetchMovies={this.props.fetchMovies}
                             />
                     </div>
                     {window.addEventListener('scroll', (e) => {
@@ -171,6 +170,7 @@ class MoviesIndex extends React.Component {
                             />
                             )}
                         </div>
+
                         <div className="sub-items">
                             <FeaturedItems
                                 movies={this.props.movies}
@@ -181,25 +181,27 @@ class MoviesIndex extends React.Component {
                             />
                         </div>
                         
-                        <div className="hello">
-                            <NonFeatured 
-                                movies={this.props.movies}
-                                currentUser={this.props.currentUser}
-                                updateUser={this.props.updateUser}
-                                history={this.props.history}
-                                updateMovie={this.props.updateMovie}
-                            />
-                        </div>
+                        <div id="sub-index">
+                            <div className="hello">
+                                <NonFeatured 
+                                    movies={this.props.movies}
+                                    currentUser={this.props.currentUser}
+                                    updateUser={this.props.updateUser}
+                                    history={this.props.history}
+                                    updateMovie={this.props.updateMovie}
+                                />
+                            </div>
 
-                        <div className="sub-items2">
-                            <h1 id="sub2-title">newly added ></h1>
-                            <FeaturedItems2
-                                movies={this.props.movies}
-                                user={this.props.currentUser}
-                                updateUser={this.props.updateUser}
-                                history={this.props.history}
-                                updateMovie={this.props.updateMovie}
-                            />
+                            <div className="sub-items2">
+                                <h1 id="sub2-title">newly added ></h1>
+                                <FeaturedItems2
+                                    movies={this.props.movies}
+                                    user={this.props.currentUser}
+                                    updateUser={this.props.updateUser}
+                                    history={this.props.history}
+                                    updateMovie={this.props.updateMovie}
+                                />
+                            </div>
                         </div>
 
                     </div>
