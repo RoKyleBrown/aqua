@@ -25,23 +25,6 @@
  /*  charcoal #1b1a1b    */
 
 
- /* @import url(//db.onlinewebfonts.com/c/105007d99d9df64c50cc24d696d79555?family=Graphik+Web+Regular) */
-
-
-/* @import url(//db.onlinewebfonts.com/c/03d44a9a83b9f8a39806dac12ec6d615?family=Graphik+Web+Bold); */
-
-/* @import url(//db.onlinewebfonts.com/c/03d44a9a83b9f8a39806dac12ec6d615?family=Graphik+Web+Bold);
-
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
-@import url(//db.onlinewebfonts.com/c/e50594fdf8d9d9390f930016e6db2223?family=Graphik+Web+Light);
-@import url(//db.onlinewebfonts.com/c/b1d3fa674247ecf1a49694674ea26d4c?family=Graphik+Compact+Web+Light);
-
-@import url(//db.onlinewebfonts.com/c/416ff9cebc6b09a8d7c97e7d6e632cb9?family=Graphik+LC+TT+Thin);
-
-@import url(//db.onlinewebfonts.com/c/2aa5f6db10ab7b69465c95555c235503?family=Graphik+Semibold);
-@import url(//db.onlinewebfonts.com/c/c678102c438826011836d3c74fe1061b?family=GraphikLCGMedium);
-@import url(//db.onlinewebfonts.com/c/e81d1bf7827206c7d1273046adace7f2?family=Graphik+LC+Web+Medium); */
-
 @font-face{
     font-family: "Graphik Web Regular";
     src: url('./g-web-reg.ttf')
