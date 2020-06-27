@@ -12,8 +12,20 @@ class SignupForm extends React.Component {
             selected_movies: [],
             test: 'test'
         }
-        this.doTheRightThing = this.doTheRightThing.bind(this)
+        this.doTheRightThing = this.doTheRightThing.bind(this);
+        this.demoLogIn = this.demoLogIn.bind(this);
     }
+
+    demoLogIn(e) {
+        e.preventDefault();
+        const guest = {
+            email: 'guest@aqua.com',
+            password: '123asd'
+        }
+        this.props.login(guest)
+            .then(() => this.props.history.push('/movies'));
+    }
+
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value })
     }
@@ -29,8 +41,12 @@ class SignupForm extends React.Component {
         <div className="signup-background">
             <ul className="signup-nav">
                 <li ><Link id="logo-signup" to={`/`}>aqua</Link></li>
-                <li> <Link id="signup-login-btn" to={`/session/login`}> 
-                Log In</Link></li>
+                <li> <Link 
+                        id="signup-login-btn" 
+                        to={`/session/login`}
+                        onClick={this.demoLogIn}
+                     > 
+                Demo Login</Link></li>
             </ul>
             <div className="signup-form-container">
                 <p>Create Your Account</p>
@@ -82,9 +98,11 @@ class SignupForm extends React.Component {
                             )}</p>
                         </label>
                     </div>
+                   
                     <p id="signup-t-c">By clicking "SIGN UP" you agree to 
                     the Terms of Use and Privacy Policy.</p>
                     <button className="signup-btn">Sign Up</button>
+                    
                 </form>
             </div>
             <div className="errors-container">
