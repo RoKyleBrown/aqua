@@ -83,13 +83,9 @@ class SplashPage extends React.Component {
                         history={this.props.history} />
                 </div>
             </div>
-
-        {/* <div id="continue">
-            <div id="devices">
-
+            <div id="rel-base">
+                <p>© 2020 Aqua</p>
             </div>
-        </div> */}
-                
     </div>)
     }       
 }

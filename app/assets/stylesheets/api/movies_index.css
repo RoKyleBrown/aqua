@@ -8,6 +8,7 @@
  /* magenta hover #5e1638  */
  /*  charcoal #1b1a1b    */
  /* darkest blue #01010f*/
+ /* browse blue #01010f */
 
 html, body {
     overflow-x: hidden;
@@ -94,9 +95,18 @@ html, body {
     margin-right: 10px;
 }
 
+.nav-logo:hover {
+    cursor: default;
+}
+
 .nav-logo-scroll {
     color: white;
 }
+
+.nav-logo-scroll:hover {
+    cursor: default;
+}
+
 
 .circle-letter {
     border-radius: 50%;
@@ -620,4 +630,18 @@ html, body {
     flex-direction: column;
     justify-content: space-between;
     margin-top: -5vw;
+}
+
+#idx-rel-base {
+    height: 110px;
+    width: 100%;
+    background-color: #021623;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#idx-rel-base p {
+    color: white;
+    font-family: "Graphik Web Regular";
+    margin-right: 3%;
 }

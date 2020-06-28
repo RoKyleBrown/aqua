@@ -219,3 +219,17 @@
     display: flex;
     align-items: center;
 }
+
+#rel-base {
+    height: 110px;
+    width: 100%;
+    background-color: #010116;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#rel-base p {
+    color: white;
+    font-family: "Graphik Web Regular";
+    margin-right: 3%;
+}

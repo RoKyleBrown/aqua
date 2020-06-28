@@ -30,7 +30,11 @@ class ContentPage extends React.Component {
                 $(".content-ripple-flex")
                     .addClass("content-ripple-flex-b");
             }, 360)
-        } 
+        }
+        
+        if (document.readyState === 'complete') {
+            $(".footer-container").height($(document).outerHeight());
+        }
     }
 
     browseDropdown(e) {
@@ -295,6 +299,21 @@ class ContentPage extends React.Component {
                     )}
                 </ul>
             )}
+                <div className="footer-container"
+                >
+                    <div id="browse-rel-base">
+                        <p>© 2020 Aqua</p>
+                    </div>
+                </div>
+                {window.addEventListener('load', () => {
+                    if (document.readyState === 'complete') {
+                        $(".footer-container").height($(document).outerHeight());
+                    }
+                })}
+                {window.addEventListener('resize', (e) => {
+                    e.preventDefault();
+                    $(".footer-container").height($(document).height());
+                })}
         </div>
          )
        } else {
@@ -470,6 +489,7 @@ class ContentPage extends React.Component {
 
                     </div>
                 </div>
+                
                 {window.addEventListener('resize', (e) => {
                     e.preventDefault();
                     $('.delete-container').height($(window).height());

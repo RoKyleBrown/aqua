@@ -22,6 +22,9 @@ class GenresPage extends React.Component{
     componentDidMount() {
         this.props.fetchMovies();
         this.itemSelected();
+        if (document.readyState === 'complete') {
+            $(".footer-container").height($(document).outerHeight());
+        }
     }
 
     itemSelected() {
@@ -361,14 +364,13 @@ class GenresPage extends React.Component{
 
                                 )}
                                 <div id="non-div">
-
+                                                       
                                 </div>
                                 <div id="non-div-filler">
 
                                 </div>
                             </ul>
                         )}
-
                         <div className="non-notify-contain-a"
                         >
                             <div className="add-notify">
@@ -382,7 +384,21 @@ class GenresPage extends React.Component{
                         })}
                     </div>
                 </div>
-
+                <div className="footer-container"
+                >
+                    <div id="browse-rel-base">
+                        <p>© 2020 Aqua</p>
+                    </div>
+                </div>
+                {window.addEventListener('load', () => {
+                    if (document.readyState === 'complete') {
+                        $(".footer-container").height($(document).outerHeight());
+                    }
+                })}
+                {window.addEventListener('resize', (e) => {
+                    e.preventDefault();
+                    $(".footer-container").height($(document).height());
+                })}
             </div>
         )
     }
