@@ -11,6 +11,7 @@ import MovieShowContainer from "./content/movie_show_container";
 import ContentPageContainer from "./content/content_page_container";
 import YearsPageContainer from './content/years_page_container';
 import GenresPageContainer from './content/genres_page_container';
+import SplashPageContainer from './splash_page_container'
 const App = () => {
 
     function ScrollToTopOnMount() {
@@ -20,16 +21,10 @@ const App = () => {
         return null;
     }
 
-    function minusOut(state) {
-        state.entities.movies.forEach( (movie, i) => {
-            state.entities.movies[i] = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png"; 
-        })
-    }
-
     return ( <div>
         <ScrollToTopOnMount />
         <Switch>
-            <Route exact path="/" component={SplashPage}/>
+            <Route exact path="/" component={SplashPageContainer}/>
             <AuthRoute exact path="/session/login" component={LoginFormContainer}/>
             <AuthRoute exact path="/users/new" component={SignupFormContainer} />
             <ProtectedRoute exact path="/movies" component={MoviesIndexContainer} />

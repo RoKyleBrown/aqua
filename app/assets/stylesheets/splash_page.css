@@ -47,6 +47,48 @@
     opacity: 90%;
 }
 
+.nav-demo-btn {
+     text-decoration: none;
+     color: white;
+     background-color: black;
+     padding: 12px 25px 12px 25px;
+     border-radius: 4px;
+     text-align: center;
+     display: inline-block;
+     font-size: 16px;
+     font-family: "Graphik Web Regular";
+     text-transform: uppercase;
+     font-weight: bold;
+     position: relative;
+     margin-top: 1.5%;
+     right: 15%;
+     transition: 1.35s;
+     opacity: 0%;
+ }
+
+.nav-demo-btn-scroll {
+     text-decoration: none;
+     color: white;
+     background-color: black;
+     padding: 12px 25px 12px 25px;
+     border-radius: 4px;
+     text-align: center;
+     display: inline-block;
+     font-size: 16px;
+     font-family: "Graphik Web Regular";
+     text-transform: uppercase;
+     font-weight: bold;
+     position: relative;
+     margin-top: 1.5%;
+     right: 15%;
+     opacity: 100%;
+ }
+
+ #right-splash-nav {
+     display: flex;
+     align-items: center;
+ }
+
 .splash-nav li {
     margin-inline-end: 4.35%;
     margin-inline-start: 2%;
@@ -170,4 +212,10 @@
     height: 530px;
     background-color: #021623;
     
+}
+
+.nav-demo-div {
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
