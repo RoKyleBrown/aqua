@@ -432,6 +432,10 @@ html, body {
     position: absolute;
 }
 
+.non-click-plus img:hover {
+    cursor: pointer;
+}
+
 #non-info-appear {
     opacity: 0%;
 }

@@ -2,7 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ModalLoginFormContainer from './auth/modal_login_form_container';
 
-const SplashPage = (props) => {
+class SplashPage extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+
+    render () {
         return ( <div id="modal-center">
         
             <div className="splash-background">
@@ -11,7 +16,19 @@ const SplashPage = (props) => {
                 
                     <ul className="splash-nav" >
                         <li className="logo-splash">AQUA</li>
-                        <li ><button id="login-btn" onClick={(e) => {
+                        <li id="right-splash-nav" ><div className="nav-demo-div">
+                            <Link className="nav-demo-btn" 
+                            onClick={ (e) => {
+                                e.preventDefault();
+                                const guest = {
+                                    email: 'guest@aqua.com',
+                                    password: '123asd'
+                                }
+                                this.props.login(guest)
+                                    .then(() => this.props.history.push('/movies'));
+                            }}
+                            to={""}>Demo Login</Link></div>
+                            <button id="login-btn" onClick={(e) => {
                             e.preventDefault();
                             $(".login-modal").addClass("login-modal-open");
                             $(".splash-background")
@@ -40,14 +57,16 @@ const SplashPage = (props) => {
                 e.preventDefault();
             $(".splash-nav").addClass("splash-nav-scroll");
             $(".logo-splash").addClass("logo-splash-scroll");
+            $(".nav-demo-btn").addClass("nav-demo-btn-scroll");
         })}
 
             {window.addEventListener('scroll', (e) => {
-                    e.preventDefault();
-                    if (window.scrollY === 0) {
-                        $(".splash-nav").removeClass("splash-nav-scroll");
-                        $(".logo-splash").removeClass("logo-splash-scroll");
-                    }
+            e.preventDefault();
+            if (window.scrollY === 0) {
+                $(".splash-nav").removeClass("splash-nav-scroll");
+                $(".logo-splash").removeClass("logo-splash-scroll");
+                $(".nav-demo-btn").removeClass("nav-demo-btn-scroll");
+            }
             })}
 
         </div>
@@ -61,7 +80,7 @@ const SplashPage = (props) => {
 
                 <div className="login-modal-background">
                     <ModalLoginFormContainer
-                        history={props.history} />
+                        history={this.props.history} />
                 </div>
             </div>
 
@@ -72,7 +91,7 @@ const SplashPage = (props) => {
         </div> */}
                 
     </div>)
-
+    }       
 }
 
 export default SplashPage;

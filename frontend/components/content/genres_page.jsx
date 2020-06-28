@@ -28,6 +28,9 @@ class GenresPage extends React.Component{
         let item = this.props.location.pathname[1];
         let subItem = this.props.match.params["genre"];
 
+
+        $(`.${subItem}`).addClass("browse-sub-item-b")
+
         if (item === 'g') {
             $(".genre").addClass("br-lt-li-b");
             $(".year").removeClass("br-lt-li-b");
@@ -40,7 +43,7 @@ class GenresPage extends React.Component{
             $(".year-list").removeClass("year-list-b")
         }
 
-        $(`.${subItem}`).addClass("browse-sub-item-b")
+       
 
 
     }
@@ -372,10 +375,7 @@ class GenresPage extends React.Component{
                                 <h1>{this.state.clkMsg}</h1>
                             </div>
                         </div>
-                        {window.addEventListener('load', (e) => {
-                            e.preventDefault();
-                            this.itemSelected();
-                        })}
+                        {window.addEventListener('load', this.itemSelected())}
                         {window.addEventListener('resize', (e) => {
                             e.preventDefault();
                             $('.non-notify-contain').height($(window).height());
