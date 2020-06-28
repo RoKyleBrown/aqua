@@ -201,9 +201,11 @@ class MoviesIndex extends React.Component {
                                     history={this.props.history}
                                     updateMovie={this.props.updateMovie}
                                 />
+                                <div id="idx-rel-base">
+                                    <p>© 2020 Aqua</p>
+                                </div>
                             </div>
                         </div>
-
                     </div>
                     {document.onreadystatechange = () => {
                         if (document.readyState === 'complete') {

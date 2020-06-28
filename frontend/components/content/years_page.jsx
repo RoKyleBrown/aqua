@@ -23,6 +23,9 @@ class YearsPage extends React.Component {
     componentDidMount() {
         this.props.fetchMovies();
         this.itemSelected();
+        if (document.readyState === 'complete') {
+            $(".footer-container").height($(document).outerHeight());
+        }
     }
 
     itemSelected() {
@@ -374,6 +377,21 @@ class YearsPage extends React.Component {
                         })}
                     </div>
                 </div>
+                <div className="footer-container"
+                >
+                    <div id="browse-rel-base">
+                        <p>© 2020 Aqua</p>
+                    </div>
+                </div>
+                {window.addEventListener('load', () => { 
+                    if (document.readyState === 'complete') {
+                        $(".footer-container").height($(document).outerHeight());
+                    }
+                })}
+                {window.addEventListener('resize', (e) => {
+                    e.preventDefault();
+                    $(".footer-container").height($(document).height());
+                })}
                 
             </div>
         )

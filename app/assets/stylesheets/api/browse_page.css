@@ -7,11 +7,12 @@
  /* light-gray #bfbfbf */
  /* magenta hover #5e1638  */
  /* charcoal #1b1a1b    */
+/* browse blue #01010f */
 
 .browse-page-back {
     background-color: #010116;
     width: 100%;
-    min-height: 100vh;
+    min-height: 100vh; 
 }
 
 .browse-grid{
@@ -29,4 +30,25 @@
     color: white;
     font-size: 4vw;
     text-transform: capitalize;
+}
+.footer-container {
+    width: 100%;
+    pointer-events: none;
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+}
+
+#browse-rel-base {
+    height: 110px;
+    width: 100%;
+    background-color: #01010f;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#browse-rel-base p {
+    color: white;
+    font-family: "Graphik Web Regular";
+    margin-right: 3%;
 }
