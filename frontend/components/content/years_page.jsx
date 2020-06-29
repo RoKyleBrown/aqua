@@ -18,14 +18,40 @@ class YearsPage extends React.Component {
         this.check = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/check-circle.png";
         this.minus = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png";
         this.rightThing = this.rightThing.bind(this);
+        this.reRender = this.reRender.bind(this);
     }
 
     componentDidMount() {
-        this.props.fetchMovies();
-        this.itemSelected();
-        if (document.readyState === 'complete') {
-            $(".footer-container").height($(document).outerHeight());
+        this.props.fetchMovies()
+        if (document.readyState == 'complete') {
+            setTimeout(() => {
+                $(".pre-browse-grid").addClass("browse-grid");
+                $(".pre-browse-grid").removeClass("pre-browse-grid");
+                $(".browse-ripple-flex")
+                    .addClass("browse-ripple-flex-b");
+                $(".footer-container").height($(document).outerHeight())
+                this.itemSelected();
+            }, 360)
         }
+    }
+
+    componentDidUpdate(nextProps) {
+        if (this.props.location.pathname !== nextProps.location.pathname){
+            window.location.reload();
+            if (document.readyState == 'complete') {
+                setTimeout(() => {
+                    $(".pre-browse-grid").addClass("browse-grid");
+                    $(".pre-browse-grid").removeClass("pre-browse-grid");
+                    $(".browse-ripple-flex")
+                        .addClass("browse-ripple-flex-b");
+                }, 360)
+            }
+        }
+    }
+
+    reRender(e) {
+        e.preventDefault()
+        this.forceUpdate();
     }
 
     itemSelected() {
@@ -280,7 +306,9 @@ class YearsPage extends React.Component {
                             onClick={this.rightThing}>Log Out</li>
                     </ul>
                 </div>
-                <div className="browse-grid">
+                <div className="pre-browse-grid"
+                    onLoad={this.reRender}
+                >
                     <h3 id="browse-title">{decade}</h3>
                     <div id="funny-guy" >
                         <h3 id="movies-top">{gridTitle} > </h3>
@@ -366,16 +394,23 @@ class YearsPage extends React.Component {
                                 <h1>{this.state.clkMsg}</h1>
                             </div>
                         </div>
-                        {window.addEventListener('load', (e) => {
-                            e.preventDefault();
+                        {/* {window.addEventListener('load', () => {
                             this.itemSelected();
-                        })}
+                            
+                        })} */}
 
                         {window.addEventListener('resize', (e) => {
                             e.preventDefault();
                             $('.non-notify-contain').height($(window).height());
                         })}
                     </div>
+                    
+                </div>
+                <div className="browse-ripple-flex"
+                    style={{
+                        height: $(window).height()
+                    }}>
+                    <img src="https://aqua-app-dev.s3-us-west-1.amazonaws.com/aqua_ripple.gif" />
                 </div>
                 <div className="footer-container"
                 >
@@ -383,15 +418,30 @@ class YearsPage extends React.Component {
                         <p>© 2020 Aqua</p>
                     </div>
                 </div>
-                {window.addEventListener('load', () => { 
+                {/* {window.addEventListener('load', () => { 
                     if (document.readyState === 'complete') {
                         $(".footer-container").height($(document).outerHeight());
+                        this.itemSelected();
                     }
-                })}
+                })} */}
                 {window.addEventListener('resize', (e) => {
                     e.preventDefault();
                     $(".footer-container").height($(document).height());
                 })}
+
+                {document.onreadystatechange = () => {
+                    if (document.readyState === 'complete') {
+                        setTimeout(() => {
+                            $(".pre-browse-grid").addClass("browse-grid");
+                            $(".pre-browse-grid").removeClass("pre-browse-grid");
+                            $(".browse-ripple-flex")
+                                .addClass("browse-ripple-flex-b");
+                            $(".footer-container").height($(document).outerHeight());
+                            this.itemSelected();
+                        }, 360)
+                    }
+                }}
+                
                 
             </div>
         )

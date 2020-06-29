@@ -217,7 +217,7 @@
     background-color: #010116;
     flex-direction: column;
     width: 100%;
-    position: absolute;
+    position: relative;
     margin-top: 5%;
 }
 
@@ -361,5 +361,9 @@ font-family: "GraphikLCGMedium";
 }
 
 .content-ripple-flex-b {
+    display: none;
+}
+
+.footer-container-b {
     display: none;
 }
