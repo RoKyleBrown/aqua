@@ -1,6 +1,6 @@
 # Aqua
 
-[Live Link](http://aqua-app.herokuapp.com/#/)
+[Live Link](http://aqua-streaming.herokuapp.com/)
 
 ![alt text](https://aqua-app-dev.s3-us-west-1.amazonaws.com/Screen+Shot+2020-06-11+at+11.40.52+AM.png "ScreenShot")
 
