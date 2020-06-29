@@ -52,11 +52,10 @@ class FeaturedItems2 extends React.Component {
         if (Object.keys(user.minus_check).includes(`${movie.id}`)){
             currMovie.plus_check = this.check;
             this.setState({ movie: currMovie })
-            // this.props.updateMovie(currMovie)
         } else {
             currMovie.plus_check = this.plus;
             this.setState({ movie: currMovie });
-            // this.props.updateMovie(currMovie);
+            
         }
       
     }
