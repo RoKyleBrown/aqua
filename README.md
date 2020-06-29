@@ -59,7 +59,7 @@ Aqua is a take on the streaming service, Hulu. It hosts movie content and featur
  
  * When users hover, a thumbnail from the movie is displayed also revealing minus (-) icon
  
- * When users click on the minus they are prompted with the abiity to select more movies
+ * When users click on the minus they are prompted with the ability to select more movies
  
  * Once the user has selected all of his or her movies, he or she is able to remove them from the "My Content" page
  
