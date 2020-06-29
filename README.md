@@ -51,7 +51,7 @@ Aqua is a take on the streaming service, Hulu. It hosts movie content and featur
  
  * It features normal video interation, including seeking, title display/auto-hide, and video close-out
  
- ### "My Content" Page
+ ### "My Content" Page (CRUD)
  
  * This page replicates Hulu's "My Stuff" page with a similar user experience
  
