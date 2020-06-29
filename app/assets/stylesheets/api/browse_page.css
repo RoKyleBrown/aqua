@@ -12,14 +12,21 @@
 .browse-page-back {
     background-color: #010116;
     width: 100%;
-    min-height: 100vh; 
+    min-height: 100vh;
+    position: absolute;
 }
 
-.browse-grid{
+.pre-browse-grid {
+    display: none;
+   
+}
+.browse-grid {
+    display: block;
     position: absolute;
     top: calc(45px);
     margin-top: 5%;
     width: 100%;
+   
 }
 
 #browse-title {
@@ -36,7 +43,7 @@
     pointer-events: none;
     display: flex;
     align-items: flex-end;
-    position: absolute;
+    background-color: #010116;
 }
 
 #browse-rel-base {
@@ -45,10 +52,30 @@
     background-color: #01010f;
     display: flex;
     justify-content: flex-end;
+ 
 }
 
 #browse-rel-base p {
     color: white;
     font-family: "Graphik Web Regular";
     margin-right: 3%;
+}
+
+.browse-ripple-flex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+}
+
+.browse-ripple-flex img {
+    position: fixed;
+    width: 13vw;
+}
+
+.browse-ripple-flex-b {
+    display: none;
 }

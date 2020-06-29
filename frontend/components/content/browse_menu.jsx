@@ -5,6 +5,7 @@ class BrowseMenu extends React.Component {
     constructor(props) {
         super(props);
         this.itemSelected = this.itemSelected.bind(this);
+        this.state = {};
     }
 
     componentDidMount() {
@@ -47,7 +48,15 @@ class BrowseMenu extends React.Component {
         $(".browse-sub-item-b").removeClass("browse-sub-item-b")
         let item = e.currentTarget.classList[1];
         $(`.${item}`).addClass("browse-sub-item-b")
-        this.props.history.push(`/${page}/${item}`)
+
+        if (this.props.history.location.pathname.slice(0,3) === `/${page.slice(0,2)}`){
+
+            $(".browse-grid").addClass("pre-browse-grid")
+            $(".browse-grid").removeClass("browse-grid")
+                .then(this.props.history.push(`/${page}/${item}`))
+        } else {
+            this.props.history.push(`/${page}/${item}`)
+        }
 
     }
 
