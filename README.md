@@ -65,4 +65,12 @@ Aqua is a take on the streaming service, Hulu. It hosts movie content and featur
  
  ![alt text](https://aqua-app-dev.s3-us-west-1.amazonaws.com/Screen+Shot+2020-06-11+at+12.53.39+PM.png "ScreenShot 3")
  
+  ### "Browse" Page
+ 
+ * A user can view the movies filtered by either year or genre
+ 
+ * When users hover, a similar action to Hulu's sub-features occurs (pictured)
+ 
+ ![alt text](https://aqua-app-dev.s3-us-west-1.amazonaws.com/browse_screenshot.png "ScreenShot 4")
+ 
  
