@@ -49,8 +49,9 @@ class BrowseMenu extends React.Component {
         let item = e.currentTarget.classList[1];
         $(`.${item}`).addClass("browse-sub-item-b")
 
-        if (this.props.history.location.pathname.slice(0,3) === `/${page.slice(0,2)}`){
-
+        if (this.props.history.location.pathname === `/${page}/${item}`){
+            this.props.history.push(`/${page}/${item}`)
+        } else if (this.props.history.location.pathname.slice(0, 3) === `/${page.slice(0, 2)}`) {
             $(".browse-grid").addClass("pre-browse-grid")
             $(".browse-grid").removeClass("browse-grid")
                 .then(this.props.history.push(`/${page}/${item}`))
