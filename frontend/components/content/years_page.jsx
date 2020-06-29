@@ -29,6 +29,8 @@ class YearsPage extends React.Component {
                 $(".pre-browse-grid").removeClass("pre-browse-grid");
                 $(".browse-ripple-flex")
                     .addClass("browse-ripple-flex-b");
+                $(".footer-container-b").addClass("footer-container")
+                $(".footer-container-b").removeClass("footer-container-b")
                 $(".footer-container").height($(document).outerHeight())
                 this.itemSelected();
             }, 360)
@@ -44,6 +46,8 @@ class YearsPage extends React.Component {
                     $(".pre-browse-grid").removeClass("pre-browse-grid");
                     $(".browse-ripple-flex")
                         .addClass("browse-ripple-flex-b");
+                    $(".footer-container-b").addClass("footer-container")
+                    $(".footer-container-b").removeClass("footer-container-b")
                 }, 360)
             }
         }
@@ -202,9 +206,16 @@ class YearsPage extends React.Component {
         let rows = [];
         let gridTitle = "movies";
         let decade = this.props.match.params["decade"];
-        let matchedMovs = this.props.movies.filter( movie =>
-                movie.year.slice(0,3) === decade.slice(0,3)
-            )
+        let matchedMovs = [];
+        
+        
+        this.props.movies.forEach( movie => {
+                if (movie.year !== undefined) {
+                    if (movie.year.slice(0,3) === decade.slice(0,3)) {
+                        matchedMovs.push(movie)
+                    }
+                }
+            })
 
         let numRows = Math.ceil(matchedMovs.length / 4);
         let rowStart = 0;
@@ -412,7 +423,7 @@ class YearsPage extends React.Component {
                     }}>
                     <img src="https://aqua-app-dev.s3-us-west-1.amazonaws.com/aqua_ripple.gif" />
                 </div>
-                <div className="footer-container"
+                <div className="footer-container-b"
                 >
                     <div id="browse-rel-base">
                         <p>© 2020 Aqua</p>
@@ -436,6 +447,8 @@ class YearsPage extends React.Component {
                             $(".pre-browse-grid").removeClass("pre-browse-grid");
                             $(".browse-ripple-flex")
                                 .addClass("browse-ripple-flex-b");
+                            $(".footer-container-b").addClass("footer-container")
+                            $(".footer-container-b").removeClass("footer-container-b")
                             $(".footer-container").height($(document).outerHeight());
                             this.itemSelected();
                         }, 360)

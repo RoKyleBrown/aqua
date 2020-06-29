@@ -27,6 +27,8 @@ class GenresPage extends React.Component{
                 $(".pre-browse-grid").removeClass("pre-browse-grid");
                 $(".browse-ripple-flex")
                     .addClass("browse-ripple-flex-b");
+                $(".footer-container-b").addClass("footer-container")
+                $(".footer-container-b").removeClass("footer-container-b")
                 $(".footer-container").height($(document).outerHeight())
                 this.itemSelected();
             }, 360)
@@ -42,6 +44,8 @@ class GenresPage extends React.Component{
                     $(".pre-browse-grid").removeClass("pre-browse-grid");
                     $(".browse-ripple-flex")
                         .addClass("browse-ripple-flex-b");
+                    $(".footer-container-b").addClass("footer-container")
+                    $(".footer-container-b").removeClass("footer-container-b")
                 }, 360)
             }
         }
@@ -410,7 +414,7 @@ class GenresPage extends React.Component{
                     }}>
                     <img src="https://aqua-app-dev.s3-us-west-1.amazonaws.com/aqua_ripple.gif" />
                 </div>
-                <div className="footer-container"
+                <div className="footer-container-b"
                 >
                     <div id="browse-rel-base">
                         <p>© 2020 Aqua</p>
@@ -432,6 +436,8 @@ class GenresPage extends React.Component{
                             $(".pre-browse-grid").removeClass("pre-browse-grid");
                             $(".browse-ripple-flex")
                                 .addClass("browse-ripple-flex-b");
+                            $(".footer-container-b").addClass("footer-container")
+                            $(".footer-container-b").removeClass("footer-container-b")
                             $(".footer-container").height($(document).outerHeight());
                             this.itemSelected();
                         }, 360)
