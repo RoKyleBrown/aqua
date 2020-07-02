@@ -50,7 +50,33 @@ Aqua is a take on the streaming service, Hulu. It hosts movie content and featur
  
  Allows user to add movie to "My Content" from the index page. Displays a check when added ("+" when yet to be added).
  
- ![alt text](https://aqua-app-dev.s3-us-west-1.amazonaws.com/Screen+Shot+2020-07-02+at+10.28.36+AM.png "Snippet 1")
+ ```javascript
+ if (!(Object.keys(user.minus_check).includes(`${movie.id}`))) {
+            user.minus_check[movie.id] = this.minus;
+            currMovie.plus_check = this.check;
+            currMovie.current_msg = clkAdd;
+            this.setState({ movie: currMovie, hovMsg: this.removeMessage, 
+                clkMsg: currMovie.current_msg, user: user });
+            $(`.${movie.id}b`).addClass("feats-hov-msg-b");
+            $(`.${movie.id}b`).removeClass("feats-hov-msg");
+
+        } else {
+            Object.keys(user.minus_check).forEach((selected) => {
+                if (selected === `${movie.id}`) {
+                    delete user.minus_check[movie.id]
+                    currMovie.plus_check = this.plus;
+                    currMovie.current_msg = clkRmv;
+                    this.setState({ movie: currMovie });
+                    this.setState({ hovMsg: this.addMsg, 
+                        clkMsg: currMovie.current_msg, user: user });
+                    $(`.${movie.id}b`).addClass("feats-hov-msg");
+                    $(`.${movie.id}b`).removeClass("feats-hov-msg-b");
+                }
+            })
+        }
+        this.props.updateUser(user);
+        this.props.updateMovie(currMovie);
+```
  
  ### Video Page
  
