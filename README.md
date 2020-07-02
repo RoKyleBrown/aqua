@@ -45,6 +45,13 @@ Aqua is a take on the streaming service, Hulu. It hosts movie content and featur
  
  ![alt text](https://aqua-app-dev.s3-us-west-1.amazonaws.com/Screen+Shot+2020-06-11+at+12.32.23+PM.png "ScreenShot 2")
  
+ 
+ 
+ 
+ Allows user to add movie to "My Content" from the index page. Displays a check when added ("+" when yet to be added).
+ 
+ ![alt text](https://aqua-app-dev.s3-us-west-1.amazonaws.com/Screen+Shot+2020-07-02+at+10.28.36+AM.png "Snippet 1")
+ 
  ### Video Page
  
  * The video page hosts an adaptive video PLAYER that adjusts to the user's browser dimensions
