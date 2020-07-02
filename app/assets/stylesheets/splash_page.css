@@ -187,6 +187,7 @@
 
  .signup-btn:hover {
      background-color: #bfbfbf;
+     cursor: pointer;
  }
 
 .splash-movie-hero {

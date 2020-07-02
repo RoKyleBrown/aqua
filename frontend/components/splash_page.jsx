@@ -46,10 +46,10 @@ class SplashPage extends React.Component {
                         <p id="hbo"> HBO®, SHOWTIME®, CINEMAX® and STARZ® available 
                         as add-ons.</p>
                         </p>
-                        <Link className="signup-btn"  
+                        <div className="signup-btn"  
                             onClick={() => this.props.history.push(`/users/new`) }
-                            to={`/users/new`}>Start Your 
-                            Free Trial</Link>
+                            >Start Your 
+                            Free Trial</div>
                 </div>
             </div>
             <div className="splash-movie-hero">
