@@ -152,7 +152,8 @@ class FeaturedItems extends React.Component {
                                     </div>
                                     <div id="feats-descrip">
                                         <div id="feats-details">
-                                                <p>{movie.year} &#8226; {this.noStinkinHyphens(movie.genre)}</p>
+                                                <p>{movie.year} &#8226; 
+                                                {this.noStinkinHyphens(movie.genre)}</p>
                                             <p>{movie.description}</p>
                                         </div>
                                         <div id="feats-actions">
