@@ -50,6 +50,11 @@
     src: url('./g-web-bold.ttf')
 }
 
+@font-face{
+    font-family: "futura";
+    src: url('./FUTURAB.TTF')
+}
+
 
 body {
     margin: 0;

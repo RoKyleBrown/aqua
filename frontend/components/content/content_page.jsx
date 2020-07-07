@@ -470,7 +470,6 @@ class ContentPage extends React.Component {
                                     this.minusOut();
                                     this.props.updateUser(this.state.user)
                                          .then( () => this.props.history.push('/content'));
-                                    // window.location.reload();
                                     
                                  }}}
                             >
