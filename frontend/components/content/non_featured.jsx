@@ -168,7 +168,8 @@ class NonFeatured extends React.Component {
                                     <div id="non-info-appear">
                                         <div id="non-descrip">
                                             <p>
-                                                {movie.year} &#8226; {this.noStinkinHyphens(movie.genre)}
+                                                {movie.year} &#8226; 
+                                                {this.noStinkinHyphens(movie.genre)}
                                             </p>
                                             <p> {movie.description}</p>
                                         </div>
