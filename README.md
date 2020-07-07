@@ -1,6 +1,6 @@
 # Aqua
 
-[Live Link](http://aqua-streaming.herokuapp.com/)
+[Live Link](http://aqua-app.herokuapp.com/)
 
 ![alt text](https://aqua-app-dev.s3-us-west-1.amazonaws.com/Screen+Shot+2020-06-11+at+11.40.52+AM.png "ScreenShot")
 
@@ -98,6 +98,27 @@ Aqua is a take on the streaming service, Hulu. It hosts movie content and featur
  
  ![alt text](https://aqua-app-dev.s3-us-west-1.amazonaws.com/Screen+Shot+2020-06-11+at+12.53.39+PM.png "ScreenShot 3")
  
+ Checks to see how many items are selected and returns an array of those items to remove.
+ 
+  ```javascript
+ if (this.deleteCount > 1){
+      let arr = this.removeSelected();
+      let newObj = {};
+
+      arr.forEach( el => {
+      newObj = this.removeVid(el);
+      })
+      this.deleteCount = 0;
+      this.setState({ deleteCount: this.deleteCount })
+      this.state.user.minus_check = newObj;
+      this.setState({user: this.state.user });
+      this.minusOut();
+      this.props.updateUser(this.state.user)
+           .then( () => this.props.history.push('/content'));
+                                    
+   }
+```
+ 
   ### "Browse" Page
  
  * A user can view the movies filtered by either year or genre
@@ -105,5 +126,20 @@ Aqua is a take on the streaming service, Hulu. It hosts movie content and featur
  * When users hover, a similar action to Hulu's sub-features occurs (pictured)
  
  ![alt text](https://aqua-app-dev.s3-us-west-1.amazonaws.com/browse_screenshot.png "ScreenShot 4")
+ 
+Filters movie objects that match the decade selected by the user. 
+
+```javascript
+let decade = this.props.match.params["decade"];
+        let matchedMovs = [];
+         
+        this.props.movies.forEach( movie => {
+                if (movie.year !== undefined) {
+                    if (movie.year.slice(0,3) === decade.slice(0,3)) {
+                        matchedMovs.push(movie)
+                    }
+                }
+            })
+```
  
  
