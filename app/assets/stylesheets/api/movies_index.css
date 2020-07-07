@@ -217,9 +217,9 @@ html, body {
 }
 
 .line-top {
-    padding-top: 0;
-    opacity: 0;
-    transform: translateX(-20px) scaleX(1.159);
+    top: 0;
+    opacity: 30%;
+    transform: translateX(-20px) translateY(-20px) scaleX(1.159);
 }
 
 .line-top hr {
