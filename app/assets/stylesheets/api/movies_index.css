@@ -200,12 +200,12 @@ html, body {
     list-style: none;
     font-family: "Graphik Web Regular";
     font-size: 13px;
-    height: 100px;
+    height: 60px;
     width: 250px;
     transform: translateX(-12%);
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     position: fixed;
     z-index: 76;
     top: calc(45px + 2vw);
@@ -217,7 +217,8 @@ html, body {
 }
 
 .line-top {
-    padding-top: 13px;
+    padding-top: 0;
+    opacity: 0;
     transform: translateX(-20px) scaleX(1.159);
 }
 
