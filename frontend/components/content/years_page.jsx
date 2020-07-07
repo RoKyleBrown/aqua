@@ -405,10 +405,6 @@ class YearsPage extends React.Component {
                                 <h1>{this.state.clkMsg}</h1>
                             </div>
                         </div>
-                        {/* {window.addEventListener('load', () => {
-                            this.itemSelected();
-                            
-                        })} */}
 
                         {window.addEventListener('resize', (e) => {
                             e.preventDefault();
