@@ -426,8 +426,8 @@ class ContentPage extends React.Component {
                             $(".content-pre-load").addClass("content-load");
                             $(".content-ripple-flex")
                                 .addClass("content-ripple-flex-b");
-                            $(".footer-container-b").addClass("footer-container")
-                            $(".footer-container-b").removeClass("footer-container-b")
+                            $(".footer-container-b").addClass("footer-container");
+                            $(".footer-container-b").removeClass("footer-container-b");
                         }, 360) 
                     }   
                 }}
