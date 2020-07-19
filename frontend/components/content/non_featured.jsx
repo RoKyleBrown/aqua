@@ -83,7 +83,7 @@ class NonFeatured extends React.Component {
                 movie: currMovie, hovMsg: this.removeMessage,
                 clkMsg: currMovie.current_msg, user: user
             });
-            $(`.${movie.id}b`).addClass("non-hov-msg-b")
+            $(`.${movie.id}b`).addClass("non-hov-msg-b");
 
         } else {
             Object.keys(user.minus_check).forEach((selected) => {
