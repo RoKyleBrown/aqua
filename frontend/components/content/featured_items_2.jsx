@@ -64,7 +64,8 @@ class FeaturedItems2 extends React.Component {
     centerScreen(el) {
         if (document.getElementById(el) !== null) {
             let element = document.getElementById(el);
-            (element).scrollIntoView({behavior:'smooth', block: 'center' });
+            (element).scrollIntoView({ block: 'center' });
+            element.id = `${el}-scroll`;
         }
     }
 
@@ -131,6 +132,12 @@ class FeaturedItems2 extends React.Component {
                 onMouseOver={(e) => {
                     e.preventDefault();
                     this.centerScreen("flex2");
+                }}
+                onMouseLeave={(e) => {
+                    e.preventDefault();
+                    if (document.getElementById("flex2-scroll") !== null) {
+                        document.getElementById("flex2-scroll").id = "flex2";
+                    }
                 }}
             >
                 {movies.map(movie =>
