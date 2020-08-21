@@ -11,6 +11,7 @@ class FeaturedItems2 extends React.Component {
                      user: this.props.user}
         this.clickPlus = this.clickPlus.bind(this);
         this.whichIcon = this.whichIcon.bind(this);
+        this.centerScreen = this.centerScreen.bind(this);
         this.plus = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png";
         this.check = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/check-circle.png";
         this.play = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/play-btn.png";
@@ -58,6 +59,13 @@ class FeaturedItems2 extends React.Component {
             
         }
       
+    }
+
+    centerScreen(el) {
+        if (document.getElementById(el) !== null) {
+            let element = document.getElementById(el);
+            (element).scrollIntoView({behavior:'smooth', block: 'center' });
+        }
     }
 
     clickPlus(movie) {
@@ -118,7 +126,13 @@ class FeaturedItems2 extends React.Component {
 
 
         return (<div className="items">
-            <ul className="featured-items-flex">
+            <ul className="featured-items-flex"
+                id="flex2"
+                onMouseOver={(e) => {
+                    e.preventDefault();
+                    this.centerScreen("flex2");
+                }}
+            >
                 {movies.map(movie =>
                             
                         <li id="li-flex">
