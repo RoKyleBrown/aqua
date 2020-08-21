@@ -13,6 +13,7 @@ class NonFeatured extends React.Component {
         }
         this.clickPlus = this.clickPlus.bind(this);
         this.whichIcon = this.whichIcon.bind(this);
+        this.centerScreen = this.centerScreen.bind(this);
         this.plus = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/add-btn.png";
         this.check = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/check-circle.png";
         this.minus = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png";
@@ -28,6 +29,14 @@ class NonFeatured extends React.Component {
         }
 
         return newStr;
+    }
+
+    centerScreen(el) {
+        if (document.getElementById(el) !== null) {
+            let element = document.getElementById(el);
+            (element).scrollIntoView({ block: 'center' });
+            element.id = `${el}-scroll`;
+        }
     }
 
     showMsg(movieId) {
@@ -136,9 +145,20 @@ class NonFeatured extends React.Component {
 
             return (
                 <div id="funny-guy" >
-                    <h3 id="movies-top">{gridTitle} > </h3>
+                    <h3 id="movies-top">{gridTitle} </h3>
                     {rows.map(row =>
-                        <ul className="non-content-row">
+                        <ul className="non-content-row" id="non-content"
+                            onMouseOver={(e) => {
+                                e.preventDefault();
+                                this.centerScreen("non-content");
+                            }}
+                            onMouseLeave={(e) => {
+                                e.preventDefault();
+                                if (document.getElementById("non-content-scroll") !== null) {
+                                    document.getElementById("non-content-scroll").id = "non-content";
+                                }
+                            }}
+                        >
                             {row.map(movie =>
                                 <li>
                                     <div className="more-fun">
