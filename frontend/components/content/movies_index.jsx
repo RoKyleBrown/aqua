@@ -11,7 +11,7 @@ import BrowseMenu from "./browse_menu";
 class MoviesIndex extends React.Component {
     constructor(props){
         super(props);
-        this.rightThing = this.rightThing.bind(this)
+        this.rightThing = this.rightThing.bind(this);
         this.zoom = this.zoom.bind(this);
     }
 
@@ -171,7 +171,8 @@ class MoviesIndex extends React.Component {
                             )}
                         </div>
 
-                        <div className="sub-items">
+                        <div className="sub-items" id="sub-items"
+                        >
                             <FeaturedItems
                                 movies={this.props.movies}
                                 user={this.props.currentUser}
@@ -193,7 +194,7 @@ class MoviesIndex extends React.Component {
                             </div>
 
                             <div className="sub-items2">
-                                <h1 id="sub2-title">newly added ></h1>
+                                <h1 id="sub2-title">newly added </h1>
                                 <FeaturedItems2
                                     movies={this.props.movies}
                                     user={this.props.currentUser}
