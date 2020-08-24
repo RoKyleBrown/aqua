@@ -62,7 +62,7 @@ class NonFeatured extends React.Component {
 
     clickPlus(movie) {
         let user = this.props.currentUser;
-        let currMovie = movie;
+        let currMovie = movie
         let clkAdd = `${movie.title} was added to My Content.`;
         let clkRmv = `${movie.title} was removed from My Content.`;
 
