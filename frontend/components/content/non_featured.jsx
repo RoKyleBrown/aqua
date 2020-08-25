@@ -48,7 +48,7 @@ class NonFeatured extends React.Component {
     }
     whichIcon(movie) {
         let user = this.props.currentUser;
-        let currMovie = movie
+        let currMovie = movie;
 
         if (Object.keys(user.minus_check).includes(`${movie.id}`)) {
             currMovie.plus_check = this.check;
