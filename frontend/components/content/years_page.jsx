@@ -212,7 +212,7 @@ class YearsPage extends React.Component {
         this.props.movies.forEach( movie => {
                 if (movie.year !== undefined) {
                     if (movie.year.slice(0,3) === decade.slice(0,3)) {
-                        matchedMovs.push(movie)
+                        matchedMovs.push(movie);
                     }
                 }
             })
