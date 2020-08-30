@@ -11,7 +11,7 @@ class MovieShow extends React.Component {
         e.preventDefault();
         let vid = document.getElementById("show-video-height") ||
             document.getElementById("show-video-width");
-        const body = document.querySelector("body")
+        const body = document.querySelector("body");
         
         if (vid.offsetWidth > body.offsetWidth){
             vid.setAttribute("id", "show-video-width");
