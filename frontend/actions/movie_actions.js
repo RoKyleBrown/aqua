@@ -28,5 +28,6 @@ export const fetchMovie = (movieId) => (dispatch) => (
 
 export const updateMovie = (movie) => dispatch => {
     return APIUtil.updateMovie(movie)
-        .then(movie => dispatch(receiveMovie(movie))); 
+        .then(movie => dispatch(receiveMovie(movie)));
+        
 }
