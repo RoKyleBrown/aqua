@@ -229,4 +229,4 @@ class MoviesIndex extends React.Component {
     }
 }
 
-export default MoviesIndex; 
+export default MoviesIndex;

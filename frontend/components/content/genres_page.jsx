@@ -278,7 +278,7 @@ class GenresPage extends React.Component{
                             </span>
                             <span>
                                 {this.props.currentUser.first_name}
-                            </span></li>
+                            </span></li> 
                     </ul>
                 </div>
                 <div className="browse-dropdown-b"
@@ -319,7 +319,7 @@ class GenresPage extends React.Component{
                 <div className="pre-browse-grid">
                     <h3 id="browse-title">{this.noStinkinHyphens(genre)}</h3>
                     <div id="funny-guy" >
-                        <h3 id="movies-top">{gridTitle} > </h3>
+                        <h3 id="movies-top">{gridTitle} </h3>
                         {rows.map(row =>
                             <ul className="non-content-row">
                                 {row.map(movie =>

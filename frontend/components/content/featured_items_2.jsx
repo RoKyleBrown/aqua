@@ -134,7 +134,6 @@ class FeaturedItems2 extends React.Component {
                                             <img className="screenshot"
                                                 src={movie.screenshot} />
                                     </div>
-                            
                                     <div id="fun">
                                 <Link to={`/movies/${movie.id}`}>
                                         <div id="feats-play-link">
@@ -158,7 +157,7 @@ class FeaturedItems2 extends React.Component {
                                         </div>
                                         <div id="feats-actions">
                                             <div className={`${movie.id}b feats-hov-msg`}>
-                                                <img className={`${movie.id} msg`} 
+                                                <img className={`${movie.id} msg`}
                                                  src={this.state.hovMsg}/>
                                             </div>
                                             <div id="feats-actions-bar">

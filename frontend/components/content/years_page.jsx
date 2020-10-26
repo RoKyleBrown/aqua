@@ -322,7 +322,7 @@ class YearsPage extends React.Component {
                 >
                     <h3 id="browse-title">{decade}</h3>
                     <div id="funny-guy" >
-                        <h3 id="movies-top">{gridTitle} > </h3>
+                        <h3 id="movies-top">{gridTitle} </h3>
                         {rows.map(row =>
                             <ul className="non-content-row">
                                 {row.map(movie =>
