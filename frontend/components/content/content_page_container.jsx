@@ -23,7 +23,7 @@ const mapDispatchToProps = (dispatch) => {
         fetchMovie: movieId => dispatch(fetchMovie(movieId)),
         logout: user => dispatch(logout(user)),
         updateUser: user => dispatch(updateUser(user)),
-        updateMovie: movie => dispatch(updateMovie(movie))
+        updateMovie: movie => dispatch(updateMovie(movie)) 
     }
 }
 
