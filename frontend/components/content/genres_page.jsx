@@ -278,7 +278,11 @@ class GenresPage extends React.Component{
                             </span>
                             <span>
                                 {this.props.currentUser.first_name}
+<<<<<<< HEAD
                             </span></li> 
+=======
+                            </span></li>
+>>>>>>> 363d6e68e26e3342d0bfa51d3334f5469ff9fc35
                     </ul>
                 </div>
                 <div className="browse-dropdown-b"
@@ -319,7 +323,11 @@ class GenresPage extends React.Component{
                 <div className="pre-browse-grid">
                     <h3 id="browse-title">{this.noStinkinHyphens(genre)}</h3>
                     <div id="funny-guy" >
+<<<<<<< HEAD
                         <h3 id="movies-top">{gridTitle} </h3>
+=======
+                        <h3 id="movies-top">{gridTitle} > </h3>
+>>>>>>> 363d6e68e26e3342d0bfa51d3334f5469ff9fc35
                         {rows.map(row =>
                             <ul className="non-content-row">
                                 {row.map(movie =>

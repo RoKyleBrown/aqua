@@ -127,13 +127,21 @@ class FeaturedItems2 extends React.Component {
                             <img className="idx-thumb-hover" 
                                 src={movie.thumb_hover}/>
                                 <img className="vid-cap-container" 
+<<<<<<< HEAD
                             src="https://aqua-app-dev.s3-us-west-1.amazonaws.com/PulpFiction-back.png">
+=======
+                                src="PulpFiction-back.png">
+>>>>>>> 363d6e68e26e3342d0bfa51d3334f5469ff9fc35
                                 </img>
                                 <div className="screenshot-flex">
                                     <div id="screenshot-form">
                                             <img className="screenshot"
                                                 src={movie.screenshot} />
                                     </div>
+<<<<<<< HEAD
+=======
+                            
+>>>>>>> 363d6e68e26e3342d0bfa51d3334f5469ff9fc35
                                     <div id="fun">
                                 <Link to={`/movies/${movie.id}`}>
                                         <div id="feats-play-link">
@@ -157,7 +165,11 @@ class FeaturedItems2 extends React.Component {
                                         </div>
                                         <div id="feats-actions">
                                             <div className={`${movie.id}b feats-hov-msg`}>
+<<<<<<< HEAD
                                                 <img className={`${movie.id} msg`}
+=======
+                                                <img className={`${movie.id} msg`} 
+>>>>>>> 363d6e68e26e3342d0bfa51d3334f5469ff9fc35
                                                  src={this.state.hovMsg}/>
                                             </div>
                                             <div id="feats-actions-bar">
