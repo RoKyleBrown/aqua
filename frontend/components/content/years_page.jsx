@@ -38,7 +38,7 @@ class YearsPage extends React.Component {
     }
 
     componentDidUpdate(nextProps) {
-        if (this.props.location.pathname !== nextProps.location.pathname){
+        if (this.props.location.pathname !== nextProps.location.pathname) {
             window.location.reload();
             if (document.readyState == 'complete') {
                 setTimeout(() => {
@@ -207,15 +207,15 @@ class YearsPage extends React.Component {
         let gridTitle = "movies";
         let decade = this.props.match.params["decade"];
         let matchedMovs = [];
-        
-        
-        this.props.movies.forEach( movie => {
-                if (movie.year !== undefined) {
-                    if (movie.year.slice(0,3) === decade.slice(0,3)) {
-                        matchedMovs.push(movie);
-                    }
+
+
+        this.props.movies.forEach(movie => {
+            if (movie.year !== undefined) {
+                if (movie.year.slice(0, 3) === decade.slice(0, 3)) {
+                    matchedMovs.push(movie);
                 }
-            })
+            }
+        })
 
         let numRows = Math.ceil(matchedMovs.length / 4);
         let rowStart = 0;
@@ -322,11 +322,8 @@ class YearsPage extends React.Component {
                 >
                     <h3 id="browse-title">{decade}</h3>
                     <div id="funny-guy" >
-<<<<<<< HEAD
-                        <h3 id="movies-top">{gridTitle} </h3>
-=======
-                        <h3 id="movies-top">{gridTitle} > </h3>
->>>>>>> 363d6e68e26e3342d0bfa51d3334f5469ff9fc35
+
+                        <h3 id="movies-top">{gridTitle}  </h3>
                         {rows.map(row =>
                             <ul className="non-content-row">
                                 {row.map(movie =>
@@ -402,7 +399,7 @@ class YearsPage extends React.Component {
                                 </div>
                             </ul>
                         )}
-                        
+
                         <div className="non-notify-contain-a"
                         >
                             <div className="add-notify">
@@ -415,7 +412,7 @@ class YearsPage extends React.Component {
                             $('.non-notify-contain').height($(window).height());
                         })}
                     </div>
-                    
+
                 </div>
                 <div className="browse-ripple-flex"
                     style={{
@@ -454,8 +451,8 @@ class YearsPage extends React.Component {
                         }, 360)
                     }
                 }}
-                
-                
+
+
             </div>
         )
     }

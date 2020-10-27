@@ -1,7 +1,7 @@
 import React from 'react';
 import BrowseMenu from "./browse_menu";
 
-class GenresPage extends React.Component{
+class GenresPage extends React.Component {
     constructor(props) {
         super(props);
         this.playIcon = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/play-btn.png";
@@ -70,7 +70,7 @@ class GenresPage extends React.Component{
             $(".year-list").removeClass("year-list-b")
         }
 
-       
+
 
 
     }
@@ -126,7 +126,7 @@ class GenresPage extends React.Component{
             $(`.${movieId}b`).addClass("non-hov-msg-b");
         }
 
-        $(`.${movieId}`).addClass("non-msg-b");
+        $(`.${movieId}`).addClass("non-msg-b"); 
     }
 
     hideMsg(movieId) {
@@ -278,11 +278,9 @@ class GenresPage extends React.Component{
                             </span>
                             <span>
                                 {this.props.currentUser.first_name}
-<<<<<<< HEAD
+
                             </span></li> 
-=======
-                            </span></li>
->>>>>>> 363d6e68e26e3342d0bfa51d3334f5469ff9fc35
+
                     </ul>
                 </div>
                 <div className="browse-dropdown-b"
@@ -323,11 +321,7 @@ class GenresPage extends React.Component{
                 <div className="pre-browse-grid">
                     <h3 id="browse-title">{this.noStinkinHyphens(genre)}</h3>
                     <div id="funny-guy" >
-<<<<<<< HEAD
-                        <h3 id="movies-top">{gridTitle} </h3>
-=======
-                        <h3 id="movies-top">{gridTitle} > </h3>
->>>>>>> 363d6e68e26e3342d0bfa51d3334f5469ff9fc35
+                        <h3 id="movies-top">{gridTitle}  </h3>
                         {rows.map(row =>
                             <ul className="non-content-row">
                                 {row.map(movie =>
@@ -396,7 +390,7 @@ class GenresPage extends React.Component{
 
                                 )}
                                 <div id="non-div">
-                                                       
+
                                 </div>
                                 <div id="non-div-filler">
 

@@ -124,7 +124,7 @@ class FeaturedItems2 extends React.Component {
 
 
         return (<div className="items">
-            <ul className="featured-items-flex"
+            <ul className="featured-items-flex" 
                 id="flex2"
             >
                 {movies.map(movie =>
