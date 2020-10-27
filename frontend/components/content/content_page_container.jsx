@@ -16,7 +16,7 @@ const mapStateProps = (state, ownProps) => {
 }
 
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => { 
     
     return {
         fetchMovies: movies => dispatch(fetchMovies(movies)),
