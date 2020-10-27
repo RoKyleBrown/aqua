@@ -128,7 +128,7 @@ class FeaturedItems extends React.Component {
                             <img className="idx-thumb-hover" 
                                 src={movie.thumb_hover}/>
                                 <img className="vid-cap-container" 
-                                src="PulpFiction-back.png">
+                                    src="https://aqua-app-dev.s3-us-west-1.amazonaws.com/PulpFiction-back.png">
                                 </img>
                                 <div className="screenshot-flex">
                                     <div id="screenshot-form">
