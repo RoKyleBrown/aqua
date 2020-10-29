@@ -145,7 +145,7 @@ class FeaturedItems2 extends React.Component {
                                 <Link to={`/movies/${movie.id}`}>
                                     <div id="feats-play-link">
                                         <div id="feats-play-scale">
-                                            <img src={this.play} />
+                                            <img src={this.play} /> 
                                         </div>
                                     </div>
                                 </Link></div>
