@@ -20,7 +20,7 @@ class LoginForm extends React.Component {
         this.props.login(user)
            .then(() => this.props.history.push('/movies'));
     }
-    render() { 
+    render() {
         return (
             <div className="login-page-background">
                 <ul className="login-page-nav">
