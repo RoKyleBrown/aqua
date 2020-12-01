@@ -26,7 +26,7 @@ class LoginForm extends React.Component {
                 <ul className="login-page-nav">
                     <li><Link id="logo-login-page" to={'/'}>aqua</Link></li>
                     <li> <Link id="signup-login-btn" to={`/session/login`}>
-                        Log In</Link></li>
+                        Log In</Link></li> 
                 </ul>
                 <div className="login-page-form-container">
                     <p>Log in</p>
