@@ -16,7 +16,7 @@ class LoginForm extends React.Component {
     }
     doTheRightThing(e) {
         e.preventDefault();
-        const user = Object.assign( {}, this.state)
+        const user = Object.assign( {}, this.state) 
         this.props.login(user)
            .then(() => this.props.history.push('/movies'));
     }
