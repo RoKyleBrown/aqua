@@ -22,7 +22,7 @@ class LoginForm extends React.Component {
     }
     render() {
         return (
-            <div className="login-page-background">
+            <div className="login-page-background"> 
                 <ul className="login-page-nav">
                     <li><Link id="logo-login-page" to={'/'}>aqua</Link></li>
                     <li> <Link id="signup-login-btn" to={`/session/login`}>
