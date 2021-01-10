@@ -19,7 +19,7 @@ class FeaturedItems2 extends React.Component {
         this.minus = "https://aqua-app-dev.s3-us-west-1.amazonaws.com/minus-btn.png";
     }
 
-    noStinkinHyphens(item) {
+    noStinkinHyphens(item) { 
         let newStr = ""
 
         if (item !== "sci-fi") {
