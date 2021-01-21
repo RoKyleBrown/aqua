@@ -23,7 +23,7 @@ class FeaturedItems2 extends React.Component {
         let newStr = ""
 
         if (item !== "sci-fi") {
-            newStr = item.replace(/-/g, " ");
+            newStr = item.replace(/-/g, " "); 
         } else {
             newStr = item;
         }
