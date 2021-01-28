@@ -27,32 +27,32 @@
 
 @font-face{
     font-family: "Graphik Web Regular"; 
-    src: url('https://aqua-app-dev.s3-us-west-1.amazonaws.com/g-web-reg.ttf')
+    src: url('./g-web-reg.ttf')
 }
 
 @font-face{
     font-family: "Graphik Web Light";
-    src: url('https://aqua-app-dev.s3-us-west-1.amazonaws.com/g-web-light.ttf')
+    src: url('./g-web-light.ttf')
 }
 
 @font-face{
     font-family: "GraphikLCGMedium";
-    src: url('https://aqua-app-dev.s3-us-west-1.amazonaws.com/g-lcg-medium.ttf')
+    src: url('./g-lcg-medium.ttf')
 }
  
 @font-face{
     font-family: "Graphik LC TT Thin";
-    src: url('https://aqua-app-dev.s3-us-west-1.amazonaws.com/g-lctt-thin.ttf')
+    src: url('./g-lctt-thin.ttf')
 }
 
 @font-face{
     font-family: "Graphik Web Bold";
-    src: url('https://aqua-app-dev.s3-us-west-1.amazonaws.com/g-web-bold.ttf')
+    src: url('./g-web-bold.ttf')
 }
 
 @font-face{
     font-family: "futura";
-    src: url('https://aqua-app-dev.s3-us-west-1.amazonaws.com/FUTURAB.TTF')
+    src: url('./FUTURAB.TTF')
 }
 
 
