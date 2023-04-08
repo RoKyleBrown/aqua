@@ -426,12 +426,7 @@ class YearsPage extends React.Component {
                         <p>© 2020 Aqua</p>
                     </div>
                 </div>
-                {/* {window.addEventListener('load', () => { 
-                    if (document.readyState === 'complete') {
-                        $(".footer-container").height($(document).outerHeight());
-                        this.itemSelected();
-                    }
-                })} */}
+                
                 {window.addEventListener('resize', (e) => {
                     e.preventDefault();
                     $(".footer-container").height($(document).height());

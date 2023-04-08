@@ -3,10 +3,9 @@ import MoviesIndexContainer from './content/movies_index_container';
 import LoginFormContainer from './auth/login_form_container';
 import SignupFormContainer from './auth/signup_form_container';
 import {Switch, Route} from 'react-router-dom';
-import SplashPage from './splash_page'
 import { AuthRoute, ProtectedRoute } from '../util/route_util'
 import { withRouter } from "react-router";
-import { useEffect } from "react"
+import { useEffect } from "react";
 import MovieShowContainer from "./content/movie_show_container";
 import ContentPageContainer from "./content/content_page_container";
 import YearsPageContainer from './content/years_page_container';

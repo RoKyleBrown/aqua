@@ -19,13 +19,13 @@ class BrowseMenu extends React.Component {
         if (item === 'genre') {
             $(".genre").addClass("br-lt-li-b");
             $(".year").removeClass("br-lt-li-b");
-            $(".genre-list").removeClass("genre-list-b")
-            $(".year-list").addClass("year-list-b")
+            $(".genre-list").removeClass("genre-list-b");
+            $(".year-list").addClass("year-list-b");
         } else {
             $(".year").addClass("br-lt-li-b");
             $(".genre").removeClass("br-lt-li-b");
-            $(".genre-list").addClass("genre-list-b")
-            $(".year-list").removeClass("year-list-b")
+            $(".genre-list").addClass("genre-list-b");
+            $(".year-list").removeClass("year-list-b");
         }
 
     }
@@ -86,7 +86,6 @@ class BrowseMenu extends React.Component {
                                     }}
                                 >
                                   {this.noStinkinHyphens(item)}
-                                  {/* {item} */}
                                 </p>
                             </div>
                         )}
